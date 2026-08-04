@@ -55,9 +55,9 @@ The regime is split across two instruments by constitutional necessity — the s
 | `phase-1-handoff.md` | The legislative-track assignment as handed off (completed; retained as the assignment record) |
 | `phase-1-findings.md` | Legislative-track findings and provenance |
 | `LICENSE` | MIT, covering the original work only — see *Licence and scope of it* above |
-| `sources/manifest.md` | Retrieval manifest for primary documents — official links, page ranges, sizes, checksums |
+| `sources/manifest.md` | Retrieval manifest — archival sources (§ 1) and live-case filings (§ 2), with official links and checksums |
 | `sources/pdfs/` | Local primary-document copies; Git-ignored by policy |
-| `Trace Elements/` | Primary documents for the live case — ACIS docket, rehearing motion, response |
+| `Trace Elements/` | Live-case filings — ACIS docket, rehearing motion, response. **Git-ignored**; see *Excluded from version control* |
 
 ---
 
@@ -179,7 +179,24 @@ It worked. All four questions came back closed with primary documents, and the r
 
 ## 11. Which source documents go in Git
 
-**The test is re-retrievability, not file type.** Archival material — session laws, staff analyses — can be pulled again from a stable official URL, so [`sources/manifest.md`](sources/manifest.md) suffices and the bytes stay out. Point-in-time captures cannot be re-fetched: the `Trace Elements/` filings are a dated snapshot of a moving docket, and the ACIS print timestamp is not reproducible. Those three PDFs are tracked deliberately.
+**Two tests, in order.**
+
+**First — does it contain contact details for people outside this project?** If so it stays out of Git regardless of provenance. The three `Trace Elements/` filings were tracked until August 4, 2026 and are now excluded on this ground: the two briefs carry nine email addresses plus firm addresses and phone numbers in their certificates of service. They are public records, but publishing them to a crawlable, indexed repository is a different exposure from the same document behind a court portal. History was rewritten to remove the blobs before anything was pushed.
+
+**Second — is it re-retrievable?** Archival material like session laws and staff analyses can be pulled again from a stable official URL, so [`sources/manifest.md`](sources/manifest.md) suffices and the bytes stay out.
+
+🔴 **Do not delete `Trace Elements/` from disk.** The ACIS docket printout carries a timestamp of **August 3, 2026, 8:38 a.m.** and shows the docket while rehearing was pending. That state is not reproducible — once rehearing is decided, the live docket shows something else — and the local copy is now the only record of it. Checksums and retrieval routes are in [`sources/manifest.md`](sources/manifest.md) § 2.
+
+### Getting the live-case documents
+
+| Document | Source |
+|---|---|
+| Live docket and all filings | [ACIS — SC2024-1274](https://acis.flcourts.gov/portal/court/68f021c4-6a44-4735-9a76-5360b2e8af13/case/359DF1ED-D650-4B05-8067-811D0695104E) |
+| July 2, 2026 opinion | [CourtListener](https://www.courtlistener.com/opinion/10883903/trace-elements-inc-v-nadja-mackensen/) · [slip opinion PDF](https://storage.courtlistener.com/pdf/2026/07/02/trace_elements_inc._v._nadja_mackensen.pdf) |
+| Oral argument, Dec. 11, 2025 | [Video](https://www.youtube.com/watch?v=HBBqn7Ya4PU) |
+| Fourth District decision below | *Mackensen v. Trace Elements, Inc.*, 388 So. 3d 815 (Fla. 4th DCA 2024) |
+
+⚠️ ACIS is a JavaScript application — a plain fetch returns nothing and the guessed API endpoints 404. Open it in a browser and print to PDF.
 
 **Manifest what can be re-fetched; commit what cannot.**
 
