@@ -63,3 +63,5 @@ Carried from `CLAUDE.md`; they apply to anything committed here.
 ## Excluded from version control
 
 `tmp/` holds intermediate retrieval artifacts — full session-law volumes and per-page scans (~300 MB). `sources/pdfs/` holds curated local copies of the primary documents. Both directories are reproducible and excluded from Git; [`sources/manifest.md`](sources/manifest.md) is the tracked retrieval record.
+
+**The test is re-retrievability, not file type.** Archival material — session laws, staff analyses — can be pulled again from a stable official URL, so the manifest suffices. Point-in-time captures cannot: the `Trace Elements/` filings are a dated snapshot of a docket that is still moving, and the ACIS print timestamp is not reproducible. Those three PDFs are tracked deliberately. Manifest what can be re-fetched; commit what cannot.

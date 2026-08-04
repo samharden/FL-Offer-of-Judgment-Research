@@ -27,6 +27,8 @@ Owner: Sam Harden. Working directory: `/Users/samharden/Claudeo/OoJ`. **Git repo
 
 **Decision recorded August 3, 2026:** archival source PDFs do not belong in Git. Local copies live in the Git-ignored `sources/pdfs/` directory; `sources/manifest.md` is the tracked record and must preserve each filename, official retrieval URL, relevant source pages, file size, and SHA-256 checksum. New source PDFs should follow the same pattern.
 
+**The line runs between archival and live-case material.** Session laws, staff analyses, and other archival documents are re-retrievable from a stable official URL, so the manifest is sufficient and the bytes stay out of Git. Filings in the live case are not — the `Trace Elements/` documents are a dated snapshot of a docket that is still moving, and the ACIS copies carry a print timestamp that cannot be reproduced later. **Those three files are tracked deliberately** (1.8 MB total). Apply the same test to anything new: if it can be pulled again from an official source, manifest it; if it is a point-in-time capture, commit it.
+
 The five Phase 1 PDFs were briefly committed under `output/pdf/` before this policy was adopted. Before any remote was added, `main` was rewritten to remove that path from every commit so those binary objects would not be included in a future push. Do not re-add the PDFs or recreate the pre-rewrite history on a remote. The local copies remain available and reproducible from the manifest.
 
 ## Status — August 3, 2026
