@@ -987,7 +987,23 @@ Full project-level next steps live in `CLAUDE.md`. Corpus-specific work remainin
 3. **Verify §B entries** — the five suspected false positives (*Kennedy* 1893, *Parker* 1984, *Standard Jury Instructions* 2002, the 2014 "Order", *DeLisle* 2018) and the **1980** rulemaking opinion, 391 So. 2d 165. (The **1972** entry is confirmed as rule 1.442's origin.)
 4. ✅ ~~Pull into the Phase 2 chain: 550 So. 2d 442, 112 So. 3d 1209, SC2025-0045~~ — **done August 3, 2026**, coded above. The correction on 550 So. 2d 442 is now confirmed from the opinion itself, not only from *Sarkis* and *Timmons*.
 5. ✅ ~~Verify the *Fabre* origin of (c)(3)~~ — **done August 3, 2026.** Confirmed verbatim from the 1996 committee note at 682 So. 2d 105, 126, and *Fabre* itself read. No longer single-sourced.
-6. **Analytical consolidation** — code the 40 read cases against the ten arcs; build the district-split matrix and the two-track timeline.
+6. ✅ ~~Analytical consolidation~~ — **done August 3, 2026.** All 39 read cases coded against the ten arcs in `arc-matrix.md`, with the Supreme Court alignment matrix and the two-track timeline. ⚠️ The **true district-split matrix is not built** — it needs the DCA corpus; what exists is the Supreme Court's alignment by district.
 7. ⚠️ **Open:** pull the formatted SC2025-0045 slip opinion to resolve the (c)(2)(B)/(F) edits.
 8. ✅ ~~Confirm the *Trace Elements* rehearing status~~ — **done August 3, 2026.** 🔴 **Rehearing and clarification pending, undecided.** Re-pull before shipping.
-9. 🆕 **Pull *Watkins v. Corbett*, No. 2D2025-0214, 2026 WL 816637 (Fla. 2d DCA Mar. 25, 2026)** — filed as supplemental authority in *Trace Elements* on 03/27/2026 as expressly and directly conflicting with the decision on review. Post-dates the corpus build. Also get the **rehearing motion and response** themselves (not yet saved).
+9. 🆕 **Pull *Watkins v. Corbett*, No. 2D2025-0214, 2026 WL 816637 (Fla. 2d DCA Mar. 25, 2026)** — filed as supplemental authority in *Trace Elements* on 03/27/2026 as expressly and directly conflicting with the decision on review. Post-dates the corpus build. ✅ The rehearing motion and response are saved in `Trace Elements/` and read in full (Aug. 3).
+
+### Phase 3 completion state — August 3, 2026
+
+| Component | State |
+|---|---|
+| Triage of all 85 SC opinions | ✅ Complete |
+| Tier A merits corpus — 39 cases | ✅ Read **and** arc-coded |
+| Separate dissents (*Gorka*, *Pratt*, *Audiffred*) | ✅ Read |
+| Tier B — 11 cases | ❌ Not started |
+| Tier C — 9 cases | ❌ Not started |
+| §B false positives + the 1980 opinion | ❌ Not verified |
+| 30-case district-attribution validation | ❌ Not run |
+| DCA corpus — ~816 opinions | ❌ Untouched |
+| *Hoang Dinh Duong* | ⚠️ Apportionment passage only |
+
+**Judgment: Phase 3 is complete for the memo, incomplete as scoped.** The unread remainder is the low-density tail — Tier C contains no mention of § 768.79 at all, and the arc matrix shows the doctrine is carried by cases already read. The one genuine gap is the **DCA corpus**, which is not a gap in the doctrine but in the *distribution*: it is what the district-split matrix needs, and nothing else depends on it.
