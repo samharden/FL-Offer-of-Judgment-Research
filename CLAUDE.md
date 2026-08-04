@@ -18,6 +18,7 @@ Owner: Sam Harden. Working directory: `/Users/samharden/Claudeo/OoJ`. **Git repo
 | `phase-0-findings.md` | Phase 0 — district-attribution cascade, corpus map, coding schema, caveats |
 | `sc-corpus.md` | The 85 Florida Supreme Court opinions: triage, Tier A/B/C split, coded entries. **Also holds the completed Phase 2 rule-track section and the *Trace Elements* rehearing record** |
 | `arc-matrix.md` | **Phase 3 consolidation (Aug 3)** — 39 cases × 10 arcs, the Supreme Court alignment matrix by district, and the two-track timeline |
+| `memo.md` | 🆕 **The doctrinal memorandum (draft 1, Aug 4).** Eleven parts; Part XI states its own limits. Citations not yet run through `analyze_citations` |
 | `phase-1-handoff.md` | **Self-contained brief for the legislative track**, written for an outside collaborator. Four questions, the traps, sources, deliverable standards |
 | `phase-1-findings.md` | **Completed legislative-track findings.** Resolves all four handoff questions and links the retrieved primary PDFs |
 | `Trace Elements/` | Primary documents for the live case — ACIS docket (printed Aug. 3, 2026), rehearing motion, response in opposition |
