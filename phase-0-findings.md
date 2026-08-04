@@ -1,0 +1,157 @@
+# Phase 0 — Findings
+
+**Run:** August 2, 2026
+**Status:** Complete. The blocker is solved; two caveats carried forward.
+
+---
+
+## 1. DCA district attribution — SOLVED
+
+This was the blocker: CourtListener files all six District Courts of Appeal under a single court id, `fladistctapp`, and returns them all as "District Court of Appeal of Florida." Inter-district conflict is the engine of this doctrine, so nothing downstream works without district resolution.
+
+### What was tested
+
+| Method | Result |
+|---|---|
+| **(a) cluster → docket → `court` field** | **FAILED.** The docket record's `court_id` is also `fladistctapp`. `appeal_from` is null. No district anywhere on the docket. |
+| **(b) docket-number regex** | **PARTIAL.** Works from roughly the early 2000s on (`3D08-2039`, `4D08-968`, `6D2023-2546`). Fails for the entire 1987–2000 era (`93-2778`, `94-04599`, `95-2012`) and for occasional modern records (`2023-0248`, `17-0174 & 17-0173 & 16-1692`). |
+| **(c) opinion HTML header** | **WORKS** for the old corpus. |
+| **(d) `download_url` hostname** | **WORKS** for the modern corpus. Discovered while closing the (b) gap. |
+
+### Key discovery — `plain_text` is empty for old opinions
+
+Pre-1996 Lawbox-sourced opinions return `plain_text: ""`. The text lives in `html_lawbox` and `html_with_citations` instead. Any text-based extraction that reads only `plain_text` silently returns nothing for the earliest and most important era.
+
+Those fields carry a clean, centered district line:
+
+```html
+<center><p><b>District Court of Appeal of Florida, Fourth District.</b></p></center>
+```
+
+*(Verified on Mudano v. St. Paul Fire & Marine Ins. Co., 543 So. 2d 876 (Fla. 4th DCA 1989).)*
+
+### Key discovery — `download_url` encodes the district
+
+Modern opinions scraped from court sites carry a district-specific hostname:
+
+```
+https://2dca.flcourts.gov/pre_opinion_content_download/2438975
+```
+
+Verified on the one modern record that defeated docket parsing — *City of Sarasota v. Estate of Kaafi* (docket `2023-0248`). Hostname resolves to Second District; Sarasota County is in the Second District. Correct.
+
+### Resolution — a four-signal cascade
+
+Apply in order; stop at first hit.
+
+| Signal | Source | Covers |
+|---|---|---|
+| **S1** | `download_url` hostname → `(\d)dca\.flcourts\.gov` | Modern scraped opinions |
+| **S2** | `docketNumber` → `^(?:Nos?\.\s*)?(\d)D(\d{2}\|\d{4})-` | ~2000s → present |
+| **S3** | `html_lawbox` / `html_with_citations` / `xml_harvard` → `District Court of Appeal of Florida,?\s+(First\|Second\|Third\|Fourth\|Fifth\|Sixth) District` | 1987 → ~2000 |
+| **S4** | Judge panel → district lookup, or manual | Residual |
+
+**Why this is robust:** the signals are independent, so wherever two are present they cross-validate. Build the cascade to record *which* signal fired for each case and log every disagreement — that gives a measurable confidence rate rather than an assumption.
+
+### Note on S4
+
+`panel_ids` and `panel_names` are mostly empty pre-1996, and the `judge` field is unreliable — *Palm Beach Polo Holdings* returns `"Ciklin, Had, Kaplan, Michael, Opportunity, Polen, Proceedings, Review"`, which is parser noise, not a panel. Treat S4 as manual review, not automation.
+
+### A heuristic worth noting but NOT relying on
+
+In the 1990s the Second District used five-digit zero-padded sequences (`94-04599`, `95-04027`, `94-02012`) while the Third and Fourth used four (`95-2012`, `95-1232`). Suggestive, not a rule. Use only to prioritize manual review, never as an attribution signal.
+
+---
+
+## 2. Corpus map — measured, not estimated
+
+All figures are Florida state appellate opinions (`fla` + `fladistctapp`).
+
+| Query | Count |
+|---|---|
+| `"768.79"` | **776** |
+| `"1.442"` | **514** |
+| `"768.79" OR "1.442"` | **901** |
+| Florida **Supreme Court** only, union query | **85** |
+
+### Distribution by era (`"768.79"`)
+
+| Era | Count | Attribution tier |
+|---|---|---|
+| pre-1996 | 100 | S3 |
+| 1996–2006 | 302 | S3 early, S2 late |
+| 2006–2016 | 200 | S2 |
+| 2016–2026 | 174 | S1 / S2 |
+
+Buckets sum to exactly 776. Counts were independently validated by re-partitioning: 1996–2001 (161) + 2001–2006 (141) = 302, matching the combined bucket. **These are real counts, not pagination caps** — the round 100 and 200 figures were coincidence.
+
+The Phase 1 estimate of 800–1,200 was accurate. **901 is the working universe.**
+
+### The district-prefix transition is later than assumed
+
+Sampling June 1996 – January 1997 returned *zero* district-prefixed docket numbers. The `ND{yy}-` format appears somewhere between 2000 and 2008 — not the mid-1990s. **Roughly 250–300 cases fall to S3**, not the ~100 originally assumed. S3 is therefore load-bearing, not a fallback, which is why the `plain_text`-is-empty discovery mattered.
+
+---
+
+## 3. Query set — locked
+
+The terminology shift is confirmed and it is a real trap. Querying `"768.79" + "proposal for settlement"` returns 320 opinions with the earliest at **1997**. The statute dates to 1986. Adding `"offer of judgment"` recovers 65 pre-1996 cases reaching back to **1989** (*Mudano*).
+
+**Retrieval procedure:** run `"768.79"` and `"1.442"` as independent sweeps, union them, then de-duplicate on `cluster_id`. Do not rely on phrase terms ("proposal for settlement," "offer of judgment," "demand for judgment") for *retrieval* — they belong in the coding layer as era markers, not the query layer.
+
+---
+
+## 4. Coding schema
+
+| Field | Type | Notes |
+|---|---|---|
+| `cluster_id` | int | Primary key; de-dup on this |
+| `opinion_id` | int | May differ from cluster_id |
+| `case_name` | str | |
+| `citation` | str | Preferred So.2d/So.3d cite |
+| `date_filed` | date | |
+| `court_level` | enum | `supreme` / `dca` |
+| `district` | enum 1–6 | From the cascade |
+| `district_signal` | enum | `S1`/`S2`/`S3`/`S4` — provenance |
+| `district_confidence` | enum | `confirmed` (2+ signals agree) / `single` / `manual` |
+| `panel` | str | |
+| `issue_tags` | multi | The six arcs (see plan Phase 3) |
+| `canon_invoked` | enum | `derogation` / `rule_1.010` / `both` / `neither` |
+| `proposal_outcome` | enum | `upheld` / `invalidated` / `n-a` |
+| `fee_disposition` | enum | `awarded` / `denied` / `remanded` |
+| `conflict_certified` | bool | |
+| `statute_version` | str | Which version of § 768.79 governed |
+| `rule_version` | str | Which version of rule 1.442 governed |
+| `subsequent_history` | str | Quashed / approved / receded from |
+| `cite_count` | int | For tiering |
+
+`statute_version` and `rule_version` are what make the two-track timeline work — they let you ask whether a case turned on text that no longer exists.
+
+---
+
+## 5. Corpus scope — recommendation
+
+Grounded in the real numbers:
+
+- **Full read and code — 85 cases.** Every Florida Supreme Court opinion in the union set. Entirely tractable; this is where the doctrine is actually made.
+- **Full code — all conflict-certified DCA cases**, regardless of citation count. These are the pressure points and the reason district attribution mattered.
+- **Full code — DCA cases with `citeCount ≥ 1`.** Count not yet measured (see caveat 1).
+- **Light code — the remainder**, captured in the database with district, date, and outcome only, so the district-split matrix and timeline stay complete without reading all 901.
+
+---
+
+## Caveats carried into Phase 1
+
+1. **`cited_gt` does not filter.** Passing `cited_gt: 0` returned 901 — identical to unfiltered. Citation-count tiering must be done client-side on retrieved `citeCount` values, not via the API parameter.
+
+2. **901 counts opinions, not cases.** Search `type=o` returns opinions, and `opinion_id` diverges from `cluster_id` in a meaningful share of records (concurrences, dissents, sub-opinions). The true distinct-case count is somewhat below 901. De-duplication on `cluster_id` during retrieval will produce the real figure.
+
+3. **The cascade is validated qualitatively, not yet quantitatively.** Roughly 40 records were probed across all eras and every signal worked where present, but per-tier coverage percentages have not been measured on a random sample. The formal 30-case validation with a measured agreement rate should run as the first task of Phase 3, once retrieval is scripted — it is cheap at that point and expensive now.
+
+---
+
+## Unplanned finding worth keeping
+
+*Mudano* (1989) is not an apportionment or ambiguity case — it holds that § 768.79 does **not** apply where the cause of action accrued before the July 1, 1986 effective date, because § 768.71(2) limits Part III to causes arising on or after that date, and because the statute affects substantive rights and so applies only prospectively.
+
+**Effective-date and retroactivity litigation is a distinct seventh doctrinal arc** dominating the first several years of the case law, and it recurs every time the statute or rule is amended — including right now, with the November 2025 rule amendment. Add it to the Phase 3 arc list.
