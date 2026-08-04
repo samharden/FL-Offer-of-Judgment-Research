@@ -23,6 +23,12 @@ Owner: Sam Harden. Working directory: `/Users/samharden/Claudeo/OoJ`. **Git repo
 | `Trace Elements/` | Primary documents for the live case — ACIS docket (printed Aug. 3, 2026), rehearing motion, response in opposition |
 | `CLAUDE.md` | This file — orientation, thesis, verified facts, tooling |
 
+## Git and source-artifact policy
+
+**Decision recorded August 3, 2026:** archival source PDFs do not belong in Git. Local copies live in the Git-ignored `sources/pdfs/` directory; `sources/manifest.md` is the tracked record and must preserve each filename, official retrieval URL, relevant source pages, file size, and SHA-256 checksum. New source PDFs should follow the same pattern.
+
+The five Phase 1 PDFs were briefly committed under `output/pdf/` before this policy was adopted. Before any remote was added, `main` was rewritten to remove that path from every commit so those binary objects would not be included in a future push. Do not re-add the PDFs or recreate the pre-rewrite history on a remote. The local copies remain available and reproducible from the manifest.
+
 ## Status — August 3, 2026
 
 | Phase | State |
