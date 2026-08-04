@@ -43,7 +43,7 @@ The five Phase 1 PDFs were briefly committed under `output/pdf/` before this pol
 
 **Merits cases read (40):** *Unicare*, *Aspen*, *Leapai*, *Timmons*, *Jones Boatyard*, *TGI Friday's*, *Hannah*, *Knealing*, *Gulliver Academy*, *MX Investments*, *MGR Equipment*, *Rollins*, *Hingson*, *White v. Steak & Ale*, *Willis Shaw*, *Sarkis*, *D'Angelo*, *Lamb*, *Saia*, *Nichols*, *Campbell*, *Frosti*, *Massey*, *Gorka*, *Southeast Floating Docks*, *Shands*, *Diamond Aircraft*, *Advanced Chiropractic*, *Pratt*, *Audiffred*, *Anderson*, *Kuhajda*, *Koppel*, *Allen v. Nunez*, *Wheaton*, *CCM Condominium*, *Suarez Trucking*, *Coates*, *Trace Elements*.
 
-**Also read, outside the merits corpus:** the four rule-amendment opinions (550 So. 2d 442 · 682 So. 2d 105 · 112 So. 3d 1209 · SC2025-0045); ***Fabre v. Marin***, 623 So. 2d 1182 (Fla. 1993); the *Trace Elements* rehearing motion and response; the ACIS docket. Partially read: *Hoang Dinh Duong v. Ziadie* (apportionment passage only).
+**Also read, outside the merits corpus:** the four rule-amendment opinions (550 So. 2d 442 · 682 So. 2d 105 · 112 So. 3d 1209 · SC2025-0045); ***Fabre v. Marin***, 623 So. 2d 1182 (Fla. 1993); ***Hoang Dinh Duong v. Ziadie***, 153 So. 3d 354 (Fla. 4th DCA 2014) — **read in full Aug. 4**; the *Trace Elements* rehearing motion and response; the ACIS docket.
 
 ### Two scoping decisions still open
 
@@ -169,6 +169,8 @@ A statute in this field survives art. V, § 2(a) **only if it contains a substan
 From respondents' *Trace Elements* rehearing motion, and worth taking seriously on its own: ***Ramos v. State***, 505 So. 2d 418, 421 (Fla. 1987) (citing ***State v. Furen***, 118 So. 2d 6 (Fla. 1960)) — "substantive rights conferred by law can neither be **diminished nor enlarged** by procedural rules adopted by this Court."
 
 The argument: strict compliance with (c)(3) can **expand** the § 768.79 right, because splitting a joint offer lowers each offeror's comparator and makes the 25% threshold easier to beat. Every substance/procedure argument in this corpus runs the other direction — that the rule *contracts* the statutory right. This one is the mirror image, and it pairs with the confirmed finding that **strict construction is not inherently pro-offeree** (below). ⚠️ *Ramos* and *Furen* are unread; both are outside the 768.79 corpus.
+
+⚠️ **But the argument is refuted for the offer structure the districts have actually approved** — established August 4, 2026 from *Hoang Dinh Duong*, read in full. In an **all-or-nothing allocated** proposal, apportionment converts one aggregate comparison into a **conjunctive** one: *every* claimant must independently beat their allocated share by 25%, or **none** of them recovers fees. That is harder than an unapportioned offer measured in the aggregate, not easier. The enlargement argument survives only for an apportioned proposal **without** an all-or-nothing condition — and the drafting fix is available to any offeror. **The refutation comes from the case petitioner itself cited.** Full analysis in `sc-corpus.md`.
 
 ## ***Wheaton* remains unreconciled**
 
@@ -371,7 +373,7 @@ Not usable until authorized: **Trellis** (highest value — the only route to ci
 5. **Scope of "civil action for damages"** — *Nichols*, *Diamond Aircraft*; equitable claims; arbitration
 6. **Good faith** — **§ 768.79(8)(a) post-2022; (7)(a) in pre-2022 sources**; nominal proposals (*Leapai* n.2's "one dollar offer"; *Frosti*'s $1 punitive offer)
 7. **Effective date and retroactivity** — *Mudano* → *Jones Boatyard*; recurs on every amendment, including November 2025
-8. **Contract formation and acceptance mechanics** — *Suarez Trucking*; the mirror-image rule; counteroffers don't terminate an offer (*Scope v. Fannelli*); ⚠️ **the "all-or-nothing, allocated offer"** — a joint apportioned proposal requiring acceptance of the whole, approved by every DCA to consider it (*Hoang Dinh Duong*, collecting cases) — **reconcile with *Gorka* and the 2022 carve-out**
+8. **Contract formation and acceptance mechanics** — *Suarez Trucking*; the mirror-image rule; counteroffers don't terminate an offer (*Scope v. Fannelli*); ✅ **the "all-or-nothing, allocated offer"** — reconciled with *Gorka* August 4, 2026. The distinction is **structural**: *Gorka* barred one offeror → **multiple offerees** conditioned on all accepting; the approved structure is **multiple offerors** → one offeree conditioned on that offeree accepting as to all. With a single offeree there is no divestment of independent control. *Hoang Dinh Duong*, collecting four post-*Gorka* decisions (⚠️ one of which, *Andrews v. Frey*, this Court later disapproved in *Audiffred* on a different point)
 9. **Calculating "judgment obtained"** — the *White* formula → *Nichols* → *Shands* → *CCM Condominium*
 10. **Procedural deadlines** — rule 1.525 and rule 1.442(g); *Gulliver Academy* → *Saia* → *Frosti* → *Koppel*
 

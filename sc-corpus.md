@@ -195,7 +195,7 @@ Not a prediction to put in a deliverable, but it should drive sequencing. The mo
 
 | Case | Why |
 |---|---|
-| ***Hoang Dinh Duong v. Ziadie***, 153 So. 3d 354 (Fla. 4th DCA 2014) | ✅ Apportionment passage read — the administrability rationale traces to *Hingson* 199 and goes no further. ⚠️ **Still read in full** for the **all-or-nothing allocated offer** and how it distinguishes *Gorka* (single offeree ⇒ no divestment of independent control), citing *Donovan Marine v. Delmonico*, 40 So. 3d 69, 71–72 (Fla. 4th DCA 2010) |
+| ***Hoang Dinh Duong v. Ziadie***, 153 So. 3d 354 (Fla. 4th DCA 2014) | ✅ **Read in full August 4, 2026** — see the coded entry under *District court decisions read in full*. The *Gorka* distinction is structural (multiple offerors → one offeree), and the opinion's closing paragraph **refutes the rehearing motion's enlargement argument** for this offer structure |
 | ***Twiddy v. Guttenplan***, 678 So. 2d 488, 489 (Fla. 2d DCA 1996) | 🆕 Cited in both *Hingson* n.1 and *Hoang Dinh Duong* — pre-1997 authority that a demand be specific enough for the judge to run the comparison. **Predates (c)(3)**, so it bears on whether apportionment existed independent of the 1996 rule |
 | ***C & S Chemicals, Inc. v. McDougald***, 754 So. 2d 795, 797–98 (Fla. 2d DCA 2000) | 🆕 The decision *Hingson* approved and quoted. The independent-evaluation rationale originates here, in a **district court**, not in this Court |
 | ***Herzog v. K-Mart Corp.***, 760 So. 2d 1006 (Fla. 4th DCA 2000) | 🆕 Disapproved by *Hingson*; supplies the n.3 worked example — and it is a **separable-judgments** case, not a unified-claim case |
@@ -978,6 +978,55 @@ The mechanism the project is about shows up in only three of eight: 1992, 1996, 
 
 ---
 
+## District court decisions read in full — outside the SC corpus
+
+### ✅ *Hoang Dinh Duong v. Ziadie*, 153 So. 3d 354 (Fla. 4th DCA Dec. 17, 2014)
+
+**Read in full August 4, 2026.** Previously only the apportionment passage had been read. Warner, J.; Taylor and May, JJ., concur. **Unanimous.**
+
+- **Facts.** Medical malpractice. Olivia Ziadie sued as plenary guardian of her incapacitated son Francis, **and** for Francis as parent and legal guardian of his two minor children, Philip and Paul. Proposal for settlement: **$1,000,000 total, apportioned** — $900,000 to Francis, $50,000 to each child — served on **Dr. Duong alone**. Rejected. Jury: Duong 75% at fault. Judgment after setoff: $8,896,926 economic + $6,000,000 non-economic for Francis; **$172,000 for each child**. Fees awarded: **$557,452**. Affirmed.
+- **Holding 1 — the cover letter.** A transmittal letter accompanying a proposal is not a second, conflicting proposal. Reading it as one is "grammatically possible" but "substantively unreasonable," citing *Alamo Financing, L.P. v. Mazoff*, 112 So. 3d 626, 630 (Fla. 4th DCA 2013). Read the proposal as a whole.
+- ⭐⭐ **Holding 2 — the all-or-nothing allocated offer is valid, and *Gorka* does not reach it.** The distinction is structural and clean:
+
+  | | *Gorka* (2010) | *Hoang Dinh Duong* (2014) |
+  |---|---|---|
+  | Direction | one offeror → **multiple offerees** | **multiple offerors** → one offeree |
+  | Condition | all **offerees** must accept | the single offeree must accept as to all **offerors** |
+  | Result | **invalid** — divests each offeree of independent control | **valid** — only one offeree, so the decision is his alone |
+
+  *Gorka*'s stated concern was that "[t]he conditional nature of the offer divests each **party** of independent control of the decision to settle." With a single offeree that concern is simply not implicated.
+- **Collects four post-*Gorka* decisions upholding the structure:** *Wolfe v. Culpepper Constructors*, 104 So. 3d 1132, 1134 (Fla. 2d DCA 2012); *Rossmore v. Smith*, 55 So. 3d 680, 681 (Fla. 5th DCA 2011); *Andrews v. Frey*, 66 So. 3d 376, 379 (Fla. 5th DCA 2011); *Donovan Marine v. Delmonico*, 40 So. 3d 69, 71–72 (Fla. 4th DCA 2010).
+  - ⚠️ ***Andrews v. Frey* was later disapproved by this Court in *Audiffred*** (2015) — but on a different question (whether a given proposal was a sole-offeror or a joint proposal), not on the all-or-nothing structure. **Do not cite the collection without noting this.** Petitioner's *Trace Elements* rehearing response says every DCA to consider the issue has approved the structure; that remains true, but one of the four collected cases has since been disapproved in part.
+
+#### ⭐⭐⭐ The finding that matters — the conjunctive 25% test
+
+The last substantive paragraph is the important one, and it was not visible from the apportionment passage alone:
+
+> "[B]ecause it was an 'all or nothing' joint proposal, if the verdict for **any** of the claimants was not twenty-five percent higher than the amount of that claim in the settlement proposal, then **none** of the claimants could obtain attorney's fees under its terms. In other words, it was not enough that the total amount of the verdict exceed the total amount of the offer by twenty-five percent; **the individual amounts awarded to each claimant in the verdict must also exceed the individual amounts set forth in the proposal for settlement for that claimant by twenty-five percent**, or no attorney's fees could be claimed."
+
+**This is a direct answer to the *Trace Elements* rehearing motion's constitutional argument** — and it comes from the case petitioner itself cited.
+
+Respondents argued that strict compliance with (c)(3) can **enlarge** the substantive right, because splitting a joint offer lowers each offeror's comparator and makes the 25% threshold easier to beat (*Ramos* / *Furen*: rules may neither diminish nor enlarge substantive rights). For an **all-or-nothing allocated offer, the opposite is true**: apportionment converts one aggregate test into a **conjunctive** test that every claimant must independently satisfy. One claimant falling short defeats fees for all of them. That is strictly **harder** than an unapportioned offer measured in the aggregate.
+
+⚠️ **State this precisely — it turns on offer structure, not on apportionment as such.** The conjunctive effect follows from the *all-or-nothing condition*, not from (c)(3) alone. An apportioned proposal **without** that condition could plausibly let each offeror recover on their own share, which is the scenario the rehearing motion feared. So the honest formulation is: **the enlargement argument is unanswered in the abstract but refuted for the structure the DCAs have actually approved**, and the drafting fix — an all-or-nothing clause — is available to any offeror who wants it.
+
+#### On the administrability rationale — the earlier conclusion holds and gains support
+
+Reading the whole opinion does **not** disturb the August 3 finding. Two additions:
+
+1. ⭐ **The court's supporting citation is *Twiddy v. Guttenplan*, 678 So. 2d 488, 489 (Fla. 2d DCA 1996)** — a **pre-(c)(3)** decision, since the rule took effect January 1, 1997. The administrability concern was a **district-court** concern about the *statute* before the rule provision existed. That **strengthens** thesis point 2: (c)(3) did not create this rationale and was not drafted for it.
+2. **A second, distinct rationale appears here that is genuinely offeree-side** and is *not* traceable to *Hingson*: apportionment lets the offeree "consider whether each offeror will later recover the amount of the offer that is apportioned to them, **which would determine the offeree(s)' liability for attorney's fees**." That is about pricing **fee exposure**, not settlement value. It is still a district-court gloss, not this Court's — but it is a real argument and the memo should not pretend the only rationale is *Hingson*'s.
+
+#### Also worth keeping
+
+- **Apportionment worked frictionlessly here because the claims were genuinely separable** — one catastrophically injured adult and two children with distinct derivative claims, three different numbers, three different judgments. Together with *Hingson* n.3 (*Herzog*'s $8,601 / $3,750), that is now **two** worked examples in which the administrability rationale does real work, and **both involve separable claims**. Neither is a unified-claim case. The pattern holds.
+- **Footnote 1 — the policy defense of the structure.** Requiring separate individual offers "could mean that an offeree could settle the main claim and leave consortium claims unsettled. It would be rare plaintiffs who would want to hazard trying a consortium claim without the underlying injury claim being tried at the same time."
+- Applies *Nichols*'s ambiguity standard verbatim; treats (c)(3) as a "**bright line rule**" citing *Cano v. Hyundai Motor America*, 8 So. 3d 408, 410–11 (Fla. 4th DCA 2009).
+- Cites *Arnold v. Audiffred*, 98 So. 3d 746, 749 (Fla. 1st DCA 2012) — the district decision this Court approved in *Audiffred*.
+- **Arc:** #8 acceptance mechanics (the all-or-nothing allocated offer) · #3 apportionment · #4 ambiguity · #9 the 25% comparison
+
+---
+
 ## Next steps
 
 Full project-level next steps live in `CLAUDE.md`. Corpus-specific work remaining:
@@ -1004,6 +1053,6 @@ Full project-level next steps live in `CLAUDE.md`. Corpus-specific work remainin
 | §B false positives + the 1980 opinion | ❌ Not verified |
 | 30-case district-attribution validation | ❌ Not run |
 | DCA corpus — ~816 opinions | ❌ Untouched |
-| *Hoang Dinh Duong* | ⚠️ Apportionment passage only |
+| *Hoang Dinh Duong* | ✅ Read in full Aug. 4, 2026 |
 
 **Judgment: Phase 3 is complete for the memo, incomplete as scoped.** The unread remainder is the low-density tail — Tier C contains no mention of § 768.79 at all, and the arc matrix shows the doctrine is carried by cases already read. The one genuine gap is the **DCA corpus**, which is not a gap in the doctrine but in the *distribution*: it is what the district-split matrix needs, and nothing else depends on it.
