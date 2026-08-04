@@ -54,9 +54,23 @@ The regime is split across two instruments by constitutional necessity — the s
 | `arc-matrix.md` | 39 cases × 10 doctrinal arcs, the Supreme Court alignment matrix by district, the two-track timeline |
 | `phase-1-handoff.md` | The legislative-track assignment as handed off (completed; retained as the assignment record) |
 | `phase-1-findings.md` | Legislative-track findings and provenance |
+| `LICENSE` | MIT, covering the original work only — see *Licence and scope of it* above |
 | `sources/manifest.md` | Retrieval manifest for primary documents — official links, page ranges, sizes, checksums |
 | `sources/pdfs/` | Local primary-document copies; Git-ignored by policy |
 | `Trace Elements/` | Primary documents for the live case — ACIS docket, rehearing motion, response |
+
+---
+
+## Licence and scope of it
+
+The original work in this repository — the analysis, the coding, the memo, the timeline, the research notes — is released under the **MIT Licence**. See [`LICENSE`](LICENSE).
+
+⚠️ **The licence does not, and cannot, cover the third-party material.** Two categories are not Sam Harden's to license:
+
+- **The court filings in `Trace Elements/`** — a docket printout and two briefs authored by counsel for the parties. Filings in Florida appellate proceedings are public records, and this repository reproduces them for research; but authorship and any rights in them rest with their authors, not with this project.
+- **Quoted material from judicial opinions and legislative documents** throughout the markdown files. Florida judicial opinions and session laws are public records; the quotations are used for scholarship and commentary.
+
+**Nothing here is legal advice**, and the memo is expressly a research work-product with its limits stated in Part VIII. It describes a regime with a live, undecided matter at its edge.
 
 ---
 
