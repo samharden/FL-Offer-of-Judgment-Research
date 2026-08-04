@@ -23,7 +23,7 @@ The broader premise that secondary sources "routinely" describe ch. 87-249 as am
 
 ### Document and retrieval route
 
-- Local chapter PDF: [`output/pdf/ch-87-249-laws-of-florida.pdf`](output/pdf/ch-87-249-laws-of-florida.pdf), official session pages 1721-1723.
+- Local chapter PDF, when downloaded: `sources/pdfs/ch-87-249-laws-of-florida.pdf`, official session pages 1721-1723. See [`sources/manifest.md`](sources/manifest.md).
 - Official source volume: [1987 Laws of Florida, vol. I, part 2](https://edocs.dlis.state.fl.us/fldocs/leg/actsflorida/1987/1987V1Pt2.pdf), PDF pages 501-503.
 - Official current statute: [§ 45.061 (2024), Florida Senate](https://www.flsenate.gov/laws/statutes/2024/45.061).
 
@@ -37,7 +37,7 @@ Accordingly, invalidation of ch. 99-225 created no revival question for § 768.7
 
 ### Document and retrieval route
 
-- Local complete act: [`output/pdf/ch-99-225-laws-of-florida.pdf`](output/pdf/ch-99-225-laws-of-florida.pdf). Section 27 begins on session-law page 20.
+- Local complete act, when downloaded: `sources/pdfs/ch-99-225-laws-of-florida.pdf`. Section 27 begins on session-law page 20. See [`sources/manifest.md`](sources/manifest.md).
 - Official source: [ch. 99-225, Laws of Florida](https://laws.flrules.org/files/Ch_1999-225.pdf).
 
 ## Q3 - May 24, 1990 staff analysis
@@ -63,9 +63,9 @@ The May 24 draft used **section 41**. The enacted law used **section 48** for th
 
 ### Document and retrieval route
 
-- Local seven-page analysis: [`output/pdf/CS-SB-2670-senate-staff-analysis-1990-05-24.pdf`](output/pdf/CS-SB-2670-senate-staff-analysis-1990-05-24.pdf).
+- Local seven-page analysis, when downloaded: `sources/pdfs/CS-SB-2670-senate-staff-analysis-1990-05-24.pdf`. See [`sources/manifest.md`](sources/manifest.md).
 - Provenance source: [Respondents' Answer Brief, *MX Investments, Inc. v. Crawford*, No. 89,623](https://library.law.fsu.edu/Digital-Collections/flsupct/dockets/89623/89623ans.pdf), appendix PDF pages 15-21.
-- Local enacted chapter: [`output/pdf/ch-90-119-laws-of-florida.pdf`](output/pdf/ch-90-119-laws-of-florida.pdf).
+- Local enacted chapter, when downloaded: `sources/pdfs/ch-90-119-laws-of-florida.pdf`. See [`sources/manifest.md`](sources/manifest.md).
 - Official enacted source: [1990 Laws of Florida, vol. I, part 1](https://edocs.dlis.state.fl.us/fldocs/leg/actsflorida/1990/1990V1Pt1.pdf), ch. 90-119 at PDF pages 400-433; § 22 at PDF pages 411-412; § 48 at PDF pages 430-432.
 
 ### Recommended citation
@@ -82,7 +82,7 @@ If the archive-copy provenance matters in a footnote, add that the retrieved cop
 
 ### Document and retrieval route
 
-- Local excerpt: [`output/pdf/ch-86-160-sections-58-61-excerpt.pdf`](output/pdf/ch-86-160-sections-58-61-excerpt.pdf), official session pages 754-756.
+- Local excerpt, when downloaded: `sources/pdfs/ch-86-160-sections-58-61-excerpt.pdf`, official session pages 754-756. See [`sources/manifest.md`](sources/manifest.md).
 - Official source volume: [1986 Laws of Florida, vol. I, part 1](https://edocs.dlis.state.fl.us/fldocs/leg/actsflorida/1986/1986V1Pt1.pdf), PDF pages 772-774.
 
 ## Source-integrity notes

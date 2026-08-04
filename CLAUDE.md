@@ -249,7 +249,7 @@ Credit line, 2024 Florida Statutes: **s. 58, ch. 86-160; s. 48, ch. 90-119; s. 1
 - ⭐ **The May 24, 1990 staff analysis is retrieved.** It is a **Senate Staff Analysis and Economic Impact Statement for CS/SB 2670**. The *White* majority is correct in substance; Harding's `CS/HB 2670` is a miscitation. Page 7 states the consolidation purpose and flags the then-draft's missing § 45.061 repealer. The enrolled act cured that problem in § 22 and placed the § 768.79 rewrite in § 48.
 - **Ch. 86-160 § 60** created § 768.81; the same-session-law argument is verified.
 
-Full findings and local PDFs: `phase-1-findings.md` and `output/pdf/`.
+Full findings and retrieval manifest: `phase-1-findings.md` and `sources/manifest.md`. Local PDFs, when downloaded, live in the Git-ignored `sources/pdfs/` directory.
 
 ## Rule
 
@@ -386,7 +386,7 @@ Not usable until authorized: **Trellis** (highest value — the only route to ci
 6. **Tier B (11 cases) — light-code**, spot-checking the four high-citation entries first: *Manasse* (77), *Macedo* (44), *Joyce* (33), *Odom* (15).
 7. **Tier C (9 cases)** — no mention of § 768.79; light-code. The three pre-statute rule cases (*CU Associates*, *Cheek*, *Fixel*) matter only if Phase 2 needs the 1972–1986 rule history.
 8. **Verify** the five suspected false positives in `sc-corpus.md` §B and the 1980 rulemaking opinion.
-9. ✅ ~~**Phase 1** — pull the 1990 staff analysis and resolve ch. 87-249, ch. 99-225, and the ch. 86-160 section number~~ — **complete August 3, 2026.** See `phase-1-findings.md` and `output/pdf/`.
+9. ✅ ~~**Phase 1** — pull the 1990 staff analysis and resolve ch. 87-249, ch. 99-225, and the ch. 86-160 section number~~ — **complete August 3, 2026.** See `phase-1-findings.md` and `sources/manifest.md`.
 10. **Pull the formatted SC2025-0045 slip opinion** to resolve what changed in (c)(2)(B) and (c)(2)(F) — the plain-text version loses the underline/strikethrough.
 11. ✅ ~~**Confirm the ch. 86-160 section number for § 768.81**~~ — **§ 60, verified from the primary session law.**
 12. Resolve the three open scoping decisions.

@@ -50,7 +50,7 @@ The targeted retrievals are complete:
 3. ✅ **Ch. 99-225** did not touch § 768.79. It amended § 768.81 in section 27.
 4. ✅ **Ch. 86-160 § 60** created § 768.81; § 58 created § 768.79.
 
-Full findings, provenance, stable source URLs, and extracted PDFs are in `phase-1-findings.md` and `output/pdf/`.
+Full findings and provenance are in `phase-1-findings.md`; stable source URLs, page ranges, checksums, and local filenames are in `sources/manifest.md`. Downloaded PDFs live in the Git-ignored `sources/pdfs/` directory.
 
 **Already sourced, no archive needed:** ch. 86-160 (creation), ch. 90-119 §§ 22 and 48, ch. 97-102 (reviser's), ch. 2022-271 (§ 768.79(6), overriding *Gorka*; also renumbered the subsections), ch. 2023-15 § 11 (repealed § 627.428, eff. March 24, 2023).
 

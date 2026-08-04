@@ -32,7 +32,8 @@ The live question driving the work is ***Trace Elements, Inc. v. MacKensen***, N
 | `arc-matrix.md` | 39 cases × 10 doctrinal arcs, the Supreme Court alignment matrix by district, the two-track timeline |
 | `phase-1-handoff.md` | The legislative-track assignment as handed off (completed; retained as the assignment record) |
 | `phase-1-findings.md` | Legislative-track findings and provenance |
-| `output/pdf/` | Retrieved primary documents — session laws and the 1990 staff analysis |
+| `sources/manifest.md` | Retrieval manifest for primary documents, including official links, page ranges, sizes, and checksums |
+| `sources/pdfs/` | Local primary-document copies; intentionally ignored by Git |
 | `Trace Elements/` | Primary documents for the live case — ACIS docket, rehearing motion, response in opposition |
 
 ---
@@ -61,4 +62,4 @@ Carried from `CLAUDE.md`; they apply to anything committed here.
 
 ## Excluded from version control
 
-`tmp/` holds intermediate retrieval artifacts — full session-law volumes and per-page scans (~300 MB) used to produce the curated extracts in `output/pdf/`. Reproducible, and not part of the record.
+`tmp/` holds intermediate retrieval artifacts — full session-law volumes and per-page scans (~300 MB). `sources/pdfs/` holds curated local copies of the primary documents. Both directories are reproducible and excluded from Git; [`sources/manifest.md`](sources/manifest.md) is the tracked retrieval record.

@@ -2,7 +2,7 @@
 
 **Prepared August 3, 2026.** Self-contained: you should not need any prior conversation or file to do this work. Where you do need context from the wider project, it is reproduced below.
 
-> ✅ **Completed August 3, 2026.** All four questions were resolved from primary documents. See `phase-1-findings.md` and `output/pdf/`. This handoff remains as the assignment record; do not rerun it.
+> ✅ **Completed August 3, 2026.** All four questions were resolved from primary documents. See `phase-1-findings.md` and `sources/manifest.md`. Local PDFs live in the Git-ignored `sources/pdfs/` directory. This handoff remains as the assignment record; do not rerun it.
 
 **Return to:** Sam Harden · `/Users/samharden/Claudeo/OoJ`
 

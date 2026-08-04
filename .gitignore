@@ -1,7 +1,12 @@
 # Working scratch — intermediate retrieval artifacts.
 # Full session-law volumes and per-page PNGs used to produce the curated
-# extracts in output/pdf/. Large (~300MB) and reproducible; not part of the record.
+# extracts listed in sources/manifest.md. Large (~300MB) and reproducible;
+# not part of the Git record.
 tmp/
+
+# Local copies of primary-source PDFs. Keep the tracked retrieval manifest in
+# sources/manifest.md; download or regenerate these files as needed.
+sources/pdfs/
 
 # Machine-local Claude Code permissions, not shared project config
 .claude/settings.local.json
