@@ -136,6 +136,26 @@ The terminology shift is confirmed and it is a real trap. Querying `"768.79" + "
 - Case names contain commas and quotation marks constantly (*Willis Shaw Express, Inc. v. Hilyer Sod, Inc.*), so **quote every string field** rather than relying on a writer to decide. Escape embedded quotes by doubling.
 - Diffs cleanly in Git, which a spreadsheet binary does not — that is the point of the format. Sort rows by `date_filed` so the diff stays legible.
 
+### ✅ Built August 4, 2026 — `case-database.csv`, 87 rows × 24 columns
+
+**Five columns were added to the schema above.** All five carry information the corpus already held and the original nineteen had nowhere to put:
+
+| Added column | Why |
+|---|---|
+| `docket_number` | Six post-2020 opinions have **no reporter citation at all** (*CCM*, *Suarez Trucking*, *Trace Elements*, three rule opinions). Without this they are unidentifiable from the row |
+| `vote` | The corpus's central structural finding is that the 4–3s cluster in one arc. Format follows `arc-matrix.md`: `4-3`, `7-0`, and `4-0+3` where justices concurred in result or wrote separately |
+| `issue_tags_secondary` | `arc-matrix.md` distinguishes ● (primary authority) from ○ (touches the arc). Collapsing them into `issue_tags` would destroy that distinction. `issue_tags` = ●, `issue_tags_secondary` = ○ |
+| `category` | `A` rulemaking · `B` probable false positive · `C` merits · `X` read but outside the 85-opinion union set (*Fabre*, *Hoang Dinh Duong*) |
+| `read_status` | `read` / `unread`. Enforces the "never assert a holding for an unread case" rule at the data layer |
+
+**Counts the file reproduces:** 39 merits cases read (category `C` + `read`), 59 merits clusters, 21 rulemaking clusters, 5 suspected false positives, 2 out-of-corpus. ⚠️ The A-table in `sc-corpus.md` shows **20 rows but 21 clusters** — the October 28, 2021 omnibus restyling has two duplicate cluster entries. The CSV counts clusters.
+
+### ⚠️ Four columns are `unknown` for every row, and one of them should stay that way
+
+- `proposal_outcome`, `fee_disposition` — not recorded per case in `sc-corpus.md`. Fillable by re-reading the coded entries; nothing else blocks it.
+- `canon_invoked` — filled for the **six** cases where `sc-corpus.md` records a `Canon:` line (*Willis Shaw*, *Sarkis*, *Campbell*, *Diamond Aircraft*, *Wheaton*, *Coates*, *Trace Elements*); `unknown` elsewhere rather than inferred from the arc-2 tag, which marks that a case *engages* the canon fight, not which side it lands on.
+- 🔴 `statute_version` and `rule_version` — **left `unknown` deliberately, and deriving them from `date_filed` would be an error.** Per *Jones Boatyard*, the governing version of § 768.79 is the one in effect **when the cause of action accrued**, not when the opinion issued; § 45.061's trigger is different again (the making of the offer). Filing date is not a proxy. These have to come from each opinion's own recitation of the facts.
+
 ---
 
 ## 5. Corpus scope — recommendation

@@ -36,7 +36,7 @@ Two features distinguish it from ordinary fee-shifting.
 
 **It is split across two instruments.** The substantive right lives in **§ 768.79**; the procedure lives in **rule 1.442**. That division is constitutionally required, not stylistic, and it drives most of what follows — including which institution is able to fix a given problem.
 
-The statute calls its own awards **"penalties."** That word, in § 768.79(1), does a surprising amount of work: it supplies the premise for strict construction in [*Sarkis v. Allstate Ins. Co.*, 863 So. 2d 210 (Fla. 2003)](https://www.courtlistener.com/opinion/1831641/sarkis-v-allstate-ins-co/) and for the holding in [*Coates v. R.J. Reynolds Tobacco Co.*](https://www.courtlistener.com/opinion/9406669/brinda-coates-etc-v-rj-reynolds-tobacco-company/) (Fla. 2023) that § 768.79 is **not a prevailing-party statute** — a party need not win to recover.
+The statute calls its own awards **"penalties."** That word, in § 768.79(1), does a surprising amount of work: it supplies the premise for strict construction in [*Sarkis v. Allstate Ins. Co.*, 863 So. 2d 210 (Fla. 2003)](https://www.courtlistener.com/opinion/1831641/sarkis-v-allstate-ins-co/) and for the holding in [*Coates v. R.J. Reynolds Tobacco Co.*, 365 So. 3d 353 (Fla. 2023)](https://www.courtlistener.com/opinion/9406669/brinda-coates-etc-v-rj-reynolds-tobacco-company/) that § 768.79 is **not a prevailing-party statute** — a party need not win to recover.
 
 The regime's stated purpose is settlement. [*Unicare Health Facilities, Inc. v. Mort*, 553 So. 2d 159 (Fla. 1989)](https://www.courtlistener.com/opinion/1670587/unicare-health-facilities-inc-v-mort/): the rule was implemented "**solely to encourage settlements in order to eliminate trials if possible**." Whether it does so is contested by the Court itself; see Part VI.D.
 
@@ -243,6 +243,8 @@ The canon holds that a statute in derogation of the common law is strictly const
 
 ⭐ **And the modern Court's declared method uses neither canon.** *Coates* applies the **supremacy-of-the-text principle** and states that the Court does "not add words to a statute in the guise of interpreting it." The derogation canon is never mentioned. Read with *Koppel*, the principle is: **where the text is clear, no canon applies** — which cuts against both sides of this fight.
 
+⚠️ One qualification on how far *Coates* can be pushed: **five justices joined that opinion, not six.** Labarga, J., concurred in result only, and Sasso, J., did not participate. The method is the Court's declared method, but it is not a unanimous endorsement of it.
+
 ## 3. Joint-proposal apportionment
 
 The most litigated and most divided arc. Its entire textual foundation is two sentences.
@@ -438,7 +440,7 @@ One piece of timing is worth noting: the Court adopted the restyled (c)(3) **una
 - ⚠️ The **~816 district court opinions are untouched**. Any statement here about district alignment describes *the Supreme Court's agreement with a district*, not the districts' own distribution.
 - ⚠️ **Tier B (11) and Tier C (9)** Supreme Court cases are unread. They are the low-density tail — Tier C contains no mention of § 768.79 at all — but they bound any claim that a proposition appears nowhere else.
 - ⚠️ *Ramos v. State*, *State v. Furen*, and *Watkins v. Corbett* (2d DCA 2026) are **unread**.
-- ⚠️ `365 So. 3d 353` (*Coates*) is the one **unverified reporter citation** in this document; CourtListener carries no So. 3d parallel cites for recent Florida Supreme Court decisions. Confirm against Southern Reporter before circulating.
+- ✅ `365 So. 3d 353` (*Coates*) — **verified August 4, 2026.** It was the one unverified reporter citation here. CourtListener carries no So. 3d parallel cite for the decision, but ***Trace Elements* itself cites it**: "*Coates v. R.J. Reynolds Tobacco Co.*, 365 So. 3d 353, **355** (Fla. 2023)." The Court's own citation is the confirmation; 355 is the "penalty statute" pin.
 - ⚠️ **Pin cites are not machine-verifiable.** Citation checking confirms that a citation resolves to a real case; it cannot confirm that a given page says what it is said to say. Those were taken from the opinions and are recorded in [`sc-corpus.md`](sc-corpus.md).
 
 ---

@@ -49,7 +49,7 @@
 | 35 | ⚠️ *Wheaton* | 19 | 5–2 | ● | ● | | | | | | | | ○ |
 | 36 | *CCM Condominium* | 21 | 5–2 | | | | | | | | | **●** | |
 | 37 | ⭐ *Suarez Trucking* | 22 | 5–1 | ● | | | | | | | **●** | | |
-| 38 | ⭐ ***Coates*** | 23 | 6–0 | ● | ● | | | | ● | | | | |
+| 38 | ⭐ ***Coates*** | 23 | 5–0+1 | ● | ● | | | | ● | | | | |
 | 39 | 🔴 ***Trace Elements*** | 26 | **4–3** | ● | ● | ● | | | | | | | |
 | — | *Fabre* (outside corpus) | 93 | 5–2 | | | ● | | | | | | | |
 
@@ -207,4 +207,5 @@ Compiled from the dispositions in each read opinion. Counts how often the Suprem
 - **Arc coding for Tier B (11) and Tier C (9)** — will not change the shape above; these are the low-density cases.
 - **The real district-split matrix** — needs the ~816 DCA opinions retrieved and coded via the four-signal cascade.
 - **Vote margins marked "—"** in the matrix (*TGI Friday's*, *Hannah*, *Massey*, *Shands*, *Advanced Chiropractic*) — the corpus entries record the lineup but not always a clean count. Verify before publishing any vote-margin claim.
+  - ✅ **One such claim already corrected, August 4, 2026.** *Coates* was recorded here as **6–0**; the slip opinion shows **Grosshans, J., writing; Muñiz, C.J., Canady, Couriel, and Francis, JJ., concurring; Labarga, J., concurring in result; Sasso, J., not participating.** Five justices joined the opinion, not six. Corrected to **5–0+1**, matching the *Lamb* convention. This matters because the memo relies on *Coates*'s **reasoning** — the supremacy-of-the-text method — and Labarga did not join it.
 - **A visual two-track timeline** (`dataviz`) and the master case database (**CSV**) — Phase 4 deliverables, not blockers.

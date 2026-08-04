@@ -40,6 +40,7 @@ The regime is split across two instruments by constitutional necessity — the s
 | What remains to be done | [`research-plan.md`](research-plan.md) |
 | The case law, coded | [`sc-corpus.md`](sc-corpus.md) |
 | The analytical consolidation | [`arc-matrix.md`](arc-matrix.md) |
+| The corpus as data you can query | [`case-database.csv`](case-database.csv) |
 
 ## File map
 
@@ -52,6 +53,7 @@ The regime is split across two instruments by constitutional necessity — the s
 | `phase-0-findings.md` | District-attribution cascade, corpus map, coding schema, CSV conventions |
 | `sc-corpus.md` | The 85 Florida Supreme Court opinions — triage, Tier A/B/C, coded entries, the Phase 2 rule track, the *Trace Elements* rehearing record, and district decisions read in full |
 | `arc-matrix.md` | 39 cases × 10 doctrinal arcs, the Supreme Court alignment matrix by district, the two-track timeline |
+| `case-database.csv` | **The reusable asset.** 87 rows × 24 columns — the whole 85-opinion Supreme Court set plus *Fabre* and *Hoang Dinh Duong*, keyed on CourtListener `cluster_id`, with citation, docket, category, read status, and (for the 39 read merits cases) panel, vote, and arc tags. Four columns remain uncoded and are marked `unknown` rather than guessed |
 | `phase-1-handoff.md` | The legislative-track assignment as handed off (completed; retained as the assignment record) |
 | `phase-1-findings.md` | Legislative-track findings and provenance |
 | `LICENSE` | MIT, covering the original work only — see *Licence and scope of it* above |
@@ -251,7 +253,7 @@ Carried from [`CLAUDE.md`](CLAUDE.md); they apply to anything committed here.
 # Known limits
 
 - 🔴 ***Trace Elements* is not final.** Re-pull the docket before circulating anything.
-- ⚠️ `365 So. 3d 353` (*Coates*) is the one unverified reporter citation appearing in the memo. Confirm against Southern Reporter.
+- ✅ `365 So. 3d 353` (*Coates*) — **verified August 4, 2026** from ***Trace Elements*'s own citation** of it ("365 So. 3d 353, 355"). The slip opinion was also retrieved from the Florida Supreme Court and is manifested in `sources/manifest.md` § 3. No unverified reporter citations remain in the memo.
 - ⚠️ *Ramos*, *Furen*, and *Watkins v. Corbett* are **unread** and are cited in the memo as such.
 - ⚠️ The ~816 DCA opinions are untouched. District figures are the Supreme Court's alignment, not a district split.
 - ⚠️ Tier B (11) and Tier C (9) Supreme Court cases are unread, which bounds any claim that a proposition appears nowhere else in the corpus.

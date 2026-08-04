@@ -1,6 +1,6 @@
 # Primary-Source PDF Manifest
 
-Two sets of primary documents sit outside Git, for different reasons. **Archival sources** (§ 1) are excluded because the scans are large and re-retrievable. **Live-case filings** (§ 2) are excluded because they carry counsel's contact details.
+Three sets of primary documents sit outside Git, for different reasons. **Archival sources** (§ 1) are excluded because the scans are large and re-retrievable. **Live-case filings** (§ 2) are excluded because they carry counsel's contact details. **Slip opinions** (§ 3) are excluded because they are freely re-retrievable from the court that issued them.
 
 ---
 
@@ -74,4 +74,40 @@ Trace Elements/          # ignored — do not delete; holds the only copy of the
 ├── Case View - Trace Elements … .pdf
 ├── Motion (SC) - Rehearing.pdf
 └── Response - Response.pdf
+```
+
+---
+
+## 3. Slip opinions — *Coates v. R.J. Reynolds Tobacco Co.*
+
+Florida Supreme Court **No. SC2021-0175**. On review from Fla. 5th DCA No. 5D19-2549 (Orange County).
+
+⚠️ **There are two distinct 2023 opinions in this docket, and they are easy to conflate.** Only the second is the § 768.79 decision this project cites. Both were retrieved August 4, 2026 so the distinction stays documented.
+
+| Local filename | Size | Contents | SHA-256 |
+|---|---:|---|---|
+| `coates-v-rj-reynolds-sc2021-0175-2023-01-05.pdf` | 187 KB | **January 5, 2023**, 21 pp. **Polston, J.** Punitive damages / remittitur in a wrongful-death action. Reported at **375 So. 3d 168**. **Not a § 768.79 case** — cited here only to keep it separate from the June opinion | `ff87bcec4f0afffe4df56c6cbf9bf0a1e16796d239a3b47fe3cb74b1222dea9f` |
+| `coates-v-rj-reynolds-sc2021-0175-2023-06-15.pdf` | 125 KB | ⭐ **June 15, 2023**, 9 pp. **Grosshans, J.** — Muñiz, C.J., and Canady, Couriel, and Francis, JJ., concur; **Labarga, J., concurs in result**; **Sasso, J., did not participate.** Holds § 768.79 is **not a prevailing-party statute**. **This is the *Coates* the project cites**, reported at **365 So. 3d 353** | `a0b0e6ee06d65cb9982cb44bc9c689709f839e90140992141fc811a1c0213b08` |
+
+### Where to get them again
+
+| Document | Source |
+|---|---|
+| **June 15, 2023 opinion (the § 768.79 one)** | [Florida Supreme Court slip opinion PDF](https://flcourts-media.flcourts.gov/content/download/871058/opinion/sc21-175.pdf) · [CourtListener](https://www.courtlistener.com/opinion/9406669/brinda-coates-etc-v-rj-reynolds-tobacco-company/) |
+| **January 5, 2023 opinion (punitive damages)** | [Florida Supreme Court slip opinion PDF](https://flcourts-media.flcourts.gov/content/download/857335/opinion/sc21-175.pdf) · [CourtListener](https://www.courtlistener.com/opinion/9356709/brinda-coates-etc-v-rj-reynolds-tobacco-company/) |
+| **Live docket** | [ACIS — SC2021-0175](https://acis.flcourts.gov/portal/court/68f021c4-6a44-4735-9a76-5360b2e8af13/case/6077627B-F052-4A5D-9EE1-627CA41878EB) |
+
+### ⚠️ Retrieval traps found while doing this
+
+1. **The reporter citation is not in CourtListener.** The June 15 cluster carries an **empty `citations` array**, and a `search` on `citation: "365 So. 3d 353"` returns **zero results**. The cite was confirmed instead from ***Trace Elements*'s own text**, which reads: "*Coates v. R.J. Reynolds Tobacco Co.*, 365 So. 3d 353, 355 (Fla. 2023)." **For recent Florida Supreme Court decisions, verify reporter cites from a later opinion citing them, not from CourtListener metadata.**
+2. **`375 So. 3d 168` is the January opinion, not this one.** Secondary databases surface it under the same case name. Do not substitute it.
+3. **Both opinions share the file name `sc21-175.pdf`** on the court's server and are distinguished only by the numeric download id — **857335** (January) and **871058** (June). Keep the ids.
+4. **The docket number is written two ways.** CourtListener's older docket record says `SC21-175` and carries only the January cluster; the docket holding the June cluster says `SC2021-0175`. **A docket-number query in one format silently misses the other opinion.**
+
+### Local layout
+
+```text
+sources/pdfs/            # ignored
+├── coates-v-rj-reynolds-sc2021-0175-2023-01-05.pdf
+└── coates-v-rj-reynolds-sc2021-0175-2023-06-15.pdf
 ```

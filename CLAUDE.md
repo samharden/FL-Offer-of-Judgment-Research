@@ -19,6 +19,7 @@ Owner: Sam Harden. Working directory: `/Users/samharden/Claudeo/OoJ`. **Git repo
 | `sc-corpus.md` | The 85 Florida Supreme Court opinions: triage, Tier A/B/C split, coded entries. **Also holds the completed Phase 2 rule-track section and the *Trace Elements* rehearing record** |
 | `arc-matrix.md` | **Phase 3 consolidation (Aug 3)** — 39 cases × 10 arcs, the Supreme Court alignment matrix by district, and the two-track timeline |
 | `memo.md` | ⭐ **The deliverable — a survey of the whole regime** (rewritten Aug 4 after a scope correction). Eight parts: mechanics · two-track history · constitutional architecture · all ten arcs · cross-cutting patterns · open gaps · limits. Every case hyperlinked; citations verified |
+| `case-database.csv` | ⭐ **The reusable asset (built Aug. 4, 2026)** — 87 rows × 24 columns. The full 85-opinion Supreme Court union set plus *Fabre* and *Hoang Dinh Duong*, keyed on `cluster_id`, with citation, docket, category (A/B/C/X), read status, and — for the 39 read merits cases — panel, vote, and arc tags. Schema in `phase-0-findings.md` §4 |
 | `visuals/two-track-timeline.html` | The two-track timeline as a standalone page — 35 events, statute vs. Court, with the three causal loops. Also published as an artifact |
 | `phase-1-handoff.md` | **Self-contained brief for the legislative track**, written for an outside collaborator. Four questions, the traps, sources, deliverable standards |
 | `phase-1-findings.md` | **Completed legislative-track findings.** Resolves all four handoff questions and links the retrieved primary PDFs |
@@ -52,9 +53,9 @@ The five Phase 1 PDFs were briefly committed under `output/pdf/` before this pol
 | **1** — legislative track | ✅ **Complete.** Chs. 87-249 and 99-225 resolved; May 24, 1990 CS/SB 2670 Senate staff analysis retrieved; ch. 86-160 § 60 verified |
 | **2** — rule track | ✅ **Complete.** All amendment opinions read: 550 So. 2d 442 (1989), 682 So. 2d 105 (1996), 112 So. 3d 1209 (2013), SC2025-0045 (Nov. 13, 2025). *Fabre* origin of (c)(3) **verified from the committee note itself**. Coded in `sc-corpus.md` |
 | **3** — case law | 85 SC opinions triaged. **39 of ~57 merits cases read** (the "40" figure was off by one — see `arc-matrix.md`), plus the separate dissents in *Gorka*, *Pratt*, *Audiffred*. **Tier A complete. 1989–1996 foundation complete. ✅ All 39 coded against the ten arcs, Aug. 3.** Remaining: Tier B (11), Tier C (9), and the DCA corpus |
-| **4** — synthesis | **Started Aug. 3.** Arc matrix, Supreme Court alignment matrix, and two-track timeline built in `arc-matrix.md`. **Next: draft the memo** |
+| **4** — synthesis | **Substantially complete (Aug. 4).** Arc matrix, alignment matrix, and two-track timeline in `arc-matrix.md`; the survey memo in `memo.md`; the timeline visual in `visuals/`; the case database in `case-database.csv`. **Remaining: the practitioner checklist, and a second pass once rehearing resolves** |
 
-**Merits cases read (40):** *Unicare*, *Aspen*, *Leapai*, *Timmons*, *Jones Boatyard*, *TGI Friday's*, *Hannah*, *Knealing*, *Gulliver Academy*, *MX Investments*, *MGR Equipment*, *Rollins*, *Hingson*, *White v. Steak & Ale*, *Willis Shaw*, *Sarkis*, *D'Angelo*, *Lamb*, *Saia*, *Nichols*, *Campbell*, *Frosti*, *Massey*, *Gorka*, *Southeast Floating Docks*, *Shands*, *Diamond Aircraft*, *Advanced Chiropractic*, *Pratt*, *Audiffred*, *Anderson*, *Kuhajda*, *Koppel*, *Allen v. Nunez*, *Wheaton*, *CCM Condominium*, *Suarez Trucking*, *Coates*, *Trace Elements*.
+**Merits cases read (39** — the list below is the authority; the old "40" was an off-by-one, see `arc-matrix.md`**):** *Unicare*, *Aspen*, *Leapai*, *Timmons*, *Jones Boatyard*, *TGI Friday's*, *Hannah*, *Knealing*, *Gulliver Academy*, *MX Investments*, *MGR Equipment*, *Rollins*, *Hingson*, *White v. Steak & Ale*, *Willis Shaw*, *Sarkis*, *D'Angelo*, *Lamb*, *Saia*, *Nichols*, *Campbell*, *Frosti*, *Massey*, *Gorka*, *Southeast Floating Docks*, *Shands*, *Diamond Aircraft*, *Advanced Chiropractic*, *Pratt*, *Audiffred*, *Anderson*, *Kuhajda*, *Koppel*, *Allen v. Nunez*, *Wheaton*, *CCM Condominium*, *Suarez Trucking*, *Coates*, *Trace Elements*.
 
 **Also read, outside the merits corpus:** the four rule-amendment opinions (550 So. 2d 442 · 682 So. 2d 105 · 112 So. 3d 1209 · SC2025-0045); ***Fabre v. Marin***, 623 So. 2d 1182 (Fla. 1993); ***Hoang Dinh Duong v. Ziadie***, 153 So. 3d 354 (Fla. 4th DCA 2014) — **read in full Aug. 4**; the *Trace Elements* rehearing motion and response; the ACIS docket.
 
@@ -230,13 +231,15 @@ Dissented on **jurisdictional** grounds in *Pratt* (2015), *Audiffred* (2015), *
 
 ## Bench composition
 
-*Coates* (2023) — Muñiz, C.J., Canady, Couriel, Francis, Grosshans, Labarga; **Sasso did not participate**.
+*Coates* (2023) — ✅ **verified from the slip opinion August 4, 2026.** **Grosshans, J.**, writes; **Muñiz, C.J., and Canady, Couriel, and Francis, JJ., concur**; **Labarga, J., concurs in result**; **Sasso, J., did not participate**. ⚠️ **Not 6–0** — five justices joined the opinion. The memo's method argument rests on *Coates*'s **reasoning**, which Labarga did not join; say "five justices" if the point is pressed.
 **SC2025-0045 (Nov. 13, 2025)** — Muñiz, C.J., Canady, Labarga, Couriel, Grosshans, Francis, Sasso. **Unanimous.**
 *Trace Elements* (2026) — Muñiz writes; Couriel, C.J., Labarga, Grosshans concur; **Sasso, Francis, Tanenbaum dissent**.
 **Francis moved from the *Coates* majority to the *Trace Elements* dissent.**
 ⭐ **The bench turned over between the 2025 rule amendment and *Trace Elements*:** Canady is gone, **Tanenbaum** has joined, and the chief justiceship passed **Muñiz → Couriel** — with Muñiz, no longer chief, writing the majority. Every justice who joined the unanimous November 2025 restyling of (c)(3) except Canady was still sitting in July 2026, and **three of them dissented** on what it means. ⚠️ Verify against the Court's roster before relying on this.
 
-⚠️ **Labarga tension to check:** dissents in *Suarez Trucking* (2022) arguing for a common-law overlay, then joins the *Trace Elements* majority applying rigid rule enforcement. Verify before characterizing his position.
+⚠️ **Labarga tension to check:** dissents in *Suarez Trucking* (2022) arguing for a common-law overlay, then joins the *Trace Elements* majority applying rigid rule enforcement. Verify before characterizing their position.
+
+⭐ **Partly resolved August 4, 2026.** Labarga **concurred in result only** in *Coates* — so they never joined the supremacy-of-the-text method either. The through-line is not "textualist in 2023, rigid in 2026"; it is that Labarga has declined to join this Court's stated interpretive method twice and still reached the strict-enforcement result in 2026. Whatever the position is, it is not method-driven.
 
 ---
 
@@ -341,6 +344,8 @@ Era distribution for `"768.79"`: pre-1996 = 100 · 1996–2006 = 302 · 2006–2
 
 🆕 **New conflict case to pull:** ***Watkins v. Corbett*, No. 2D2025-0214, 2026 WL 816637 (Fla. 2d DCA Mar. 25, 2026)** — filed by petitioner on 03/27/2026 as supplemental authority "that Expressly and Directly Conflicts with the Decision on Review." Post-dates the corpus build; not yet in `sc-corpus.md`.
 
+⭐ **Upgraded August 4, 2026 — the majority does not merely note *Watkins*, it relies on it.** *Trace Elements* n.3, disposing of the tenancy-by-the-entireties argument: "we are persuaded by the Second District's rejection of this very argument in *Cobb* and again in *Watkins v. Corbett*, 2026 WL 816637 (Fla. 2d DCA Mar. 25, 2026). See *Cobb*, 111 So. 3d at 278; *Watkins*, 2026 WL 816637, at \*2." **A four-month-old district decision is load-bearing for the majority's answer to the spousal-unity argument, and it is unread.** Raise its priority.
+
 ---
 
 # TOOLING GOTCHAS — expensive to rediscover
@@ -359,6 +364,10 @@ Era distribution for `"768.79"`: pre-1996 = 100 · 1996–2006 = 302 · 2006–2
 - **Search fields are camelCase** (`caseName`, `dateFiled`); API fields are snake_case (`case_name`, `citations`). Don't copy one into the other.
 - **Search `type=o` returns opinions, not cases.** `opinion_id` diverges from `cluster_id` for concurrences and dissents. **De-dup on `cluster_id`.** Separate dissents are usually **majority `opinion_id` + 1**; confirm via the cluster's `sub_opinions`.
 - Always request `fields`.
+- 🔴 **Reporter citations for recent Florida Supreme Court decisions are simply absent.** The *Coates* cluster carries an **empty `citations` array**, and `search` with `citation: "365 So. 3d 353"` returns **zero results** even though the cite is real. **Confirm modern So. 3d cites from a later opinion that cites the case** — *Trace Elements* supplied this one. Do not treat CourtListener's silence as evidence the cite is wrong.
+- 🔴 **The same case can sit under two docket-number formats in two separate dockets.** *Coates* has a `SC21-175` docket (January 5, 2023 opinion only) and a `SC2021-0175` docket (June 15, 2023 opinion only). **Querying `docket__docket_number` in one format silently returns half the case.** Query the cluster or search by case name instead.
+- ⚠️ **`/opinion/<N>/` in a CourtListener *URL* is the `cluster_id`, not the `opinion_id`.** Passing that number to the `opinions` endpoint returns an unrelated case — it did here, returning a Texas criminal opinion. Use the `clusters` endpoint for URL numbers.
+- ⚠️ **One docket can hold several opinions on unrelated questions.** *Coates* has two 2023 merits opinions — punitive damages (Jan. 5, **375 So. 3d 168**) and § 768.79 (June 15, **365 So. 3d 353**). Both are "*Coates* (Fla. 2023)". Always pin the date.
 
 ## LegiScan
 
@@ -412,8 +421,10 @@ Not usable until authorized: **Trellis** (highest value — the only route to ci
 ### The critical path
 
 1. ✅ ~~Consolidate Phase 3 analytically~~ — **done August 3, 2026.** See `arc-matrix.md`. Three findings feed the memo: the 4–3s cluster in the apportionment arc; **arc 6 (good faith) has no squarely decided case** and is the corpus's real gap; the district work to date is the **Supreme Court's alignment matrix**, not the district-split matrix.
-2. **Draft the doctrinal memo.** ⬅️ **Now the critical path.**
-3. ⚠️ **Re-pull the ACIS docket immediately before anything ships.** Rehearing is pending; denial looks likely but is not certain.
+2. ✅ ~~Draft the doctrinal memo~~ — **done August 4, 2026.** `memo.md`, eight parts, citations verified, scope corrected to a survey.
+3. ✅ ~~Build the master case database~~ — **done August 4, 2026.** `case-database.csv`, 87 rows. Four columns remain uncoded; see `phase-0-findings.md` §4.
+4. ⚠️ **Re-pull the ACIS docket immediately before anything ships.** ⬅️ **Now the critical path.** Rehearing is pending; denial looks likely but is not certain. Last pulled **August 3, 2026, 8:38 a.m.**
+5. **Practitioner checklist** — the remaining Phase 4 deliverable. Spine is sketched in `research-plan.md` § Phase 4 item 5.
 
 ### Supporting research — parallelizable, none blocking
 

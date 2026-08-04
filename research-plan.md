@@ -92,9 +92,12 @@ The thesis is settled enough to write. Deliverables, in order of value:
 
 1. ✅ **Survey of the regime** — **Markdown** (`memo.md`). ⭐ **Scope corrected August 4, 2026.** Drafted first as an argument about *Trace Elements*, then rewritten as a survey: how offers of judgment work mechanically, the two-track history, the constitutional architecture, all ten arcs, cross-cutting patterns, gaps. *Trace Elements* is one decision inside arc 3.
    - **The framing test for future work:** does this describe how the regime works, or does it argue about one case? The first is the spine.
-   - Still to do: a second pass once *Trace Elements* rehearing resolves, and confirmation of `365 So. 3d 353` (*Coates*).
+   - ✅ `365 So. 3d 353` (*Coates*) **confirmed August 4, 2026** from *Trace Elements*'s own citation, and the June 15, 2023 slip opinion retrieved from the Florida Supreme Court. That retrieval also corrected the recorded vote (**5–0+1**, not 6–0) — see `arc-matrix.md` § 5.
+   - Still to do: a second pass once *Trace Elements* rehearing resolves.
 2. ✅ **Two-track timeline** — built, at `visuals/two-track-timeline.html` (also published as an artifact). 35 events, statute vs. Court, three causal loops called out, table view included.
-3. **Master case database** — **CSV** (`case-database.csv`). The reusable asset. Schema in `phase-0-findings.md` §4.
+3. ✅ **Master case database** — **CSV** (`case-database.csv`), built **August 4, 2026**. 87 rows (the full 85-opinion union set, plus *Fabre* and *Hoang Dinh Duong*) × 24 columns. Every row carries `cluster_id`, `opinion_id`, citation, docket number, date, category, and read status; the 39 read merits cases also carry panel, vote, and arc tags. Schema and the five added columns are documented in `phase-0-findings.md` §4.
+   - **Still to fill:** `proposal_outcome` and `fee_disposition` (every row), and `canon_invoked` for all but seven. Each is a re-read of coded entries already in `sc-corpus.md`, not new research.
+   - 🔴 **Do not backfill `statute_version` / `rule_version` from `date_filed`.** Per *Jones Boatyard* the governing statutory version keys to the **accrual date**. They must come from each opinion's facts.
 4. **District-split matrix** — requires the DCA corpus coded by district.
 5. **Practitioner checklist.** Anchor on the *Anderson* / *Audiffred* line: a proposal becomes "joint" when it **speaks for or binds** another party, not merely because another party has claims pending. Include the drafting traps found — rule 1.442(f)(1) excludes Fla. R. Jud. Admin. 2.514(b); a rule 1.090 motion does **not** toll acceptance (*Koppel*); offers may not be aggregated (*Anderson*); dismissal must be **with prejudice** (*MX Investments*).
 6. **Live-issues watchlist.** *Trace Elements* rehearing status; whether the Rules Committee takes up the majority's invitation to amend (c)(3); the 2027 session.
