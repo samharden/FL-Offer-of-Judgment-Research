@@ -29,7 +29,18 @@ Owner: Sam Harden. Working directory: `/Users/samharden/Claudeo/OoJ`. **Git repo
 
 **Decision recorded August 3, 2026:** archival source PDFs do not belong in Git. Local copies live in the Git-ignored `sources/pdfs/` directory; `sources/manifest.md` is the tracked record and must preserve each filename, official retrieval URL, relevant source pages, file size, and SHA-256 checksum. New source PDFs should follow the same pattern.
 
-**The line runs between archival and live-case material.** Session laws, staff analyses, and other archival documents are re-retrievable from a stable official URL, so the manifest is sufficient and the bytes stay out of Git. Filings in the live case are not — the `Trace Elements/` documents are a dated snapshot of a docket that is still moving, and the ACIS copies carry a print timestamp that cannot be reproduced later. **Those three files are tracked deliberately** (1.8 MB total). Apply the same test to anything new: if it can be pulled again from an official source, manifest it; if it is a point-in-time capture, commit it.
+⚠️ **REVISED August 4, 2026 — a second test now overrides the first.**
+
+The original rule was **re-retrievability**: manifest what can be pulled again from an official source; commit what is a point-in-time capture. On that test the `Trace Elements/` filings were tracked deliberately, because the ACIS docket print timestamp is not reproducible.
+
+**A GitHub remote was then added, and that changed the analysis.** The two briefs carry **nine email addresses** between them, plus firm addresses and phone numbers, in their certificates of service. They are public records — but publishing them to a crawlable, indexed repository is a materially different exposure from the same document sitting behind a court portal. **Contact details for named third parties outrank the archival convenience of tracking the bytes.**
+
+**So the policy is now two tests, in order:**
+
+1. **Does it contain personal contact details for people who are not party to this project?** If yes, it does not go in Git, whatever its provenance. Manifest it.
+2. **Otherwise, is it re-retrievable?** If yes, manifest it. If it is a point-in-time capture, commit it.
+
+`Trace Elements/` was untracked on August 4, 2026 and the history rewritten to remove the blobs before anything was pushed. **The local copies must not be deleted** — the August 3 docket printout is the only record of the docket while rehearing was pending, and that state is not reproducible. Retrieval routes, checksums, and the docket link are in `sources/manifest.md` § 2.
 
 The five Phase 1 PDFs were briefly committed under `output/pdf/` before this policy was adopted. Before any remote was added, `main` was rewritten to remove that path from every commit so those binary objects would not be included in a future push. Do not re-add the PDFs or recreate the pre-rewrite history on a remote. The local copies remain available and reproducible from the manifest.
 

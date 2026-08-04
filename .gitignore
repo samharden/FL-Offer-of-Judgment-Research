@@ -8,6 +8,12 @@ tmp/
 # sources/manifest.md; download or regenerate these files as needed.
 sources/pdfs/
 
+# Live-case filings. Public records, but they carry counsel's email addresses,
+# firm addresses and phone numbers in the certificates of service — which do not
+# belong in a crawlable public repository. Local copies stay here; the tracked
+# record is the live-case section of sources/manifest.md.
+Trace Elements/
+
 # Machine-local Claude Code permissions, not shared project config
 .claude/settings.local.json
 
