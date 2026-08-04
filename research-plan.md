@@ -90,8 +90,10 @@ All three outstanding opinions read, plus *Fabre* and the 1996 rewrite. Coded in
 
 The thesis is settled enough to write. Deliverables, in order of value:
 
-1. **Doctrinal memo** — **Markdown** (`memo.md`). Structure follows the thesis in CLAUDE.md: open with the Court's self-diagnosis (*Allen v. Nunez*), then the apportionment line's single contested inference, the *Fabre* mismatch, the repudiation pattern, and the *Coates* method tension. Address *Koppel*'s threshold answer to the rule-1.010 argument rather than presenting rule 1.010 as clean.
-2. **Two-track timeline.** Statute and rule amendments on one axis, decisions on the other, arrows for every override and conforming amendment. Use the `dataviz` skill.
+1. ✅ **Survey of the regime** — **Markdown** (`memo.md`). ⭐ **Scope corrected August 4, 2026.** Drafted first as an argument about *Trace Elements*, then rewritten as a survey: how offers of judgment work mechanically, the two-track history, the constitutional architecture, all ten arcs, cross-cutting patterns, gaps. *Trace Elements* is one decision inside arc 3.
+   - **The framing test for future work:** does this describe how the regime works, or does it argue about one case? The first is the spine.
+   - Still to do: a second pass once *Trace Elements* rehearing resolves, and confirmation of `365 So. 3d 353` (*Coates*).
+2. ✅ **Two-track timeline** — built, at `visuals/two-track-timeline.html` (also published as an artifact). 35 events, statute vs. Court, three causal loops called out, table view included.
 3. **Master case database** — **CSV** (`case-database.csv`). The reusable asset. Schema in `phase-0-findings.md` §4.
 4. **District-split matrix** — requires the DCA corpus coded by district.
 5. **Practitioner checklist.** Anchor on the *Anderson* / *Audiffred* line: a proposal becomes "joint" when it **speaks for or binds** another party, not merely because another party has claims pending. Include the drafting traps found — rule 1.442(f)(1) excludes Fla. R. Jud. Admin. 2.514(b); a rule 1.090 motion does **not** toll acceptance (*Koppel*); offers may not be aggregated (*Anderson*); dismissal must be **with prejudice** (*MX Investments*).

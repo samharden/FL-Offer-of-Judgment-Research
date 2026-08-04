@@ -1,355 +1,446 @@
-# The Weakest Link
+# Florida's Offer of Judgment
 
-### Rule 1.442(c)(3), *Trace Elements*, and a Premise Nobody Has Defended in Twenty-Four Years
+### How the regime works, and how it got that way
 
+**Fla. Stat. § 768.79 · Fla. R. Civ. P. 1.442**
 **Date:** August 4, 2026
-**Re:** Fla. Stat. § 768.79 and Fla. R. Civ. P. 1.442(c)(3) — the joint-proposal apportionment requirement
-**Status:** 🔴 ***Trace Elements* is not final.** A motion for clarification and rehearing was filed July 17, 2026 and remains undecided; no mandate has issued. Re-pull the ACIS docket before this is used or circulated.
+
+> 🔴 One live matter affects several statements below. ***Trace Elements, Inc. v. MacKensen***, No. SC2024-1274 (Fla. July 2, 2026), is **not final** — a motion for clarification and rehearing was filed July 17, 2026 and remains undecided. Re-pull the docket before relying on Part VI.C.
 
 ---
 
-## I. The argument in brief
+## Contents
 
-[*Trace Elements, Inc. v. MacKensen*, No. SC2024-1274 (Fla. July 2, 2026)](https://www.courtlistener.com/opinion/10883903/trace-elements-inc-v-nadja-mackensen/), holds 4–3 that rule 1.442(c)(3) requires a married couple to apportion a settlement proposal between themselves even when they assert a single, unified claim.
+| Part | Subject |
+|---|---|
+| **I** | What the regime is |
+| **II** | How it works today — the mechanics |
+| **III** | Where it came from — two tracks, fifty-four years |
+| **IV** | The constitutional architecture |
+| **V** | The ten doctrinal arcs |
+| **VI** | Patterns across the whole |
+| **VII** | Open questions and gaps |
+| **VIII** | Limits of this survey |
 
-The instinctive criticism — that *Trace Elements* is inconsistent with [*Kuhajda v. Borden Dairy Co. of Alabama, LLC*, 202 So. 3d 391 (Fla. 2016)](https://www.courtlistener.com/opinion/4314140/susanne-l-kuhajda-v-borden-dairy-company-of-alabama-llc/) — is wrong, and pressing it wastes the strongest available ground. **Under *Kuhajda*'s own test, *Trace Elements* is correctly decided.** *Kuhajda* asks whether a rule provision implements a substantive requirement of § 768.79. If it does, strict construction applies. The majority answers that (c)(3) does implement such a requirement, because [*Allstate Indemnity Co. v. Hingson*, 808 So. 2d 197 (Fla. 2002)](https://www.courtlistener.com/opinion/1860954/allstate-indem-co-v-hingson/), and [*Attorneys' Title Insurance Fund, Inc. v. Gorka*, 36 So. 3d 646 (Fla. 2010)](https://www.courtlistener.com/opinion/1555417/attorneys-title-insurance-fund-inc-v-gorka/), read the singular "party" in § 768.79(2)(b) to require apportionment. Given that premise, the result follows almost mechanically.
-
-The vulnerability is the premise itself. This memorandum makes four claims:
-
-1. **The apportionment requirement rests on a single contested inference** — two hedged sentences in a 4–3 decision, decided against three of the four district courts then to have ruled, over a dissent citing the Legislature's own definitional statute, and **never revisited in twenty-four years**.
-2. **The rule provision was drafted for a different purpose.** The 1996 committee note says (c)(3) exists "in order to conform with *Fabre v. Marin*" — a defendant-side fault-allocation case. Reading *Fabre* shows the provision is now being applied to the mirror image of the situation that produced it.
-3. **Every extension of this line has been repudiated by whoever got the next word** — the Court by its own rule amendment, the Legislature by statute, and the Rules Committee before either.
-4. **The modern Court's declared interpretive method is in tension with the line it inherited.** [*Coates v. R.J. Reynolds Tobacco Co.*, 365 So. 3d 353 (Fla. 2023)](https://www.courtlistener.com/opinion/9406669/brinda-coates-etc-v-rj-reynolds-tobacco-company/), which *Trace Elements* cites, applies the supremacy-of-the-text principle and says the Court does not add words to a statute in the guise of interpreting it. *Hingson* and *Gorka* each added words.
-
-The through-line: this is not a doctrine that has been tested and held. It is a doctrine that has never been tested at all, extended repeatedly, and corrected from outside each time it was.
+A visual companion to Part III is at [`visuals/two-track-timeline.html`](visuals/two-track-timeline.html).
 
 ---
 
-## II. Start where the Court did
+# I. What the regime is
 
-The most useful sentence in this field was written by three of its members. Dissenting in [*Allen v. Nunez*, 258 So. 3d 1207 (Fla. 2018)](https://www.courtlistener.com/opinion/4540927/w-riley-allen-v-jairo-rafael-nunez/), Polston, J., joined by Canady, C.J., and Lawson, J., wrote that this Court's jurisprudence
+Florida's offer-of-judgment regime is a **fee-shifting sanction for unreasonably rejecting a settlement offer**. A party serves a written proposal; if the other side rejects it and then does sufficiently worse at trial, the rejecting party pays the offeror's attorney's fees and costs from the date the proposal was served.
 
-> "in this area of the law seems **inconsistently applied and unpredictable**."
+Two features distinguish it from ordinary fee-shifting.
 
-That is not an advocate's characterization. And the majority's answer, in footnote 2, does not dispute the diagnosis — it says only that inconsistency is why the Court must exercise jurisdiction to eliminate it.
+**It is mechanical, not equitable.** Entitlement is arithmetic. Once the numbers line up, the court has no discretion to deny fees on the ground that rejection was reasonable — a point settled in [*TGI Friday's, Inc. v. Dvorak*, 663 So. 2d 606 (Fla. 1995)](https://www.courtlistener.com/opinion/1715682/tgi-fridays-inc-v-dvorak/), adopting the framework of [*Schmidt v. Fortner*, 629 So. 2d 1036 (Fla. 4th DCA 1993)](https://www.courtlistener.com/opinion/1676218/schmidt-v-fortner/). The only escape is a finding that the proposal was not made in good faith.
 
-The diagnosis is also structurally demonstrable rather than impressionistic. Coding thirty-nine Florida Supreme Court merits decisions against ten doctrinal arcs produces a clear pattern: **the Court's divisions are not distributed across § 768.79. They cluster in one arc.**
+**It is split across two instruments.** The substantive right lives in **§ 768.79**; the procedure lives in **rule 1.442**. That division is constitutionally required, not stylistic, and it drives most of what follows — including which institution is able to fix a given problem.
 
-| Arc | Primary authorities | Character of the majorities |
+The statute calls its own awards **"penalties."** That word, in § 768.79(1), does a surprising amount of work: it supplies the premise for strict construction in [*Sarkis v. Allstate Ins. Co.*, 863 So. 2d 210 (Fla. 2003)](https://www.courtlistener.com/opinion/1831641/sarkis-v-allstate-ins-co/) and for the holding in [*Coates v. R.J. Reynolds Tobacco Co.*](https://www.courtlistener.com/opinion/9406669/brinda-coates-etc-v-rj-reynolds-tobacco-company/) (Fla. 2023) that § 768.79 is **not a prevailing-party statute** — a party need not win to recover.
+
+The regime's stated purpose is settlement. [*Unicare Health Facilities, Inc. v. Mort*, 553 So. 2d 159 (Fla. 1989)](https://www.courtlistener.com/opinion/1670587/unicare-health-facilities-inc-v-mort/): the rule was implemented "**solely to encourage settlements in order to eliminate trials if possible**." Whether it does so is contested by the Court itself; see Part VI.D.
+
+---
+
+# II. How it works today — the mechanics
+
+## A. Timing
+
+Rule 1.442(b) sets the window:
+
+- A proposal **to a defendant** may be served no earlier than **90 days after service of process** on that defendant.
+- A proposal **to a plaintiff** may be served no earlier than **90 days after the action commenced**.
+- No proposal may be served later than **45 days before** the trial date or the first day of the trial docket, whichever is earlier.
+
+**Mediation has no effect on these dates** — rule 1.442(j). That is itself a constitutional artifact: the Legislature tried to alter the timing through § 44.102(6), and [*Knealing v. Puleo*, 675 So. 2d 593 (Fla. 1996)](https://www.courtlistener.com/opinion/1725782/knealing-v-puleo/), struck the attempt as purely procedural. See Part IV.
+
+## B. Form and content
+
+A proposal must be in writing and must identify the Florida law under which it is made — rule 1.442(c)(1). **Citing only the rule is fatal**; the proposal must cite § 768.79 itself, because § 768.79(2)(a) requires it to "state that it is being made pursuant to this section." [*Campbell v. Goldman*, 959 So. 2d 223 (Fla. 2007)](https://www.courtlistener.com/opinion/1140885/campbell-v-goldman/).
+
+Rule 1.442(c)(2) then requires that a proposal:
+
+| Subdivision | Requirement |
+|---|---|
+| **(A)** | Name the party making it and the party to whom it is made |
+| **(B)** | State that it resolves all damages that would otherwise be awarded in final judgment |
+| **(C)** | State with particularity any relevant conditions |
+| **(D)** | State the total amount and all nonmonetary terms with particularity |
+| **(E)** | State with particularity the amount proposed to settle a punitive damages claim, if any |
+| **(F)** | State whether it includes attorney's fees and whether fees are part of the legal claim |
+| **(G)** | Include a certificate of service |
+
+## C. Joint proposals
+
+Rule 1.442(c)(3): a proposal may be made by or to any party or parties and any combination of them, but **"[a] joint proposal must state the amount and terms attributable to each party."**
+
+Rule 1.442(c)(4) carves out one exception: where a party is alleged to be **solely vicariously, constructively, derivatively, or technically liable**, a joint proposal made by or served on that party need not apportion as to it.
+
+This is the most litigated provision in the regime. Part V.3 traces why.
+
+## D. Acceptance, rejection, withdrawal
+
+- A proposal is **deemed rejected** unless accepted by written notice delivered within **30 days** — rule 1.442(f)(1).
+- 🔴 **The extra-days-for-service provision does not apply.** Rule 1.442(f)(1) expressly excludes Fla. R. Jud. Admin. 2.514(b). Thirty days means thirty days.
+- **No oral communication** constitutes acceptance, rejection, or counteroffer.
+- A proposal may be **withdrawn in writing** before a written acceptance is delivered; once withdrawn it is void — rule 1.442(e).
+- **A motion to enlarge time does not toll the 30 days.** [*Koppel v. Ochoa*, 243 So. 3d 886 (Fla. 2018)](https://www.courtlistener.com/opinion/4498881/donna-koppel-v-laura-ochoa/), disapproving nineteen years of contrary authority.
+- **A counteroffer does not terminate the offer.** *Scope v. Fannelli*, 639 So. 2d 141 (Fla. 5th DCA 1994). Only written withdrawal or expiry does.
+- **Filing a written acceptance forms the contract.** [*Suarez Trucking FL Corp. v. Souders*](https://www.courtlistener.com/opinion/8404436/suarez-trucking-fl-corp-v-adam-j-souders/) (Fla. 2022): "Once a proper acceptance … is filed as specified in the statute, that's it: a settlement contract has been entered."
+
+Proposals are **served, not filed**, unless filing is necessary to enforce the rule — rule 1.442(d).
+
+## E. The entitlement calculation
+
+The comparison is the heart of it:
+
+| Offeror | Entitlement threshold |
+|---|---|
+| **Defendant** | Judgment is one of **no liability**, or the judgment obtained by the plaintiff is **at least 25% less** than the defendant's offer |
+| **Plaintiff** | Judgment obtained is **at least 25% greater** than the plaintiff's demand |
+
+Fees run from the date the proposal was served.
+
+**"Judgment obtained" is a term of art.** Under [*White v. Steak and Ale of Florida, Inc.*, 816 So. 2d 546 (Fla. 2002)](https://www.courtlistener.com/opinion/1912574/white-v-steak-and-ale-of-florida-inc/), it is not the verdict alone. It is the net judgment for damages **plus** attorney's fees, taxable costs, and prejudgment interest **as they stood on the date of the offer**.
+
+Three refinements:
+
+- **Post-offer prejudgment interest is excluded.** [*CCM Condominium Ass'n v. Petri Positive Pest Control*](https://www.courtlistener.com/opinion/5092491/ccm-condominium-association-inc-etc-v-petri-positive-pest-control/) (Fla. 2021).
+- **The whole net judgment counts**, not a favourable slice of it. [*Frosti v. Creel*, 979 So. 2d 912 (Fla. 2008)](https://www.courtlistener.com/opinion/1785275/frosti-v-creel/).
+- **Separate proposals may not be aggregated** and compared against the judgment. [*Anderson v. Hilton Hotels Corp.*, 202 So. 3d 846 (Fla. 2016)](https://www.courtlistener.com/opinion/4317987/troy-anderson-v-hilton-hotels-corporation-etc/).
+
+⚠️ **Setoffs can be decisive.** Because the comparison is arithmetic, a setoff that moves the judgment a few hundred dollars can eliminate entitlement outright — which is what happened in *Rollins v. Pizzarelli* (Fla. 2000), where a PIP setoff dropped a $25,048 judgment to $24,523.22 and destroyed a fee claim on a $20,000 demand.
+
+## F. Good faith — the only discretionary escape
+
+Section 768.79(8)(a) (2024; **(7)(a) in pre-2022 sources**) lets the court disallow an award if it determines the proposal **was not made in good faith**. Subsection (8)(b) supplies factors going to the *amount*, not entitlement.
+
+**Motive is irrelevant to facial validity.** *Anderson*: "[t]he underlying motives of a party that proposes settlement are unrelated to the strict requirements of the … statute and rule." Motive is a good-faith question, not a validity question.
+
+⚠️ See Part VII.A: this is the least-developed area in the entire regime.
+
+## G. Claiming the fees
+
+A party seeking sanctions must serve a motion in accordance with **rule 1.525** — rule 1.442(g).
+
+- Rule 1.525's 30 days is a **bright line**. A reservation of jurisdiction in the final judgment does **not** extend it. [*Saia Motor Freight Line, Inc. v. Reid*, 930 So. 2d 598 (Fla. 2006)](https://www.courtlistener.com/opinion/1899565/saia-motor-freight-line-inc-v-reid/).
+- But it is a **ceiling, not a window** — a motion served before judgment is timely. *Frosti*.
+- ⚠️ **Rule 1.442(g) and the statute measure from different events.** The rule runs 30 days from **entry of judgment** in a nonjury action but from **return of the verdict** in a jury action. "Since these time requirements are procedural, the rule prevails where it differs from the statute." [*Gulliver Academy, Inc. v. Bodek*, 694 So. 2d 675 (Fla. 1997)](https://www.courtlistener.com/opinion/1843592/gulliver-academy-inc-v-bodek/).
+- **No contingency risk multiplier** may be applied to the fee. *Sarkis*.
+- Fees **are** recoverable for appellate work. *Frosti*.
+
+## H. Where practitioners actually lose
+
+Drawn from the decided cases rather than from the rule text:
+
+1. **A joint proposal that does not apportion.** The single largest category. Part V.3.
+2. **Citing rule 1.442 without citing § 768.79.** *Campbell*.
+3. **Assuming a motion to enlarge tolls acceptance.** *Koppel*.
+4. **Counting the extra service days.** Rule 1.442(f)(1) excludes them.
+5. **Missing the rule 1.525 deadline in reliance on a reservation of jurisdiction.** *Saia*.
+6. **A general release stated too vaguely to price.** Part V.4.
+7. **Serving a proposal in an action seeking both damages and equitable relief.** Part V.5.
+8. **Taking a voluntary dismissal without prejudice and expecting fees.** [*MX Investments, Inc. v. Crawford*, 700 So. 2d 640 (Fla. 1997)](https://www.courtlistener.com/opinion/1799433/mx-investments-inc-v-crawford/): only a dismissal **with prejudice**, or a second voluntary dismissal, supports fees.
+
+---
+
+# III. Where it came from — two tracks, fifty-four years
+
+The regime is the product of two institutions editing the same subject on different schedules. The interleaving is the point.
+
+## A. The chronology
+
+| Year | Actor | Event |
+|---|---|---|
+| **1972** | Court | First Florida offer-of-judgment rule, **identical to Fed. R. Civ. P. 68** — costs only, no fees. [*In re the Florida Bar*, 265 So. 2d 21](https://www.courtlistener.com/opinion/1815658/in-re-the-florida-bar/) |
+| **1986** | Legislature | **§ 768.79 enacted**, ch. 86-160 § 58 (Tort Reform and Insurance Act). The same act creates § 768.81 at § 60 |
+| **1987** | Legislature | **§ 45.061 enacted** — a *second*, parallel offer statute, a year later |
+| **1988** | Court | Refers the three-instrument conflict to the Civil Procedure Rules Committee |
+| **1989** | Court | [550 So. 2d 442](https://www.courtlistener.com/opinion/7644473/florida-bar-re-amendment-to-rules-of-civil-procedure-rule-1442/) — rule withdrawn and replaced. **Declines to reach constitutionality**; proceeds by supersession |
+| **1990** | Legislature | Ch. 90-119 § 48 rewrites § 768.79 and lets a **defendant** recover on a judgment of no liability; § 22 repeals § 45.061 prospectively |
+| **1992** | Court | [*Leapai v. Milton*, 595 So. 2d 12](https://www.courtlistener.com/opinion/1769501/leapai-v-milton/) — § 45.061 upheld; the "cooperation principle" |
+| **1992** | Court | [*Timmons v. Combs*, 608 So. 2d 1](https://www.courtlistener.com/opinion/1842760/timmons-v-combs/) — the Court **repeals its own rule** and adopts the statute's procedural portion as a rule of Court |
+| **1993** | Court | [*Fabre v. Marin*, 623 So. 2d 1182](https://www.courtlistener.com/opinion/1617274/fabre-v-marin/) — apportionment of fault under § 768.81 |
+| **1996** | Court | ⭐ [682 So. 2d 105](https://www.courtlistener.com/opinion/1686825/in-re-amend-to-fla-rules-of-civ-proc/) — the rewrite to **Proposals for Settlement**, effective Jan. 1, 1997. Source of (c)(3) |
+| **2000** | Court | Rule **1.525** adopted; 1.442(g) later conformed |
+| **2010** | Court | [52 So. 3d 579](https://www.courtlistener.com/opinion/2543738/in-re-amendments-to-the-florida-rules-of-civil-procedure/) — **(c)(4)** adopted, the vicarious-liability carve-out |
+| **2013** | Court | [112 So. 3d 1209](https://www.courtlistener.com/opinion/4990631/in-re-amendments-to-florida-rule-of-civil-procedure-1442/) — (f)(1) cross-reference updated to rule 2.514(b) |
+| **2022** | Legislature | Ch. 2022-271 § 24 — new **§ 768.79(6)** for property insurers; **renumbers the subsections** |
+| **2022** | Court | 345 So. 3d 845 — rule conformed to the statute |
+| **2025** | Court | [SC2025-0045](https://www.courtlistener.com/opinion/10750922/in-re-amendments-to-florida-rule-of-civil-procedure-1442-and-forms-1902/) (Nov. 13) — restyling; (c)(3) reopened, *shall* → *must*, committee notes unchanged |
+
+## B. What each amendment was reacting to
+
+Classifying the eight rule amendments by their trigger produces a result worth stating:
+
+| Amendment | Reacting to |
+|---|---|
+| 1972 | Federal Rule 68 — adoption, not reaction |
+| 1989 | **The statutes** |
+| 1992 (*Timmons*) | **The Court's own decision** |
+| 1996 | **Both** — statutes *and* decisions |
+| 2010 | **A decision** (*Lamb*) |
+| 2013 | **Another rule** |
+| 2022 | **A statute** |
+| 2025 | **An administrative order** |
+
+**Only three of eight were decision-driven, and one statute-driven. The rest is housekeeping.** More striking: of the decision-driven amendments, **three were the Court correcting its own work** — 1992, 2010, and 2022 (conforming to the Legislature's correction).
+
+**The rule has been amended to fix a decision more often than to implement one.**
+
+## C. The rates are asymmetric
+
+The Legislature has touched § 768.79 **four times in forty years** (1986, 1990, a 1997 reviser's bill, 2022) and substantively only three. Against that, the Court has amended the rule at least eight times.
+
+The Court is the active editor of this field. The Legislature intervenes rarely, late, and narrowly — and when it does, the intervention tends to be industry-specific rather than structural. See Part VI.C.
+
+---
+
+# IV. The constitutional architecture
+
+Everything about this regime's shape follows from **article V, § 2(a)** of the Florida Constitution, which gives the Supreme Court exclusive authority over practice and procedure. A statute that is purely procedural intrudes on that power.
+
+**The test**, from [*Massey v. David*, 979 So. 2d 931 (Fla. 2008)](https://www.courtlistener.com/opinion/1786026/massey-v-david/), quoting *Haven Federal Savings & Loan v. Kirian*: substantive law "creates, defines, and regulates rights," while practice and procedure are "the course, form, manner, means, method, mode, order, process or steps by which a party enforces substantive rights."
+
+**Applied to this field**, the line is drawn cleanly in *Knealing*:
+
+- §§ 45.061 and 768.79 **survived** — each contains a substantive fee-authorizing provision (*Leapai*, *Timmons*).
+- § 44.102(6)'s mediation timing rules **did not** — purely procedural, no substantive authorization.
+
+That is why the regime is bifurcated, and why the 1989 and 1992 rule opinions proceeded by **supersession** rather than invalidation: the Court can displace a statute's procedural aspects with its own rule without striking anything down.
+
+**Two consequences worth carrying:**
+
+**Which institution can fix what.** In the *Timmons* Supplemental Order (Oct. 22, 1992), commenters complained that § 768.79 reaches only "civil actions for damages." The Court's answer was that this is "**beyond this Court's control because [it is] substantive**" — and it asked the Rules Committee for a new rule instead. That division still governs. A defect in scope is the Legislature's to fix; a defect in mechanics is the Court's.
+
+**§ 768.79 is substantive for conflict-of-laws purposes too.** [*Southeast Floating Docks, Inc. v. Auto-Owners Ins. Co.*, 82 So. 3d 73 (Fla. 2012)](https://www.courtlistener.com/opinion/5056323/southeast-floating-docks-inc-v-auto-owners-insurance-co/): where the parties have contractually chosen another state's substantive law, **§ 768.79 does not apply at all**.
+
+**The cooperation principle**, from *Leapai*, states the intended relationship: "The judiciary and the legislature **must work to solve these types of separation-of-powers problems without encroaching upon each other's functions**."
+
+---
+
+# V. The ten doctrinal arcs
+
+Thirty-nine Florida Supreme Court merits decisions, coded. Full matrix in [`arc-matrix.md`](arc-matrix.md).
+
+## 1. Strict compliance vs. substantive purpose
+
+**The pendulum, and it is datable.**
+
+- **1995** — *TGI Friday's*. The Court is permissive; entitlement is arithmetic. **Wells, J., writing separately, first argues for strict construction.**
+- **2003** — [*Willis Shaw Express, Inc. v. Hilyer Sod, Inc.*, 849 So. 2d 276](https://www.courtlistener.com/opinion/1090776/willis-shaw-express-inc-v-hilyer-sod-inc/). Wells now writes for the Court, extending the derogation canon from statutes to **the rule**.
+- **2006–2013** — *Nichols*, *Campbell*, *Diamond Aircraft*. Strict construction hardens: "**all portions must be strictly construed**."
+- **2016** — [*Kuhajda v. Borden Dairy Co. of Alabama, LLC*, 202 So. 3d 391](https://www.courtlistener.com/opinion/4314140/susanne-l-kuhajda-v-borden-dairy-company-of-alabama-llc/). **Not an inversion** — a narrow carve-out. Strict construction applies where the rule provision implements a substantive requirement of the statute; where it does not, "[t]he procedural rule should no more be allowed to trump the statute here than the tail should be allowed to wag the dog."
+- **2019** — [*Wheaton v. Wheaton*, 261 So. 3d 1236](https://www.courtlistener.com/opinion/4581389/sandra-kent-wheaton-v-mardella-wheaton/). The furthest the Court has gone the other way: an alternative holding excusing noncompliance with a *different* rule set (2.516) because the proposal satisfied § 768.79's substantive requirements.
+
+## 2. The derogation-canon fight
+
+The canon holds that a statute in derogation of the common law is strictly construed. *Willis Shaw* extended it to the **rule**, citing only statute cases and offering no separate justification.
+
+**It has been contested from inside the Court since 2007.** Bell, J., concurring in result in *Campbell*, declined to invoke "the **questionable derogation canon**," argued the text was unambiguous so no canon was needed, and quoted Farmer, J., below: the canon "has no logical purpose or use in the interpretation of mere rules of procedure."
+
+⚠️ **The competing proposal — rule 1.010's "just, speedy, and inexpensive" directive — has a threshold problem.** *Koppel* (unanimous, 2018): "this is the direction **only if a rule needs interpretation**. Here, the language is clear and unambiguous." Rule 1.010 is available only where the text is ambiguous.
+
+⭐ **And the modern Court's declared method uses neither canon.** *Coates* applies the **supremacy-of-the-text principle** and states that the Court does "not add words to a statute in the guise of interpreting it." The derogation canon is never mentioned. Read with *Koppel*, the principle is: **where the text is clear, no canon applies** — which cuts against both sides of this fight.
+
+## 3. Joint-proposal apportionment
+
+The most litigated and most divided arc. Its entire textual foundation is two sentences.
+
+**Origin.** [*Allstate Indemnity Co. v. Hingson*, 808 So. 2d 197, 199 (Fla. 2002)](https://www.courtlistener.com/opinion/1860954/allstate-indem-co-v-hingson/), **4–3**, on a **pre-1997 offer** governed by a rule that read in its entirety "Parties shall comply with the procedure set forth in section 768.79" — so apportionment had to be derived from the statute alone:
+
+> "In subsection (2)(b), the statute refers to 'party' in the singular. **This, we believe,** indicates the Legislature's intent that an offer specify the amount attributable to each individual party."
+
+Harding, J., dissenting, answered with **§ 1.01(1), Fla. Stat.** — the Legislature's own directive that "[t]he singular includes the plural and vice versa" — and recorded that of the four districts then to have ruled, **only one agreed** with the majority.
+
+**The line since:**
+
+| | |
+|---|---|
+| *Willis Shaw* (2003) | Multiple offerors must apportion |
+| [*Lamb v. Matetzschk*, 906 So. 2d 1037](https://www.courtlistener.com/opinion/1950924/lamb-v-matetzschk/) (2005) | Required even where liability is purely vicarious. **Three justices object in writing** |
+| [*Attorneys' Title Ins. Fund v. Gorka*, 36 So. 3d 646](https://www.courtlistener.com/opinion/1555417/attorneys-title-insurance-fund-inc-v-gorka/) (2010) | A joint proposal conditioned on mutual acceptance is invalid — **4–3** |
+| [*Pratt v. Weiss*, 161 So. 3d 1268](https://www.courtlistener.com/opinion/2794254/ancel-pratt-jr-v-michael-c-weiss-do/) (2015) | "**Even where no logical apportionment can be made, it is nonetheless required**" |
+| [*Audiffred v. Arnold*, 161 So. 3d 1274](https://www.courtlistener.com/opinion/2794251/valerie-audiffred-v-thomas-b-arnold/) (2015) | A single offeror can still make a "joint" proposal if it binds others |
+| [*Trace Elements*](https://www.courtlistener.com/opinion/10883903/trace-elements-inc-v-nadja-mackensen/) (2026) | Required even for a unified, single claim — **4–3** |
+
+**The boundary**, from *Anderson* (2016) and [*Allen v. Nunez*, 258 So. 3d 1207](https://www.courtlistener.com/opinion/4540927/w-riley-allen-v-jairo-rafael-nunez/) (2018): a proposal becomes "joint" when it **speaks for or binds** another party — not merely because another party has claims pending.
+
+⭐ **Where (c)(3) came from.** The 1996 committee note, 682 So. 2d 105, 126: the provision requiring apportionment "is in order to conform with ***Fabre v. Marin***." *Fabre* is a **defendant-side fault-allocation case** under § 768.81 — the spouse whose share had to be broken out there was an at-fault **nonparty**. Pariente, C.J., objected in 2005 that the Court's reading "has broadened the reach of the rule **beyond *Fabre*** so that a joint offer to a husband and wife is no longer authorized."
+
+⚠️ **A drafting solution exists.** [*Hoang Dinh Duong v. Ziadie*, 153 So. 3d 354 (Fla. 4th DCA 2014)](https://www.courtlistener.com/opinion/5004631/hoang-dinh-duong-v-ziadie/) approves the **all-or-nothing allocated offer** — multiple offerors to a single offeree, apportioned, conditioned on the offeree accepting as to all. *Gorka* does not reach it, because with one offeree there is no divestment of independent control. Note the consequence: the 25% test then becomes **conjunctive** — every claimant must beat their allocated share, or none recovers.
+
+## 4. Ambiguity, conditions, and nonmonetary terms
+
+**The governing standard** is [*State Farm Mut. Auto. Ins. Co. v. Nichols*, 932 So. 2d 1067 (Fla. 2006)](https://www.courtlistener.com/opinion/1697927/state-farm-mut-auto-ins-co-v-nichols/):
+
+> A proposal must be "sufficiently clear and definite to allow the offeree to make an informed decision without needing clarification." The rule "does not demand the impossible." **"If ambiguity within the proposal could reasonably affect the offeree's decision, the proposal will not satisfy the particularity requirement."**
+
+⭐ **And the qualifier that matters most in practice:** "**The rule aims to prevent ambiguity, not breadth.**" A sweeping general release is fine if it is unambiguous.
+
+**The anti-nitpicking line.** *Anderson* (2016) and *Allen* (2018) both reverse district courts for manufacturing ambiguity, in near-identical language: the courts below "**unnecessarily injected ambiguity into these proceedings and created more judicial labor, not less**." Ambiguity is resolved by reading the proposal **as a whole**.
+
+**An unqualified offer resolves everything**, counterclaims included — [*MGR Equipment Corp. v. Wilson Ice Enterprises*, 731 So. 2d 1262 (Fla. 1999)](https://www.courtlistener.com/opinion/1846806/mgr-equip-v-wilson-ice-enterprises/).
+
+## 5. Scope — "civil action for damages"
+
+Section 768.79 applies "[i]n any civil action for damages filed in the courts of this state." That phrase has done more work than its drafters can have intended.
+
+- **PIP suits are within it.** *Nichols*. "[N]othing in the offer of judgment statute exempts claims for contractual damages."
+- **Actions seeking damages *and* equitable relief are not** — at least where the proposal is a general one resolving all claims. [*Diamond Aircraft Industries, Inc. v. Horowitch*, 107 So. 3d 362 (Fla. 2013)](https://www.courtlistener.com/opinion/4988617/diamond-aircraft-industries-inc-v-horowitch/). Pleading in the alternative does not help.
+- ⭐ ***Diamond Aircraft* expressly reserved** whether the result changes when monetary and nonmonetary claims are pled separately and the proposal is **directed only to the monetary claim**. That question is still open, and it is a live drafting opportunity.
+- **Choice of law can switch the statute off entirely.** *Southeast Floating Docks*.
+
+## 6. Good faith
+
+Section 768.79(8)(a) is the only discretionary escape from an otherwise mechanical entitlement — and it is the **least developed** part of the regime.
+
+What exists is mostly asides:
+
+- *Leapai* (1992) n.2: "We do have some concern as to whether a **one dollar offer of settlement is a bona fide offer**. That issue was neither presented nor addressed."
+- *Frosti* (2008): a **$1 proposal** to settle a punitive damages claim went unchallenged on good-faith grounds.
+- *Anderson* (2016): motive goes to good faith, not validity — and candidly notes legitimate strategic reasons for differentiated offers, including to "eliminate the defendant for whom the jury may have sympathy."
+- *Coates* (2023): points to the (8)(b) factors as the answer to a feared flood of frivolous appeals.
+
+⚠️ **No decision in the read corpus squarely resolves a good-faith challenge.** See Part VII.A.
+
+## 7. Effective date and retroactivity
+
+**The versioning rule** is [*Metropolitan Dade County v. Jones Boatyard, Inc.*, 611 So. 2d 512 (Fla. 1993)](https://www.courtlistener.com/opinion/1925102/metropolitan-dade-county-v-jones-boatyard-inc/): § 768.79 does not reach causes of action accruing before **July 1, 1986**, and the applicable version is the one in effect **when the cause of action accrued** — not when the offer was served.
+
+⚠️ **The two statutes had different triggers.** § 45.061's operative event was **the making of the offer** (*Leapai*); § 768.79's is the **accrual of the claim**, because it sits inside an integrated statutory scheme governed by § 768.71(2).
+
+🔴 **Practical consequence.** Because ch. 2022-271 renumbered the subsections, **every pin cite must be tied to a statutory year**. In particular there are **two different subsection (6)s**: pre-2022 it is the judgment-comparison provision; post-2022 it is the property-insurer carve-out, and the comparison provision has become (7).
+
+## 8. Contract formation and acceptance
+
+The newest arc, opened by *Suarez Trucking* (2022).
+
+- **A filed written acceptance forms a binding settlement contract.** Acceptance is not performance.
+- **The mirror-image rule does not require recitation.** "This is a rule of **consistency**. It is not … a rule of **regurgitation**."
+- The framework "**does not envision a process of negotiation**"; proposals are "by their very nature **take-it-or-leave-it propositions**."
+- Oral communications are irrelevant to formation — rule 1.442(f)(1).
+
+## 9. Calculating "judgment obtained"
+
+Covered mechanically at Part II.E. The doctrinal line runs *White* (2002) → *Nichols* (2006) → *Shands* (2012) → *CCM* (2021), with the *White* formula reaffirmed each time.
+
+⚠️ **It has never been examined on the merits.** In *CCM*, the Fourth District below said the plain meaning of § 768.79 does **not** support the formula but considered itself bound. The Supreme Court applied *State v. Poole*'s "clearly erroneous" standard and declined to look. Canady, C.J., dissenting, argued the formula's supporting authorities were § 627.428 cases with "no relevant textual similarity."
+
+## 10. Procedural deadlines
+
+Covered at Part II.G. The line runs *Gulliver Academy* (1997) → *Saia* (2006) → *Frosti* (2008) → *Koppel* (2018), and it has moved consistently toward bright lines.
+
+⚠️ **Note the tension.** *Gulliver Academy* held a reservation of jurisdiction was an enlargement of time; *Saia* held it was not. Wells, J., wrote both. They are reconcilable only because rule 1.525 was adopted in between — *Gulliver* construed the statute's own period, *Saia* construed a rule that had not existed.
+
+---
+
+# VI. Patterns across the whole
+
+## A. Where the Court divides
+
+Coding the thirty-nine decisions produces a clear result: **the Court's divisions are not spread across the statute. They cluster in one arc.**
+
+| Arc | Primary authorities | Majorities |
 |---|---|---|
 | Strict compliance | 16 | Mostly lopsided or unanimous |
-| Ambiguity / conditions | 8 | Stable since [*Nichols*](https://www.courtlistener.com/opinion/1697927/state-farm-mut-auto-ins-co-v-nichols/) (2006) |
+| Ambiguity / conditions | 8 | Stable since *Nichols* |
 | Deadlines | 5 | Near-unanimous |
 | Retroactivity | 3 | Settled since 1993 |
 | **Joint-proposal apportionment** | **8** | ***Hingson* 4–3 · *Gorka* 4–3 · *Pratt* / *Audiffred* 5–2 · *Allen* 4–3 · *Trace Elements* 4–3** |
 
-The Court is not generally divided about the offer-of-judgment statute. Deadlines, scope, retroactivity, and the calculation of "judgment obtained" produce broad agreement. **The Court is divided about apportionment specifically** — and apportionment is simultaneously the thinnest of the major arcs and the one carrying the most doctrinal weight.
+Deadlines, scope, retroactivity, and calculation produce broad agreement. Apportionment does not — and it is simultaneously the thinnest of the major arcs and the one carrying the most weight.
 
----
+## B. Strict construction is not inherently pro-offeree
 
-## III. *Trace Elements* is faithful to *Kuhajda*
+A common misreading. Two decisions show textual strictness **saving** a fee award:
 
-This should be conceded early and clearly, because conceding it sharpens everything that follows.
+- *Anderson* (2016) — separate offers may not be aggregated: doing so "**cannot be tolerated under a strict construction of section 768.79**."
+- *Suarez Trucking* (2022) — refusing to import a mirror-image requirement into acceptance.
 
-*Kuhajda* is often described as the Court's retreat from strict construction. It is not. It is unanimous in result, it does not reject the derogation canon, and it asks one question:
+**The canon cuts against whichever party asks the Court to read something *into* the text.** In *Hingson* and *Gorka* the offeree wanted an unwritten requirement read in, and got it. In *Anderson* and *Suarez Trucking* the offeree wanted aggregation and a mirror-image rule read in, and did not.
 
-> "This Court required a strict construction of rule 1.442 … **in contexts in which the provisions of the rule implemented the substantive requirements of section 768.79**. Notably, **none of those cases explicitly addresses whether a provision of rule 1.442 must be strictly enforced when the provision is a requirement that does not implement a substantive requirement** of section 768.79."
+## C. The repudiation dynamic
 
-Rule 1.442(c)(2)(F) — the attorney's-fees recitation — implements nothing substantive when fees are not pleaded, so requiring it there would let "the tail … wag the dog." That is the whole of *Kuhajda*.
+Extensions of the apportionment line have a consistent fate: **whoever spoke next corrected them.**
 
-Apply that test to (c)(3) and the majority's conclusion follows. If § 768.79(2)(b)'s instruction that a proposal "name the party making it and the party to whom it is being made" *does* impose an apportionment requirement, then (c)(3) implements a substantive statutory command and strict construction attaches. *Trace Elements* is not an evasion of *Kuhajda*; it is an application of it.
+**The documented loop, 2003–2010.** In 2003 the Rules Committee proposed excusing apportionment for vicariously liable parties; the Court **refused**, expressly "in light of our decision in *Willis Shaw*" ([858 So. 2d 1013, 1014–15](https://www.courtlistener.com/opinion/7821028/amendments-to-the-florida-rules-of-civil-procedure/)). In 2005 *Lamb* created exactly that problem, over three justices' written objections — Lewis, J., calling the result "**purely the product of the technical language of the rule, not logic or proper legal reasoning**." In 2010 the Court adopted essentially the Committee's original proposal as (c)(4).
 
-**Which relocates the question.** Not "was strict construction appropriate," but:
+**Committee proposes fix → Court refuses → Court creates the problem → Court adopts the fix.** Seven years.
 
-> **Does § 768.79(2)(b) actually impose an apportionment requirement?**
-
-Everything turns on that. If it does, *Trace Elements* is right. If it does not, (c)(3) is a procedural detail, *Kuhajda* governs, and the case comes out the other way.
-
----
-
-## IV. The premise: one contested inference, never revisited
-
-### A. What *Hingson* actually said
-
-The entire textual basis for apportionment under § 768.79 is two sentences in *Hingson*:
-
-> "Moreover, the plain language of section 768.79 supports the *C & S* court's holding. **In subsection (2)(b), the statute refers to 'party' in the singular. This, we believe, indicates the Legislature's intent that an offer specify the amount attributable to each individual party.**"
-
-Note the hedge — "we believe." Note also what the sentence does: it moves from a noun's grammatical number to an affirmative drafting requirement found nowhere in the text.
-
-Four features of that holding deserve emphasis.
-
-**It was 4–3.** Wells, C.J., Pariente, Lewis, and Quince, JJ., in the majority; Harding, J., dissenting with Shaw and Anstead, JJ.
-
-**It was decided against three of the four district courts then to have ruled.** Harding, J., recorded the alignment: "Of the four district courts that have considered this issue, only the Second District has held to the contrary." The Court adopted the minority position.
-
-**The dissent answered it with a statute.** Harding, J., cited **§ 1.01(1), Fla. Stat.** — the Legislature's own general definitions provision, directing that in construing the statutes, "[t]he singular includes the plural and vice versa." The majority's sole textual ground is a grammatical inference the Legislature has instructed courts not to draw. The majority did not address § 1.01(1).
-
-**And the procedural posture is the part most often missed.** *Hingson* involved a **pre-1997 offer**, governed by the version of rule 1.442 that read, in its entirety: "Parties shall comply with the procedure set forth in section 768.79, Florida Statutes (1991)." The apportionment language of current (c)(3) **did not exist**. The Court had to derive apportionment from the statute alone — which is precisely why the case is load-bearing, and precisely why its reasoning has never been stress-tested against the rule text that now governs.
-
-In twenty-four years, no decision of this Court has re-examined that inference. [*Audiffred v. Arnold*, 161 So. 3d 1274 (Fla. 2015)](https://www.courtlistener.com/opinion/2794251/valerie-audiffred-v-thomas-b-arnold/), repeated the same 1-versus-3 district alignment without revisiting the premise.
-
-### B. The administrability rationale does not rescue it
-
-*Hingson* offered a functional argument alongside the textual one, in the sentence immediately preceding the passage above:
-
-> "**Otherwise, in many cases, it would be impossible for the trial court to determine the amount attributable to each party** in order to make a further determination of whether the judgment against only one of the parties was at least twenty-five percent more or less than the offer."
-
-This is the strongest defense of the apportionment requirement available, and petitioner's rehearing response in *Trace Elements* leans on it, citing [*Hoang Dinh Duong v. Ziadie*, 153 So. 3d 354, 358–60 (Fla. 4th DCA 2014)](https://www.courtlistener.com/opinion/5004631/hoang-dinh-duong-v-ziadie/), which calls enabling the fee determination "the other main purpose of the apportionment requirement."
-
-**Five reasons it fails.**
-
-1. **It is not independent.** It is the sentence immediately before "this, we believe," in the same 4–3 opinion. The "other main purpose" is the same contested passage the line already rests on. *Hoang Dinh Duong* cites *Hingson* at 199 for it.
-2. **It is about the statute, not the rule.** *Hingson* construed § 768.79(2)(b) and a rule containing no apportionment language whatever. It is not evidence of what (c)(3)'s drafters were doing.
-3. **This Court has never used it again.** The phrase "twenty-five percent" appears **zero times** in [*Willis Shaw*](https://www.courtlistener.com/opinion/1090776/willis-shaw-express-inc-v-hilyer-sod-inc/), *Gorka*, *Pratt*, *Audiffred*, and *Trace Elements* itself. *Lamb* reproduces it only inside a block quote of *Hingson*. *Trace Elements* cites *Hingson* at 199 **only** for the independent-evaluation half.
-4. **Harding answered it, and the facts of *Hingson* refute it.** "Rather than worry about what may happen 'in many cases,' it is more appropriate to focus on the facts of this case. The jury returned a verdict in favor of the Defendant, resulting in the Plaintiffs receiving nothing. **There is no question that the judgment was at least twenty-five percent less than the amount of Allstate's offer, regardless of its nonallocation.**" In the very case that generated the administrability rationale, administrability was not a problem.
-5. **The Court's own worked example is a separable-claims case.** *Hingson*'s footnote illustrates the difficulty using [*Herzog*](https://www.courtlistener.com/opinion/1727784/herzog-v-k-mart-corp/): a joint $20,001 offer to a married couple, followed by judgments of **$8,601 for Mrs. Herzog and $3,750 for Mr. Herzog**. The example works *because the spouses had two different judgments*. Where there is one unified judgment, the arithmetic is trivial — as petitioner's own rehearing response demonstrates, halving the $41,273.70 verdict and comparing $20,636.85 against a hypothetical $5,000 share.
-
-The same pattern holds in the district courts. In *Hoang Dinh Duong* itself, apportionment functioned smoothly because the claims were genuinely separable — an incapacitated adult and two children with distinct derivative claims, three allocated amounts, three different judgments. **Both worked examples in which the administrability rationale does real work involve separable claims. Neither involves a unified one.**
-
----
-
-## V. The provision was built for a different job
-
-### A. The committee note
-
-The reason rule 1.442(c)(3) contains an apportionment sentence is recorded in one line of the 1996 committee note, [*In re Amendments to Florida Rules of Civil Procedure*, 682 So. 2d 105, 126 (Fla. 1996)](https://www.courtlistener.com/opinion/1686825/in-re-amend-to-fla-rules-of-civ-proc/):
-
-> "**The provision which requires that a joint proposal state the amount and terms attributable to each party is in order to conform with [*Fabre v. Marin*, 623 So. 2d 1182 (Fla. 1993)](https://www.courtlistener.com/opinion/1617274/fabre-v-marin/).**"
-
-Pariente, C.J., made the consequence explicit in 2005, concurring in [*Lamb v. Matetzschk*, 906 So. 2d 1037 (Fla. 2005)](https://www.courtlistener.com/opinion/1950924/lamb-v-matetzschk/): the Court's reading "has broadened the reach of the rule **beyond *Fabre*** so that **a joint offer to a husband and wife is no longer authorized**," and "imposes a restriction that does not comport with the manner in which most settlements are accomplished."
-
-***Trace Elements* is a husband-and-wife case.** The objection is twenty-one years old and came from the Chief Justice.
-
-### B. Reading *Fabre* makes the mismatch worse
-
-*Fabre* construed **§ 768.81(3)** and held that judgment for noneconomic damages is entered against each party by percentage of fault, computed against all participants in the accident including nonparties. Three consequences follow.
-
-**First, *Fabre* is a defendant-side fault-allocation case.** It apportions liability among tortfeasors. It says nothing about co-plaintiffs, lump-sum demands, or settlement mechanics. A provision drafted "to conform with *Fabre*" is a provision about making joint proposals reflect **comparative fault**.
-
-**Second, the spouse in *Fabre* is on the other side of the "v."** Ann Marin was injured riding as a passenger in a car driven by her husband Ramon. The jury found Mrs. Fabre and **Mr. Marin** each 50% at fault. Mr. Marin was a **nonparty**, unreachable because of interspousal tort immunity. The spouse whose share had to be broken out was an at-fault nonparty tortfeasor.
-
-In *Hingson*, [*D'Angelo*](https://www.courtlistener.com/opinion/1831568/dangelo-v-fitzmaurice/), *Audiffred*, and *Trace Elements*, the spouses are **co-claimants with a unified claim and no fault to allocate between them**. The provision is being applied to the mirror image of the situation that produced it.
-
-**Third — and this is the sharpest form of the point — the same word, in the same session law, has been construed in opposite directions.**
-
-*Fabre* construes "party" in § 768.81(3). *Hingson* construes "party" in § 768.79(2)(b). Both sections were enacted by the **Tort Reform and Insurance Act of 1986, ch. 86-160**: § 768.79 by **section 58**, § 768.81 by **section 60** — two sections apart in a single act, verified from the session law.
-
-In *Fabre*, the Court adopted the reasoning that "party" was **"not intended as a word of limitation"**, and that "[h]ad the legislature intended the apportionment computation to be limited … **it would have so stated**."
-
-In *Hingson*, the Court made the singular "party" precisely a word of limitation — and inferred an unstated requirement from the Legislature's silence.
-
-The two constructions cannot both reflect a considered view of how this Legislature uses the word.
-
-### C. The rule that came before said the opposite
-
-There is a further textual point that has gone unnoticed. The rule immediately preceding the modern one — adopted in [*Florida Bar re Amendment to Rules of Civil Procedure, Rule 1.442*, 550 So. 2d 442 (Fla. 1989)](https://www.courtlistener.com/opinion/7644473/florida-bar-re-amendment-to-rules-of-civil-procedure-rule-1442/), effective January 1, 1990 — provided that an offer of judgment:
-
-- "**may be made by any party or parties**";
-- must "name the **party or parties** making the offer and the **party or parties** to whom the offer is made";
-- must "**settle all pending claims**"; and
-- must state "the **total amount** of the offer."
-
-**Multi-party offers, in the plural, resolving all claims, stated as a single total — with no apportionment requirement of any kind.** Apportionment entered the rule only in 1996, and only for the *Fabre* reason.
-
-That matters for *Hingson* directly. *Hingson* involved a pre-1997 offer. The rule text closest in time to that offer expressly contemplated exactly the sort of joint, unallocated, single-total offer that *Hingson* held the statute forbids.
-
----
-
-## VI. Repudiated at every point where anyone else got a word
-
-No decision in this line has been reaffirmed after examination. Each extension has instead been corrected by whichever institution spoke next.
-
-| Extension | Corrected by |
-|---|---|
-| *Lamb* (2005) — apportionment required even for purely vicarious liability | **The Court's own rule amendment**, [52 So. 3d 579, 588 (Fla. 2010)](https://www.courtlistener.com/opinion/2543738/in-re-amendments-to-the-florida-rules-of-civil-procedure/), adopting (c)(4) |
-| *Gorka* (2010) — joint proposals may not be conditioned on mutual acceptance | **The Legislature**, ch. 2022-271, § 24, adding § 768.79(6) — but narrowly; see below |
-| *Trace Elements* (2026) | Invites the same treatment, expressly citing the post-*Lamb* amendment as its model |
-
-### A. The 2003–2005–2010 loop, documented
-
-This is the strongest single illustration, because every step is on the record.
-
-**2003.** The Civil Procedure Rules Committee proposed amending (c)(3) to excuse apportionment where a party is alleged to be only vicariously, constructively, derivatively, or technically liable. **The Court declined**, expressly "in light of our decision in *Willis Shaw*." [*Amendments to the Florida Rules of Civil Procedure*, 858 So. 2d 1013, 1014–15 (Fla. 2003)](https://www.courtlistener.com/opinion/7821028/amendments-to-the-florida-rules-of-civil-procedure/).
-
-**2005.** *Lamb* held apportionment required in exactly that circumstance — creating the problem the Committee had tried to prevent. The decision was unanimous in result, but **three justices wrote or joined to say the rule was broken**. Lewis, J., concurring in result only, called apportionment between an active and a vicariously liable tortfeasor "meaningless and essentially unworkable," found *Willis Shaw*, *Hingson*, and *Barnes* "entirely distinguishable," and concluded that the result was
-
-> "**purely the product of the technical language of the rule, not logic or proper legal reasoning.**"
-
-**2010.** The Court adopted essentially the Committee's original 2003 proposal as rule 1.442(c)(4).
-
-**Committee proposes fix → Court refuses, citing its own precedent → Court creates the problem → Court adopts the fix.** Seven years. And *Trace Elements* has now set the same sequence up to run a third time, five months after a (c)(3) amendment cycle closed.
-
-### B. The *Gorka* override — state it precisely
-
-*Gorka* held that a joint proposal conditioned on mutual acceptance is invalid because "[t]he conditional nature of the offer divests each party of independent control of the decision to settle." Polston, J., dissenting with Quince, C.J., and Canady, J., argued no such prohibition appears in the text.
-
-In 2022 the Legislature adopted Polston's position — **but only in part**. Section 768.79(6) reads in its entirety:
+**The legislative correction, 2010–2022.** ⚠️ State it precisely. Section 768.79(6) reads in its entirety:
 
 > "For a breach of contract action, a **property insurer** may make a joint offer of judgment or settlement that is conditioned on the mutual acceptance of all the joint offerees."
 
-⚠️ **Do not write that *Gorka* was legislatively overruled.** It was not. Subsection (6) is a carve-out for one industry in one category of action; *Gorka*'s holding stands everywhere else.
+That is a **carve-out for one industry in one category of action**, not a repeal. *Gorka* stands everywhere else. **Do not write that *Gorka* was legislatively overruled.**
 
-Stated precisely, the point is arguably sharper. The Legislature reached in and disapproved *Gorka*'s rule for the industry that complained loudest, and left the rule in place for everyone without a lobby. That is still repudiation by whoever got the next word — and it is a less flattering form of it.
+## D. The Court's assessment of its own regime
 
-### C. What the Court said about the rule while applying it
+Unusually candid, and consistent across decades:
 
-*Gorka* itself contains the admission against interest. The fee sanction was intended "to reduce litigation costs and conserve judicial resources," but
+- *Gorka* (2010): the sanction was meant "to reduce litigation costs and conserve judicial resources," but "[t]he effect, however, **has been in sharp contrast to the intended outcome** because the statute and rule have seemingly increased litigation."
+- *Anderson* / *Allen*: nitpicking has "created **more judicial labor, not less**."
+- *Allen v. Nunez* (2018), Polston, J., dissenting with Canady, C.J., and Lawson, J.: this Court's jurisprudence "**in this area of the law seems inconsistently applied and unpredictable**."
 
-> "[t]he effect, however, **has been in sharp contrast to the intended outcome** because the statute and rule have seemingly increased litigation as parties dispute the respective validity and enforceability of these offers."
+The *Allen* majority's response, in footnote 2, does not dispute the diagnosis — only what follows from it.
 
-Compare the origin of the purposive pole, [*Unicare Health Facilities, Inc. v. Mort*, 553 So. 2d 159 (Fla. 1989)](https://www.courtlistener.com/opinion/1670587/unicare-health-facilities-inc-v-mort/): rule 1.442 "was implemented **solely to encourage settlements in order to eliminate trials if possible**." And [*Anderson v. Hilton Hotels Corp.*, 202 So. 3d 846 (Fla. 2016)](https://www.courtlistener.com/opinion/4317987/troy-anderson-v-hilton-hotels-corporation-etc/), on what the litigation has become: nitpicking proposals "**unnecessarily injected ambiguity into these proceedings and created more judicial labor, not less**."
+## E. Separate opinions become doctrine
 
----
+Four documented threads run from a lone separate writing into the law:
 
-## VII. The method problem: *Coates* undercuts the line that cites it
+| Thread | Path |
+|---|---|
+| **Pro-strict** | Wells, *TGI Friday's* separate opinion (1995) → his *Willis Shaw* majority (2003). Later cases cite *TGI Friday's* at **615** — a page inside the 1995 separate opinion |
+| **Anti-canon** | Bell, *Campbell* concurrence (2007) → cited in *Trace Elements* (2026) |
+| **Distinguishability** | Lewis, *Lamb* concurrence (2005) → the 2026 dissent |
+| **Precedent scope** | Canady, *State v. Yule* (2d DCA 2005) (specially concurring) → *Pedroza* (Fla. 2020) → the 2026 dissent |
 
-*Trace Elements* borrows from *Coates* the premise that § 768.79 is a **penalty statute**, and uses it to justify strict enforcement. But *Coates* is the modern Court's clearest statement of interpretive method, and **it never invokes the derogation canon.** Its declared approach is:
-
-> "we apply the **supremacy-of-the-text principle**, recognizing that '[t]he words of a governing text are of paramount concern, and what they convey, in their context, is what the text means'" — and "**we do not add words to a statute in the guise of interpreting it**."
-
-Measure the apportionment line against that:
-
-- ***Hingson* added words.** Section 768.79(2)(b) requires that a proposal "name the party making it and the party to whom it is being made." Apportionment is not in that sentence. It was inferred from a singular noun.
-- ***Gorka* added words.** The independent-acceptance requirement appears nowhere in the statute or the rule. The Court derived it from precedent and said so: a review of the precedent "reveals that this principle **inherently requires**" it.
-
-On *Coates*'s own stated methodology, both are the move the Court says it does not make. **This is the strongest argument available against *Trace Elements*, because it uses the current Court's own declared method rather than an external policy critique.**
-
-### The necessary qualification: strict construction is not inherently pro-offeree
-
-Any argument built on strictness must account for two decisions where textual strictness **saved** a fee award.
-
-- ***Anderson*** (2016): separate proposals may not be aggregated and compared against the judgment — the only way to reach the contrary result "**cannot be tolerated under a strict construction of section 768.79**."
-- **[*Suarez Trucking FL Corp. v. Souders*](https://www.courtlistener.com/opinion/8404436/suarez-trucking-fl-corp-v-adam-j-souders/)** (2022): the Court refused to import a mirror-image requirement into acceptance. "This is a rule of **consistency**. It is not … a rule of **regurgitation**."
-
-The canon cuts against whichever party asks the Court to read something **into** the text. In *Hingson* and *Gorka* the offeree wanted an unwritten requirement read in, and got it. In *Anderson* and *Suarez Trucking* the offeree wanted aggregation and a mirror-image rule read in, and did not.
-
-**The target is therefore not strictness. It is inconsistency** — the Court refuses additions when they would defeat a fee award as readily as it makes them when they would. That is Polston's "inconsistently applied and unpredictable," restated as a method critique.
+The dissent-to-doctrine pipeline in this field runs about eighteen years.
 
 ---
 
-## VIII. What the dissent should not lean on: *Koppel*
+# VII. Open questions and gaps
 
-Sasso, J.'s *Trace Elements* dissent argues that the derogation canon has no place in construing a procedural rule, and that rule 1.010's "just, speedy, and inexpensive" directive should govern instead. The argument has a distinguished pedigree — Bell, J., made it in [*Campbell v. Goldman*, 959 So. 2d 223, 228 (Fla. 2007)](https://www.courtlistener.com/opinion/1140885/campbell-v-goldman/), concurring in result only, declining to invoke "the **questionable derogation canon**" and quoting Farmer, J., below: the canon, "created for **statutory** changes in substantive common law — has no logical purpose or use in the interpretation of mere rules of procedure."
+## A. Good faith is undeveloped
 
-**But a unanimous Court foreclosed the move at the threshold in 2018.** In [*Koppel v. Ochoa*, 243 So. 3d 886 (Fla. 2018)](https://www.courtlistener.com/opinion/4498881/donna-koppel-v-laura-ochoa/), the petitioner urged rule 1.010 as the interpretive guide. The Court:
+Arc 6 has no squarely decided case in the read corpus. Since good faith is the **only** discretionary escape from an otherwise mechanical entitlement, this is the most consequential gap in the regime — and the most promising unexplored question. A $1 proposal has twice drawn judicial comment and has never been squarely tested.
 
-> "However, **this is the direction only if a rule needs interpretation**. Here, the language is clear and unambiguous. Accordingly, **there is no need to resort to the rules of statutory interpretation, which would require us to consider the purpose of the rules as outlined in rule 1.010**."
+## B. A scope defect thirty-four years unamended
 
-Rule 1.010 is available only where the text is ambiguous. *Trace Elements* treats (c)(3) as unambiguous. On *Koppel*, that ends the rule-1.010 argument before it starts.
+The "civil actions for damages" limitation was flagged as a defect by commenters in **1992**. The Court called it "beyond this Court's control because … substantive" and asked the Legislature to act. It has not. The question has been resolved **by construction** twice — *Nichols* (2006) and *Diamond Aircraft* (2013) — and amended never.
 
-**Two consequences.**
+## C. Questions the Court has expressly left open
 
-First, any brief or article advancing the rule-1.010 position must **engage *Koppel* directly** rather than presenting rule 1.010 as a clean answer. Ignoring it is the fastest way to lose the point.
+- Whether § 768.79 applies where monetary and nonmonetary claims are pled **separately** and the proposal targets only the monetary claim. *Diamond Aircraft*.
+- Whether *Wheaton*'s alternative holding survives. It applies a substantive-compliance test to a **different rule set** — broader than *Kuhajda* — and *Trace Elements* does not mention it.
+- Whether the *White* formula is right. *CCM* declined to reach it under *Poole*.
 
-Second — and more useful — *Koppel* is **consistent with *Coates***, and that consistency is exploitable. Both say: where the text is clear, no canon applies. If that is right, it does not merely disable rule 1.010. **It disables the derogation canon too.** A Court that will not reach for rule 1.010 absent ambiguity has no principled basis for reaching for derogation absent ambiguity. The correct framing is not "the wrong canon was applied" but "**no canon should have been applied to a text the Court says is clear** — and if the text is clear, it does not say what the Court says it says."
+## D. The live matter
 
----
+🔴 ***Trace Elements* rehearing is pending.** The majority invited a rule amendment rather than a judicial exception, expressly citing the post-*Lamb* adoption of (c)(4) as its model. On the history in Part VI.C, that invitation is likely to be accepted.
 
-## IX. The counter-arguments, taken seriously
+One piece of timing is worth noting: the Court adopted the restyled (c)(3) **unanimously on November 13, 2025** — changing only *shall* to *must*, committee notes unchanged — while *Trace Elements* sat fully briefed on its own docket, four weeks before oral argument.
 
-### A. "Practical difficulty is not an exception" — *Pratt*
+## E. The empirical picture is missing
 
-The Court has already rejected workability objections in the strongest possible terms. [*Pratt v. Weiss*, 161 So. 3d 1268, 1272–73 (Fla. 2015)](https://www.courtlistener.com/opinion/2794254/ancel-pratt-jr-v-michael-c-weiss-do/):
-
-> "**Even where no logical apportionment can be made, it is nonetheless required where more than one offeror or offeree is involved.**"
-
-And practical complications "are not recognized legal elements to disregard or circumvent the rule." *Lamb* added that "[i]t may take some creative drafting to fashion an offer of settlement."
-
-**This is a real obstacle and should be met head-on rather than argued around.** The answer is not that apportionment is hard. It is that *Pratt* presupposes the premise under attack. *Pratt* tells us difficulty does not excuse a requirement; it does not tell us the requirement exists. Every workability argument in this area is downstream of *Hingson*, and arguing workability concedes the ground that matters.
-
-### B. The enlargement argument — and why it is weaker than it looks
-
-Respondents' rehearing motion in *Trace Elements* advances an argument that runs opposite to every other substance/procedure claim in this field. Citing [*Ramos v. State*, 505 So. 2d 418, 421 (Fla. 1987)](https://www.courtlistener.com/opinion/1886488/ramos-v-state/), and [*State v. Furen*, 118 So. 2d 6 (Fla. 1960)](https://www.courtlistener.com/opinion/1106767/state-v-furen/) — "substantive rights conferred by law can neither be **diminished nor enlarged** by procedural rules adopted by this Court" — they argue that strict compliance with (c)(3) can **expand** the § 768.79 right, because splitting a joint offer lowers each offeror's comparator and makes the 25% threshold easier to beat.
-
-It is a genuinely interesting inversion. **But it is refuted for the offer structure the district courts have actually approved**, and refuted by the very case petitioner cited.
-
-*Hoang Dinh Duong* holds that under an **all-or-nothing allocated proposal**, the 25% comparison becomes **conjunctive**:
-
-> "[I]f the verdict for **any** of the claimants was not twenty-five percent higher than the amount of that claim in the settlement proposal, then **none** of the claimants could obtain attorney's fees under its terms."
-
-Apportionment there converts one aggregate test into several tests every claimant must independently satisfy. That is **harder** than an unapportioned offer measured in the aggregate, not easier.
-
-⚠️ **State the limit honestly.** The conjunctive effect follows from the all-or-nothing *condition*, not from (c)(3) alone. An apportioned proposal without that condition could plausibly let each offeror recover on their own share — the scenario the motion fears. So the enlargement argument survives in the abstract and fails for the structure practitioners actually use. The drafting fix is available to any offeror who wants it. ⚠️ *Ramos* and *Furen* are unread and sit outside this corpus; verify both before relying on them.
-
-### C. Preservation and the record
-
-Petitioner's response argues the § 768.79(7) administrability theory was never raised in the trial court, the Fourth District, or the answer brief, and that rule 9.330(a)(2)(A) bars new issues on rehearing. It also argues, with record citations, that this was **never a unified-claim case**: the Mackensens pleaded breach of contract and unjust enrichment, and Trace Elements counterclaimed against **each Mackensen individually** for tortious interference, with the directed verdict on that count coming eight months after the proposal was served.
-
-**Both points appear well taken**, and they matter for how the decision should be used. If the unified-claim premise is contested on the record, *Trace Elements* may be a weaker vehicle for the broad holding than its language suggests — which is an argument for treating the holding as narrower, not for treating the reasoning as sounder.
-
-### D. Stare decisis
-
-[*CCM Condominium Ass'n v. Petri Positive Pest Control* (Fla. 2021)](https://www.courtlistener.com/opinion/5092491/ccm-condominium-association-inc-etc-v-petri-positive-pest-control/) applied [*State v. Poole*](https://www.courtlistener.com/opinion/4741416/state-of-florida-v-mark-anthony-poole/) — precedent yields only when "clearly erroneous" — and declined to reexamine the [*White*](https://www.courtlistener.com/opinion/1912574/white-v-steak-and-ale-of-florida-inc/) formula even though the Fourth District below had said its plain meaning was unsupported.
-
-A comparable response is available here. The counter is that *Poole* asks whether precedent is clearly erroneous, and the case for *Hingson* being clearly erroneous is unusually strong: a 4–3 inference, contradicted by a statute the majority never addressed, adopted against three of four districts, never re-examined, and resting on a construction of "party" opposite to the one the Court gave the same word in a companion section of the same act.
+~816 district court opinions remain uncoded. The Supreme Court corpus supplies the doctrine; it cannot tell you **how the regime actually operates** — how often proposals are invalidated, on what grounds, or whether the districts diverge in practice. That is a separate project and would be the most valuable extension of this one.
 
 ---
 
-## X. Where this goes
+# VIII. Limits of this survey
 
-**Rehearing is pending.** The motion seeks clarification *and* rehearing. Denial appears likely — it concedes the holding and rests on a theory the response documents as unpreserved — but a grant of *clarification* addressing the § 768.79(7) mechanics is a live possibility and would touch Part IV.B above.
+**Verified from primary sources:** the 1996 committee note (682 So. 2d 105, 126); the *Hingson* passage and Harding's dissent; *Fabre*; § 768.79(6) (2024) and the post-2022 numbering; ch. 86-160 §§ 58 and 60; the 1989/1990 rule text; the 1990 Senate staff analysis for CS/SB 2670; the November 2025 amendment; the *Trace Elements* docket and rehearing filings.
 
-**The rulemaking path is the one the majority itself identified.** "To the extent this case has illuminated a potential flaw in rule 1.442(c)(3), we believe the appropriate course is to review the rule and, if a change is warranted, amend its text." On the history in Part VI, that invitation is likely to be accepted — the Court has adopted a (c)(3)-related fix once before after refusing it, and the Legislature has amended around this line once already.
-
-**One piece of timing deserves attention.** The Court adopted the restyled rule 1.442(c)(3) in [SC2025-0045](https://www.courtlistener.com/opinion/10750922/in-re-amendments-to-florida-rule-of-civil-procedure-1442-and-forms-1902/) on **November 13, 2025 — unanimously**, changing only *shall* to *must* and marking the Committee Notes "[No Change]" — while *Trace Elements* sat fully briefed on its own docket, four weeks before oral argument. The Court had the sentence open, left its substance untouched, and then divided 4–3 over what it means. Whatever else that shows, it is not a provision the Court had failed to notice.
-
----
-
-## XI. Status, limits, and what would change the analysis
-
-Stated plainly, because the memorandum's usefulness depends on its provenance being auditable.
-
-**Verified from primary sources:** the 1996 committee note (682 So. 2d 105, 126); the *Hingson* passage and Harding's dissent; *Fabre*; § 768.79(6) (2024) and the post-2022 subsection numbering; ch. 86-160 §§ 58 and 60; the 1989/1990 rule text; the November 13, 2025 amendment; the *Trace Elements* docket, rehearing motion, and response.
-
-**Read and coded:** thirty-nine Florida Supreme Court merits opinions, the four rule-amendment opinions, *Fabre*, and *Hoang Dinh Duong*.
+**Read and coded:** 39 Florida Supreme Court merits opinions, the four rule-amendment opinions, *Fabre*, and *Hoang Dinh Duong*.
 
 **Not done, and relevant:**
-- ⚠️ *Ramos* and *Furen* are **unread**. Part IX.B depends on how they are characterized.
-- ⚠️ The **~816 district court opinions are untouched**. Part II's district figures are the *Supreme Court's alignment* with each district, not the districts' own distribution. Do not present them as a district-split analysis.
-- ⚠️ Tier B (11) and Tier C (9) Supreme Court cases are unread. They are the low-density tail and are unlikely to change the shape, but the claim that a proposition appears nowhere else in the corpus is bounded by that.
-- ⚠️ *Watkins v. Corbett*, No. 2D2025-0214 (Fla. 2d DCA Mar. 25, 2026), filed in *Trace Elements* as conflicting supplemental authority, is **unread**.
 
-**Citations:** verified against CourtListener on August 4, 2026; see the Appendix. One reporter citation appearing in the text — `365 So. 3d 353` for *Coates* — remains unconfirmed and should be checked against Southern Reporter before circulation.
-
-**What would change the analysis:**
-1. A grant of rehearing, or a clarification addressing how § 768.79(7) applies to an apportioned proposal for a unified claim.
-2. Any Supreme Court decision that squarely re-examines the singular-"party" inference. Nothing has in twenty-four years.
-3. A Rules Committee proposal to amend (c)(3). On this history, that is the likeliest source of change and the one to watch.
+- ⚠️ The **~816 district court opinions are untouched**. Any statement here about district alignment describes *the Supreme Court's agreement with a district*, not the districts' own distribution.
+- ⚠️ **Tier B (11) and Tier C (9)** Supreme Court cases are unread. They are the low-density tail — Tier C contains no mention of § 768.79 at all — but they bound any claim that a proposition appears nowhere else.
+- ⚠️ *Ramos v. State*, *State v. Furen*, and *Watkins v. Corbett* (2d DCA 2026) are **unread**.
+- ⚠️ `365 So. 3d 353` (*Coates*) is the one **unverified reporter citation** in this document; CourtListener carries no So. 3d parallel cites for recent Florida Supreme Court decisions. Confirm against Southern Reporter before circulating.
+- ⚠️ **Pin cites are not machine-verifiable.** Citation checking confirms that a citation resolves to a real case; it cannot confirm that a given page says what it is said to say. Those were taken from the opinions and are recorded in [`sc-corpus.md`](sc-corpus.md).
 
 ---
 
-## Appendix — citation verification
-
-Run August 4, 2026 against CourtListener (`analyze_citations`, plus targeted lookups). **35 citations checked; 31 verified clean by reporter.** Every case named in this memorandum is hyperlinked to its opinion on first mention — 30 distinct opinions.
-
-### Resolved without change
-
-**Four case-name warnings were false positives.** The checker flagged *Kuhajda*, *Hingson*, *In re Amendments* (1996), and *Anderson* as possible name mismatches. All four are artifacts of Markdown italics: the trailing `*` was captured as part of the case name passed to the checker (e.g. `Borden Dairy Co. of Alabama, LLC*`). Each verified correctly by reporter and date. No action needed.
-
-**One ambiguity resolved.** `754 So. 2d 795` matches two clusters four days apart — *Pfoutz v. State* (Mar. 25, 2000) and *C & S Chemicals, Inc. v. McDougald* (Mar. 29, 2000). The correct case is **C & S Chemicals**, cluster 1133483. It appears in this memorandum only inside a quotation from *Hingson* and carries no independent cite.
-
-### 🔴 Unverified reporter citations — read before circulating
-
-CourtListener carries **no So. 3d parallel citations for recent Florida Supreme Court decisions**. Four citations therefore returned NOT FOUND. In every case the *decision* was located and is linked; it is the **reporter citation** that is unconfirmed.
-
-| Case | Reporter cite | Status | In this memo? |
-|---|---|---|---|
-| *Coates v. R.J. Reynolds* (SC2021-0175, June 15, 2023) | `365 So. 3d 353` | ⚠️ **Unconfirmed** — from the project corpus | **Yes** |
-| *Suarez Trucking v. Souders* (SC21-369, Oct. 20, 2022) | `351 So. 3d 1080` | 🔴 **Do not use** — see below | No |
-| *CCM Condominium v. Petri* (SC19-861, Sept. 9, 2021) | `322 So. 3d 32` | 🔴 **Do not use** — see below | No |
-| *State v. Poole* (SC18-245, 2020) | `297 So. 3d 487` | ⚠️ **Unconfirmed** — from the project corpus | No |
-
-🔴 **Two of those reporter citations were fabricated during this verification run.** The `351 So. 3d 1080` and `322 So. 3d 32` cites for *Suarez Trucking* and *CCM Condominium* do **not** appear anywhere in the project files. They were generated when assembling the citation-check input, because the project records those two cases by docket number only. They are not in this memorandum and must not be reintroduced. Recorded here rather than quietly dropped, because it is precisely the failure mode this project's verification convention exists to catch — and it survived until a database was asked.
-
-**Before circulating**, confirm `365 So. 3d 353` for *Coates* against Southern Reporter or Westlaw. It is the one unverified reporter cite that actually appears in the text.
-
-### Other notes
-
-- ***Watkins v. Corbett***, No. 2D2025-0214 (Fla. 2d DCA Mar. 25, 2026), is not in CourtListener. Cited here only as unread supplemental authority; it carries a docket number, not a reporter cite.
-- ***State v. Poole*** has two CourtListener clusters — January 23, 2020 and April 2, 2020. The link points to the April 2 opinion. Confirm which is the operative published decision if *Poole* is relied on beyond the "clearly erroneous" standard.
-- **Pin cites are not machine-verifiable.** The checker confirms that a citation resolves to a real case; it cannot confirm that page 199 of *Hingson* says what this memorandum says it says. Those were taken from the opinions directly and are recorded in `sc-corpus.md`.
-
----
-
-*Prepared from the corpus and coding in `sc-corpus.md`, `arc-matrix.md`, `phase-1-findings.md`, and `CLAUDE.md`.*
+*Prepared from the corpus and coding in [`sc-corpus.md`](sc-corpus.md), [`arc-matrix.md`](arc-matrix.md), [`phase-1-findings.md`](phase-1-findings.md), and [`CLAUDE.md`](CLAUDE.md). Citations verified against CourtListener August 4, 2026; see [`README.md`](README.md) for the verification record and the two fabricated citations it caught.*

@@ -8,13 +8,15 @@ A research project on Florida's offer-of-judgment regime, tracking three paralle
 
 Owner: **Sam Harden**. Started August 2026.
 
-The live question driving the work is ***Trace Elements, Inc. v. MacKensen***, No. SC2024-1274 (Fla. July 2, 2026), which held 4–3 that rule 1.442(c)(3) requires a married couple to apportion a settlement proposal between themselves even on a single, unified claim.
+The regime is split across two instruments by constitutional necessity — the substantive right in the statute, the procedure in the rule — and most of what is interesting about it comes from the two institutions revising each other's work over five decades.
 
-> 🔴 **Rehearing is pending and undecided.** A motion for clarification and rehearing was filed July 17, 2026; no order, no mandate. **Nothing here is final until the ACIS docket is re-pulled.**
+> 🔴 **One live matter affects several statements.** ***Trace Elements, Inc. v. MacKensen***, No. SC2024-1274 (Fla. July 2, 2026), is **not final** — a motion for clarification and rehearing was filed July 17, 2026; no order, no mandate. Re-pull the ACIS docket before relying on the apportionment sections.
 
-## The thesis, in one paragraph
+## What the deliverable is
 
-*Trace Elements* is **doctrinally faithful** to *Kuhajda v. Borden Dairy* — attacking it as inconsistent wastes the strongest ground. The vulnerability is the **premise it inherits**: that § 768.79(2)(b)'s singular "party" imposes an apportionment requirement. That inference was drawn in two hedged sentences of a 4–3 decision in 2002, against three of the four district courts then to have ruled, over a dissent citing the Legislature's own directive that the singular includes the plural — and it has never been revisited. Meanwhile the rule provision said to implement it was drafted for an entirely different purpose, and every extension of the line has been corrected by whichever institution spoke next. Full argument in [`memo.md`](memo.md).
+[`memo.md`](memo.md) is a **survey of the whole regime** — how offers of judgment work mechanically, and how the statute, the rule, and the case law have revised each other since 1972. Eight parts: the mechanics, the two-track history, the constitutional architecture that splits the regime in two, all ten doctrinal arcs, cross-cutting patterns, open gaps, and its own limits.
+
+⭐ **Scope was corrected on August 4, 2026.** An earlier draft was organised as an argument about *Trace Elements* and the joint-proposal apportionment requirement. That was too narrow — *Trace Elements* is one decision within one of ten arcs. The apportionment analysis survives as the deepest-developed section, but it is now a part of the survey rather than its frame. When adding to this project: **does this describe how the regime works, or does it argue about one case?**
 
 ---
 
@@ -32,8 +34,9 @@ The live question driving the work is ***Trace Elements, Inc. v. MacKensen***, N
 
 | If you want… | Read |
 |---|---|
-| The argument | [`memo.md`](memo.md) |
-| Orientation, thesis, verified facts, tooling gotchas | [`CLAUDE.md`](CLAUDE.md) |
+| How the regime works, and how it changed | [`memo.md`](memo.md) |
+| The history as a visual timeline | [`visuals/two-track-timeline.html`](visuals/two-track-timeline.html) |
+| Orientation, verified facts, tooling gotchas | [`CLAUDE.md`](CLAUDE.md) |
 | What remains to be done | [`research-plan.md`](research-plan.md) |
 | The case law, coded | [`sc-corpus.md`](sc-corpus.md) |
 | The analytical consolidation | [`arc-matrix.md`](arc-matrix.md) |
@@ -42,8 +45,9 @@ The live question driving the work is ***Trace Elements, Inc. v. MacKensen***, N
 
 | Path | Contents |
 |---|---|
-| `memo.md` | **The deliverable.** Doctrinal memorandum, eleven parts, every case hyperlinked. Part XI states its own limits; the appendix records the citation verification |
-| `CLAUDE.md` | Project memory — orientation, thesis, verified facts, working conventions, tooling gotchas |
+| `memo.md` | **The deliverable.** A survey of the regime in eight parts — mechanics, two-track history, constitutional architecture, all ten doctrinal arcs, cross-cutting patterns, open gaps, limits. Every case hyperlinked |
+| `visuals/two-track-timeline.html` | The two-track history as a standalone page — 35 events, statute vs. Court, with the three causal loops |
+| `CLAUDE.md` | Project memory — scope note, verified facts, working conventions, tooling gotchas, and arc 3 developed in depth |
 | `research-plan.md` | Plan for remaining work, plus a retrospective on what the original plan got wrong |
 | `phase-0-findings.md` | District-attribution cascade, corpus map, coding schema, CSV conventions |
 | `sc-corpus.md` | The 85 Florida Supreme Court opinions — triage, Tier A/B/C, coded entries, the Phase 2 rule track, the *Trace Elements* rehearing record, and district decisions read in full |

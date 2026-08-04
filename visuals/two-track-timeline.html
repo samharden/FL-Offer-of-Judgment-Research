@@ -1,0 +1,817 @@
+<title>Two-Track Timeline — Fla. Stat. § 768.79 and Fla. R. Civ. P. 1.442</title>
+<style>
+  :root {
+    color-scheme: light;
+    --plane: #f9f9f7;
+    --surface: #fcfcfb;
+    --ink: #0b0b0b;
+    --ink-2: #52514e;
+    --ink-muted: #898781;
+    --rule: #e1e0d9;
+    --rail: #c3c2b7;
+    --ring: rgba(11, 11, 11, 0.10);
+    --court: #2a78d6;
+    --legis: #eb6834;
+    --rules: #1baf7a;
+    --court-wash: rgba(42, 120, 214, 0.07);
+    --legis-wash: rgba(235, 104, 52, 0.07);
+    --rules-wash: rgba(27, 175, 122, 0.08);
+    --critical: #d03b3b;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --plane: #0d0d0d;
+      --surface: #1a1a19;
+      --ink: #ffffff;
+      --ink-2: #c3c2b7;
+      --ink-muted: #898781;
+      --rule: #2c2c2a;
+      --rail: #383835;
+      --ring: rgba(255, 255, 255, 0.10);
+      --court: #3987e5;
+      --legis: #d95926;
+      --rules: #199e70;
+      --court-wash: rgba(57, 135, 229, 0.12);
+      --legis-wash: rgba(217, 89, 38, 0.12);
+      --rules-wash: rgba(25, 158, 112, 0.13);
+      --critical: #e05c5c;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --plane: #0d0d0d;
+    --surface: #1a1a19;
+    --ink: #ffffff;
+    --ink-2: #c3c2b7;
+    --ink-muted: #898781;
+    --rule: #2c2c2a;
+    --rail: #383835;
+    --ring: rgba(255, 255, 255, 0.10);
+    --court: #3987e5;
+    --legis: #d95926;
+    --rules: #199e70;
+    --court-wash: rgba(57, 135, 229, 0.12);
+    --legis-wash: rgba(217, 89, 38, 0.12);
+    --rules-wash: rgba(25, 158, 112, 0.13);
+    --critical: #e05c5c;
+  }
+
+  body {
+    background: var(--plane);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.55;
+    margin: 0;
+    padding: 0 1.25rem 5rem;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 60rem; margin: 0 auto; }
+
+  /* ---- masthead ---- */
+  .masthead { padding: 3.5rem 0 2rem; border-bottom: 2px solid var(--ink); }
+  .eyebrow {
+    font-size: 0.7rem; letter-spacing: 0.13em; text-transform: uppercase;
+    color: var(--ink-muted); font-weight: 600; margin: 0 0 1rem;
+  }
+  h1 {
+    font-family: var(--serif); font-weight: 400; font-size: clamp(1.9rem, 5vw, 3rem);
+    line-height: 1.12; letter-spacing: -0.01em; margin: 0 0 0.9rem; text-wrap: balance;
+  }
+  .standfirst {
+    font-family: var(--serif); font-size: clamp(1rem, 2.2vw, 1.2rem);
+    color: var(--ink-2); max-width: 34em; margin: 0 0 1.5rem; line-height: 1.5;
+  }
+  .provenance { font-size: 0.8rem; color: var(--ink-muted); margin: 0; }
+
+  /* ---- summary figures ---- */
+  .figures {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
+    gap: 1px; background: var(--rule); border: 1px solid var(--rule);
+    margin: 2.5rem 0 0;
+  }
+  .fig { background: var(--surface); padding: 1.1rem 1rem; }
+  .fig-n {
+    font-size: 2rem; line-height: 1; font-variant-numeric: tabular-nums;
+    font-weight: 500; letter-spacing: -0.02em;
+  }
+  .fig-l {
+    font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--ink-muted); margin-top: 0.5rem; font-weight: 600;
+  }
+  .fig-s { font-size: 0.8rem; color: var(--ink-2); margin-top: 0.35rem; }
+
+  /* ---- legend ---- */
+  .legend {
+    display: flex; flex-wrap: wrap; gap: 0.5rem 1.6rem;
+    margin: 2.5rem 0 0; padding: 1rem 1.1rem;
+    background: var(--surface); border: 1px solid var(--rule);
+  }
+  .lg { display: flex; align-items: center; gap: 0.55rem; font-size: 0.85rem; }
+  .lg-mark { width: 13px; height: 13px; flex: none; }
+  .lg-mark.court { background: var(--court); border-radius: 50%; }
+  .lg-mark.legis { background: var(--legis); transform: rotate(45deg); }
+  .lg-mark.rules { background: var(--rules); }
+  .lg-note { font-size: 0.85rem; color: var(--ink-muted); }
+
+  h2 {
+    font-family: var(--serif); font-weight: 400; font-size: 1.55rem;
+    margin: 3.5rem 0 0.5rem; letter-spacing: -0.01em;
+  }
+  .section-note { color: var(--ink-2); font-size: 0.92rem; margin: 0 0 1.5rem; max-width: 46em; }
+
+  /* ---- timeline ---- */
+  .timeline { position: relative; margin-top: 2rem; }
+  .timeline::before {
+    content: ""; position: absolute; top: 0; bottom: 0; left: calc(50% - 1px);
+    width: 2px; background: var(--rail);
+  }
+  .row {
+    display: grid; grid-template-columns: 1fr 3.5rem 1fr;
+    align-items: start; margin-bottom: 0.85rem;
+  }
+  .node {
+    grid-column: 2; justify-self: center; margin-top: 0.85rem;
+    width: 13px; height: 13px; flex: none; position: relative; z-index: 2;
+    box-shadow: 0 0 0 4px var(--plane);
+  }
+  .node.court { background: var(--court); border-radius: 50%; }
+  .node.legis { background: var(--legis); transform: rotate(45deg); }
+  .node.rules { background: var(--rules); }
+
+  .card {
+    background: var(--surface); border: 1px solid var(--rule);
+    padding: 0.85rem 1rem 0.95rem; position: relative;
+  }
+  .card.legis { grid-column: 1; border-left: 3px solid var(--legis); background: var(--legis-wash); }
+  .card.court { grid-column: 3; border-left: 3px solid var(--court); background: var(--court-wash); }
+  .card.rules { grid-column: 3; border-left: 3px solid var(--rules); background: var(--rules-wash); }
+
+  .yr {
+    font-variant-numeric: tabular-nums; font-weight: 700; font-size: 0.78rem;
+    letter-spacing: 0.06em; color: var(--ink-muted);
+  }
+  .actor {
+    font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase;
+    font-weight: 700; margin-left: 0.6rem;
+  }
+  .card.legis .actor { color: var(--legis); }
+  .card.court .actor { color: var(--court); }
+  .card.rules .actor { color: var(--rules); }
+  .card h3 {
+    font-family: var(--serif); font-size: 1.05rem; font-weight: 400;
+    margin: 0.4rem 0 0.3rem; line-height: 1.3;
+  }
+  .card p { margin: 0; font-size: 0.87rem; color: var(--ink-2); line-height: 1.5; }
+  .cite { font-size: 0.8rem; color: var(--ink-muted); margin-top: 0.35rem; font-variant-numeric: tabular-nums; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.6rem; }
+  .chip {
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.03em;
+    padding: 0.14rem 0.5rem; border: 1px solid var(--ring); color: var(--ink-2);
+    background: var(--surface);
+  }
+  .chip.vote { color: var(--ink); border-color: var(--ink); font-variant-numeric: tabular-nums; }
+  .chip.live { color: var(--critical); border-color: var(--critical); font-weight: 700; }
+  .chip.responds { font-weight: 500; }
+
+  .card.keystone { border-width: 1px 1px 1px 3px; box-shadow: 0 0 0 2px var(--ink); }
+
+  /* ---- loop callouts ---- */
+  .loop {
+    grid-column: 1 / -1; margin: 1.4rem 0 1.6rem;
+    border: 1px solid var(--ink); background: var(--surface);
+    padding: 1.1rem 1.2rem;
+  }
+  .loop-l {
+    font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase;
+    font-weight: 700; color: var(--ink-muted); margin: 0 0 0.5rem;
+  }
+  .loop h4 { font-family: var(--serif); font-weight: 400; font-size: 1.15rem; margin: 0 0 0.5rem; }
+  .loop p { margin: 0; font-size: 0.9rem; color: var(--ink-2); }
+  .loop .steps {
+    display: flex; flex-wrap: wrap; gap: 0.3rem 0.55rem; margin-top: 0.75rem;
+    font-size: 0.82rem; font-variant-numeric: tabular-nums; align-items: center;
+  }
+  .loop .steps b { font-weight: 600; color: var(--ink); }
+  .loop .steps span { color: var(--ink-muted); }
+
+  /* ---- table view ---- */
+  .table-wrap { overflow-x: auto; border: 1px solid var(--rule); background: var(--surface); }
+  table { border-collapse: collapse; width: 100%; font-size: 0.85rem; min-width: 34rem; }
+  caption { text-align: left; font-size: 0.85rem; color: var(--ink-muted); padding: 0 0 0.75rem; }
+  th, td { text-align: left; padding: 0.5rem 0.85rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  th {
+    font-size: 0.7rem; letter-spacing: 0.07em; text-transform: uppercase;
+    color: var(--ink-muted); font-weight: 700; white-space: nowrap;
+  }
+  td.y { font-variant-numeric: tabular-nums; white-space: nowrap; font-weight: 600; }
+  tbody tr:last-child td { border-bottom: none; }
+  .tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; white-space: nowrap; }
+  .tag.court { color: var(--court); }
+  .tag.legis { color: var(--legis); }
+  .tag.rules { color: var(--rules); }
+
+  .readings { margin: 1.5rem 0 0; padding: 0; list-style: none; }
+  .readings li {
+    padding: 0.9rem 0; border-top: 1px solid var(--rule);
+    font-size: 0.92rem; color: var(--ink-2); max-width: 48em;
+  }
+  .readings b { color: var(--ink); font-weight: 600; }
+
+  footer {
+    margin-top: 4rem; padding-top: 1.25rem; border-top: 1px solid var(--rule);
+    font-size: 0.82rem; color: var(--ink-muted); max-width: 48em;
+  }
+
+  @media (max-width: 46rem) {
+    .timeline::before { left: 5px; }
+    .row { grid-template-columns: 12px 1fr; column-gap: 1rem; }
+    .node { grid-column: 1; justify-self: start; margin-top: 0.9rem; }
+    .card.legis, .card.court, .card.rules { grid-column: 2; }
+    .loop { grid-column: 1 / -1; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">Florida offer of judgment &middot; Research deliverable</p>
+    <h1>Fifty-four years of two institutions editing each other</h1>
+    <p class="standfirst">
+      Every amendment to Fla. Stat. &sect; 768.79 and Fla. R. Civ. P. 1.442, set against the
+      decisions that prompted them &mdash; and the decisions they were meant to undo.
+    </p>
+    <p class="provenance">
+      Built 3 August 2026 from 39 read Florida Supreme Court merits opinions and four rule-amendment
+      opinions. Sources and coding in <em>sc-corpus.md</em> and <em>arc-matrix.md</em>.
+    </p>
+  </header>
+
+  <section class="figures" aria-label="Summary figures">
+    <div class="fig">
+      <div class="fig-n">4</div>
+      <div class="fig-l">Legislative touches</div>
+      <div class="fig-s">In 40 years. Three of them substantive.</div>
+    </div>
+    <div class="fig">
+      <div class="fig-n">8</div>
+      <div class="fig-l">Rule amendments</div>
+      <div class="fig-s">Twice the legislative rate.</div>
+    </div>
+    <div class="fig">
+      <div class="fig-n">3</div>
+      <div class="fig-l">Self-corrections</div>
+      <div class="fig-s">Of 4 decision-driven amendments.</div>
+    </div>
+    <div class="fig">
+      <div class="fig-n">34</div>
+      <div class="fig-l">Years unamended</div>
+      <div class="fig-s">The 1992 &ldquo;damages&rdquo; defect.</div>
+    </div>
+  </section>
+
+  <div class="legend">
+    <span class="lg"><span class="lg-mark legis"></span> Legislature &mdash; statute</span>
+    <span class="lg"><span class="lg-mark court"></span> Court &mdash; decision</span>
+    <span class="lg"><span class="lg-mark rules"></span> Court &mdash; rulemaking</span>
+    <span class="lg lg-note">Heavy outline marks a turning point. Votes shown where the Court divided.</span>
+  </div>
+
+  <h2>The timeline</h2>
+  <p class="section-note">
+    Statute on the left, Court on the right &mdash; decisions and rulemaking distinguished because
+    they are the Court acting in two different capacities, which is the whole subject.
+  </p>
+
+  <div class="timeline">
+
+    <div class="row">
+      <span class="node rules"></span>
+      <div class="card rules">
+        <span class="yr">1972</span><span class="actor">Rulemaking</span>
+        <h3>Florida adopts its first offer-of-judgment rule</h3>
+        <p>Identical to Fed. R. Civ. P. 68 &mdash; costs only, no fees.</p>
+        <p class="cite">In re the Florida Bar, 265 So. 2d 21</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node legis"></span>
+      <div class="card legis">
+        <span class="yr">1986</span><span class="actor">Statute</span>
+        <h3>&sect; 768.79 enacted</h3>
+        <p>Tort Reform and Insurance Act. The same act creates &sect; 768.81, the comparative-fault
+          provision that later supplies rule 1.442(c)(3) its purpose.</p>
+        <p class="cite">ch. 86-160, &sect; 58</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node legis"></span>
+      <div class="card legis">
+        <span class="yr">1987</span><span class="actor">Statute</span>
+        <h3>&sect; 45.061 enacted &mdash; a second, separate statute</h3>
+        <p>A year later, not alongside. Now three instruments govern the same conduct.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node rules"></span>
+      <div class="card rules">
+        <span class="yr">1988</span><span class="actor">Rulemaking</span>
+        <h3>Court asks the Rules Committee to sort out the conflict</h3>
+        <p>Among &sect; 45.061, &sect; 768.79, and rule 1.442.</p>
+        <div class="chips"><span class="chip responds">&larr; responds to the statutes</span></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node court"></span>
+      <div class="card court">
+        <span class="yr">1989</span><span class="actor">Decision</span>
+        <h3><em>Unicare Health Facilities v. Mort</em></h3>
+        <p>The rule exists &ldquo;solely to encourage settlements in order to eliminate trials if
+          possible.&rdquo; The purposive pole every later argument pushes against.</p>
+        <p class="cite">553 So. 2d 159 &middot; unanimous</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node rules"></span>
+      <div class="card rules">
+        <span class="yr">1989</span><span class="actor">Rulemaking</span>
+        <h3>Rule withdrawn and replaced</h3>
+        <p>The Committee asked the Court to declare both statutes unconstitutional. It declined to
+          reach the question and proceeded by supersession instead. The replacement expressly allowed
+          offers &ldquo;by any party or parties&rdquo; stating a single total &mdash;
+          <b>no apportionment requirement of any kind.</b></p>
+        <p class="cite">550 So. 2d 442 &middot; eff. 1 Jan. 1990</p>
+        <div class="chips"><span class="chip responds">&larr; responds to the statutes</span></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node legis"></span>
+      <div class="card legis">
+        <span class="yr">1990</span><span class="actor">Statute</span>
+        <h3>Ch. 90-119 rewrites the statute</h3>
+        <p>&sect; 48 lets a defendant recover on a judgment of &ldquo;no liability&rdquo;;
+          &sect; 22 repeals &sect; 45.061 prospectively.</p>
+        <p class="cite">eff. 1 Oct. 1990</p>
+        <div class="chips"><span class="chip responds">&larr; responds to <em>Rabatie</em>, <em>Kline</em>, <em>Oriental Imports</em></span></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node court"></span>
+      <div class="card court">
+        <span class="yr">1992</span><span class="actor">Decision</span>
+        <h3><em>Leapai v. Milton</em></h3>
+        <p>&sect; 45.061 upheld. &ldquo;The judiciary and the legislature must work to solve these types
+          of separation-of-powers problems without encroaching upon each other&rsquo;s functions.&rdquo;</p>
+        <p class="cite">595 So. 2d 12 &middot; unanimous</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node court"></span>
+      <div class="card court">
+        <span class="yr">1992</span><span class="actor">Decision &amp; rulemaking</span>
+        <h3><em>Timmons v. Combs</em> &mdash; the Court repeals its own rule</h3>
+        <p>And adopts the procedural portion of &sect; 768.79 as a rule of Court.</p>
+        <p class="cite">608 So. 2d 1</p>
+        <div class="chips"><span class="chip responds">&larr; responds to the statute</span></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node rules"></span>
+      <div class="card rules">
+        <span class="yr">1992</span><span class="actor">Rulemaking</span>
+        <h3>Supplemental Order flags a defect the Court cannot fix</h3>
+        <p>Commenters lament that &sect; 768.79 reaches only &ldquo;civil actions for damages.&rdquo;
+          The Court answers that this is &ldquo;beyond this Court&rsquo;s control because
+          substantive&rdquo; &mdash; then asks the Committee for a new rule.</p>
+        <p class="cite">22 Oct. 1992</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node court"></span>
+      <div class="card court">
+        <span class="yr">1993</span><span class="actor">Decision</span>
+        <h3><em>Fabre v. Marin</em></h3>
+        <p>&sect; 768.81(3): judgment against each party by percentage of fault, counting nonparties.
+          A defendant-side fault-allocation case &mdash; and the reason (c)(3) exists.</p>
+        <p class="cite">623 So. 2d 1182 &middot; 5&ndash;2</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node court"></span>
+      <div class="card court">
+        <span class="yr">1993</span><span class="actor">Decision</span>
+        <h3><em>Metropolitan Dade County v. Jones Boatyard</em></h3>
+        <p>The applicable version of &sect; 768.79 is the one in force when the cause of action
+          accrued &mdash; not when the offer was served.</p>
+        <p class="cite">611 So. 2d 512</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node court"></span>
+      <div class="card court">
+        <span class="yr">1995</span><span class="actor">Decision</span>
+        <h3><em>TGI Friday&rsquo;s v. Dvorak</em></h3>
+        <p>Entitlement is arithmetic. But <b>Wells, J., writing separately, first argues for strict
+          construction</b> &mdash; a position that becomes the majority rule eight years later.</p>
+        <p class="cite">663 So. 2d 606</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node court"></span>
+      <div class="card court">
+        <span class="yr">1996</span><span class="actor">Decision</span>
+        <h3><em>Knealing v. Puleo</em></h3>
+        <p>&sect; 44.102(6) is unconstitutional: purely procedural, no substantive fee authorization.
+          The constitutional test for the whole field.</p>
+        <p class="cite">675 So. 2d 593</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node rules"></span>
+      <div class="card rules keystone">
+        <span class="yr">1996</span><span class="actor">Rulemaking</span>
+        <h3>The rewrite &mdash; and the birth of (c)(3)</h3>
+        <p>Rule 1.442 becomes <em>Proposals for Settlement</em>. The committee note states the reason
+          for the apportionment sentence in one line: <b>&ldquo;in order to conform with
+          <em>Fabre v. Marin</em>.&rdquo;</b> The only amendment in the chain that answers to both
+          tracks at once.</p>
+        <p class="cite">682 So. 2d 105, 126 &middot; eff. 1 Jan. 1997</p>
+        <div class="chips">
+          <span class="chip responds">&larr; <em>Fabre</em></span>
+          <span class="chip responds">&larr; <em>Knealing</em>, <em>TGI Friday&rsquo;s</em>, <em>Timmons</em></span>
+          <span class="chip responds">&larr; the statutes</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node rules"></span>
+      <div class="card rules">
+        <span class="yr">2000</span><span class="actor">Rulemaking</span>
+        <h3>Rule 1.525 adopted</h3>
+        <p>A bright-line 30-day deadline for fee motions; 1.442(g) is later conformed to it.</p>
+        <p class="cite">773 So. 2d 1098</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node court"></span>
+      <div class="card court keystone">
+        <span class="yr">2002</span><span class="actor">Decision</span>
+        <h3><em>Allstate Indemnity Co. v. Hingson</em> &mdash; the foundation stone</h3>
+        <p>The singular word &ldquo;party&rdquo; in &sect; 768.79(2)(b) is read to require
+          apportionment, in two hedged sentences &mdash; <b>&ldquo;this, we believe&rdquo;</b> &mdash;
+          over a dissent citing the Legislature&rsquo;s own directive that the singular includes the
+          plural. On a pre-1997 offer, so it had to be derived from the statute alone. Never revisited.</p>
+        <p class="cite">808 So. 2d 197, 199</p>
+        <div class="chips"><span class="chip vote">4&ndash;3</span><span class="chip">Adopted 1 district against 3</span></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node court"></span>
+      <div class="card court">
+        <span class="yr">2003</span><span class="actor">Decision</span>
+        <h3><em>Willis Shaw Express v. Hilyer Sod</em></h3>
+        <p>Wells, J., now writing for the Court, extends the derogation canon from statutes to the
+          <em>rule</em> &mdash; citing only statute cases, with no separate justification.</p>
+        <p class="cite">849 So. 2d 276</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node rules"></span>
+      <div class="card rules keystone">
+        <span class="yr">2003</span><span class="actor">Rulemaking</span>
+        <h3>The Court refuses a fix</h3>
+        <p>The Rules Committee proposes excusing apportionment where a party is only vicariously
+          liable. The Court declines &mdash; expressly &ldquo;in light of our decision in
+          <em>Willis Shaw</em>.&rdquo;</p>
+        <p class="cite">858 So. 2d 1013, 1014&ndash;15</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node court"></span>
+      <div class="card court">
+        <span class="yr">2005</span><span class="actor">Decision</span>
+        <h3><em>Lamb v. Matetzschk</em></h3>
+        <p>Apportionment required even where liability is purely vicarious &mdash; exactly the problem
+          the Committee had tried to prevent. Unanimous in result, but <b>three justices write to say
+          the rule is broken.</b> Pariente, C.J.: the reading reaches &ldquo;beyond <em>Fabre</em>&rdquo;
+          so that a joint offer to a husband and wife is no longer authorized.</p>
+        <p class="cite">906 So. 2d 1037</p>
+        <div class="chips"><span class="chip vote">4&ndash;0, 3 object in writing</span></div>
+      </div>
+    </div>
+
+    <div class="loop">
+      <p class="loop-l">Loop &mdash; documented, not inferred</p>
+      <h4>Committee proposes fix &rarr; Court refuses &rarr; Court creates the problem &rarr; Court adopts the fix</h4>
+      <p>Seven years, start to finish. The Court has now set this sequence up to run a third time.</p>
+      <div class="steps">
+        <b>2003</b> <span>Committee proposes the carve-out &mdash; refused</span> <span>&rarr;</span>
+        <b>2005</b> <span><em>Lamb</em> creates the problem</span> <span>&rarr;</span>
+        <b>2010</b> <span>Court adopts (c)(4)</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node court"></span>
+      <div class="card court">
+        <span class="yr">2006</span><span class="actor">Decision</span>
+        <h3><em>State Farm v. Nichols</em></h3>
+        <p>The ambiguity standard &mdash; &ldquo;the rule aims to prevent ambiguity, not breadth.&rdquo;
+          Also resolves the 1992 &ldquo;damages&rdquo; defect by construction rather than amendment.</p>
+        <p class="cite">932 So. 2d 1067</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node court"></span>
+      <div class="card court">
+        <span class="yr">2007</span><span class="actor">Decision</span>
+        <h3><em>Campbell v. Goldman</em></h3>
+        <p>&ldquo;All portions must be strictly construed.&rdquo; But Bell, J., concurring in result,
+          attacks the &ldquo;questionable derogation canon&rdquo; from inside the Court &mdash; the
+          argument the 2026 dissent will make, nineteen years early.</p>
+        <p class="cite">959 So. 2d 223, 228</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node court"></span>
+      <div class="card court">
+        <span class="yr">2010</span><span class="actor">Decision</span>
+        <h3><em>Attorneys&rsquo; Title Insurance Fund v. Gorka</em></h3>
+        <p>A joint proposal conditioned on mutual acceptance is invalid &mdash; a requirement the Court
+          concedes precedent only &ldquo;inherently requires.&rdquo; Concedes too that the regime
+          &ldquo;has been in sharp contrast to the intended outcome.&rdquo;</p>
+        <p class="cite">36 So. 3d 646, 650</p>
+        <div class="chips"><span class="chip vote">4&ndash;3</span></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node rules"></span>
+      <div class="card rules keystone">
+        <span class="yr">2010</span><span class="actor">Rulemaking</span>
+        <h3>(c)(4) adopted &mdash; essentially the 2003 proposal</h3>
+        <p>The vicarious-liability carve-out the Court had refused seven years earlier.</p>
+        <p class="cite">52 So. 3d 579, 588</p>
+        <div class="chips"><span class="chip responds">&larr; undoes <em>Lamb</em></span></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node court"></span>
+      <div class="card court">
+        <span class="yr">2013</span><span class="actor">Decision</span>
+        <h3><em>Diamond Aircraft v. Horowitch</em></h3>
+        <p>Scope again: the 1992 defect resolved by construction for the second time.</p>
+        <p class="cite">107 So. 3d 362</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node rules"></span>
+      <div class="card rules">
+        <span class="yr">2013</span><span class="actor">Rulemaking</span>
+        <h3>Cross-reference housekeeping</h3>
+        <p>(f)(1) now points to Fla. R. Jud. Admin. 2.514(b) instead of the deleted rule 1.090(e).
+          Reactive to another rule &mdash; neither a decision nor a statute.</p>
+        <p class="cite">112 So. 3d 1209 &middot; unanimous</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node court"></span>
+      <div class="card court">
+        <span class="yr">2015</span><span class="actor">Decision</span>
+        <h3><em>Pratt v. Weiss</em> &amp; <em>Audiffred v. Arnold</em></h3>
+        <p>The formalism high-water mark: <b>&ldquo;Even where no logical apportionment can be made,
+          it is nonetheless required.&rdquo;</b> <em>Audiffred</em> repeats the 1-against-3 district
+          alignment.</p>
+        <p class="cite">161 So. 3d 1268, 1272&ndash;73 &middot; 161 So. 3d 1274</p>
+        <div class="chips"><span class="chip vote">5&ndash;2</span></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node court"></span>
+      <div class="card court">
+        <span class="yr">2016</span><span class="actor">Decision</span>
+        <h3><em>Kuhajda v. Borden Dairy</em></h3>
+        <p>A carve-out, not a retreat: strict construction applies only where the rule provision
+          implements a <em>substantive</em> requirement of the statute. &ldquo;The tail should not
+          wag the dog.&rdquo;</p>
+        <p class="cite">202 So. 3d 391 &middot; unanimous in result</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node court"></span>
+      <div class="card court keystone">
+        <span class="yr">2018</span><span class="actor">Decision</span>
+        <h3><em>Allen v. Nunez</em> &mdash; the Court diagnoses itself</h3>
+        <p>Polston, J., dissenting with Canady, C.J., and Lawson, J.: this Court&rsquo;s jurisprudence
+          <b>&ldquo;in this area of the law seems inconsistently applied and unpredictable.&rdquo;</b>
+          The majority&rsquo;s answer disputes what to do about it, not the diagnosis.</p>
+        <p class="cite">258 So. 3d 1207</p>
+        <div class="chips"><span class="chip vote">4&ndash;3</span></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node legis"></span>
+      <div class="card legis keystone">
+        <span class="yr">2022</span><span class="actor">Statute</span>
+        <h3>The Legislature reaches in &mdash; narrowly</h3>
+        <p>New &sect; 768.79(6) lets <b>a property insurer</b> condition a joint offer on mutual
+          acceptance. A carve-out for one industry in one kind of action, not a repeal &mdash;
+          <em>Gorka</em> stands everywhere else. The same act renumbers the subsections.</p>
+        <p class="cite">ch. 2022-271, &sect; 24</p>
+        <div class="chips"><span class="chip responds">&larr; disapproves <em>Gorka</em>, in part</span></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node rules"></span>
+      <div class="card rules">
+        <span class="yr">2022</span><span class="actor">Rulemaking</span>
+        <h3>Rule conformed to the statute</h3>
+        <p class="cite">345 So. 3d 845</p>
+        <div class="chips"><span class="chip responds">&larr; responds to the statute</span></div>
+      </div>
+    </div>
+
+    <div class="loop">
+      <p class="loop-l">Loop &mdash; the other direction</p>
+      <h4>When the Court is the one edited</h4>
+      <p>The only instance in the corpus of the Legislature disapproving a decision in this line.
+        It took twelve years, reached one industry, and left the holding standing everywhere else.</p>
+      <div class="steps">
+        <b>2010</b> <span><em>Gorka</em>, 4&ndash;3</span> <span>&rarr;</span>
+        <b>2022</b> <span>&sect; 768.79(6) adopts the dissent&rsquo;s position, for property insurers</span>
+        <span>&rarr;</span> <b>2022</b> <span>rule conformed</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node legis"></span>
+      <div class="card legis">
+        <span class="yr">2023</span><span class="actor">Statute</span>
+        <h3>&sect; 627.428 repealed</h3>
+        <p>Answering a 2006 call from Anstead, J., to restore the insured&rsquo;s one-way fee street
+          &mdash; by abolishing it instead.</p>
+        <p class="cite">ch. 2023-15, &sect; 11 &middot; eff. 24 Mar. 2023</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node court"></span>
+      <div class="card court">
+        <span class="yr">2023</span><span class="actor">Decision</span>
+        <h3><em>Coates v. R.J. Reynolds</em></h3>
+        <p>The modern Court states its method: the supremacy-of-the-text principle, and
+          &ldquo;we do not add words to a statute in the guise of interpreting it.&rdquo;
+          <b>The derogation canon is never mentioned.</b></p>
+        <p class="cite">365 So. 3d 353</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node rules"></span>
+      <div class="card rules keystone">
+        <span class="yr">2025</span><span class="actor">Rulemaking</span>
+        <h3>(c)(3) reopened &mdash; and left alone</h3>
+        <p>A restyling amendment reaches the apportionment sentence and changes
+          <em>shall</em> to <em>must</em>. Committee notes: <b>no change</b> &mdash; so the 1996
+          <em>Fabre</em> note still governs. Unanimous, and adopted while <em>Trace Elements</em>
+          sat fully briefed on the Court&rsquo;s own docket, four weeks before argument.</p>
+        <p class="cite">SC2025-0045, 13 Nov. 2025 &middot; eff. 1 Jan. 2026</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <span class="node court"></span>
+      <div class="card court keystone">
+        <span class="yr">2026</span><span class="actor">Decision</span>
+        <h3><em>Trace Elements, Inc. v. MacKensen</em></h3>
+        <p>Apportionment is required even for a married couple&rsquo;s unified, single claim &mdash;
+          the application Pariente, C.J., identified as beyond the rule&rsquo;s purpose in 2005.
+          The majority invites a rule amendment rather than a judicial exception, citing the
+          post-<em>Lamb</em> amendment as its model.</p>
+        <p class="cite">No. SC2024-1274, 2 July 2026</p>
+        <div class="chips">
+          <span class="chip vote">4&ndash;3</span>
+          <span class="chip live">&#9888; Not final &mdash; rehearing pending</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="loop">
+      <p class="loop-l">Loop &mdash; still open</p>
+      <h4>The defect nobody has fixed</h4>
+      <p>Identified by commenters in 1992 and called &ldquo;beyond this Court&rsquo;s control because
+        substantive.&rdquo; The Court asked the Legislature to act. It has not. The question has been
+        answered by construction twice and amended never.</p>
+      <div class="steps">
+        <b>1992</b> <span>defect flagged</span> <span>&rarr;</span>
+        <b>2006</b> <span><em>Nichols</em> construes it</span> <span>&rarr;</span>
+        <b>2013</b> <span><em>Diamond Aircraft</em> construes it again</span> <span>&rarr;</span>
+        <b>2026</b> <span>still unamended</span>
+      </div>
+    </div>
+
+  </div>
+
+  <h2>What the chronology shows</h2>
+  <ul class="readings">
+    <li><b>The rule is amended to fix a decision more often than to implement one.</b> Of the four
+      decision-driven rulemaking events, three were the Court correcting its own work &mdash; 1992,
+      2010, and 2022.</li>
+    <li><b>The two institutions move at very different rates.</b> Four legislative touches in forty
+      years against at least eight rule amendments. The Court is the active editor of this field;
+      the Legislature intervenes rarely, late, and narrowly.</li>
+    <li><b>Only one amendment answers to both tracks at once</b> &mdash; the 1996 rewrite. It is also
+      the one that produced (c)(3).</li>
+    <li><b>Housekeeping outnumbers doctrine.</b> Three of eight rule amendments respond to a decision
+      and one to a statute; the rest are cross-references and restyling. The apportionment sentence
+      has survived thirty years and four amendment cycles without its substance being revisited once.</li>
+  </ul>
+
+  <h2>Table view</h2>
+  <div class="table-wrap">
+    <table>
+      <caption>Every event above, in one column. Actor abbreviations: L = Legislature, C = Court decision, R = Court rulemaking.</caption>
+      <thead>
+        <tr><th scope="col">Year</th><th scope="col">Actor</th><th scope="col">Event</th><th scope="col">Responds to</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="y">1972</td><td><span class="tag rules">R</span></td><td>Rule 1.442 adopted, mirroring Fed. R. Civ. P. 68</td><td>&mdash;</td></tr>
+        <tr><td class="y">1986</td><td><span class="tag legis">L</span></td><td>&sect; 768.79 enacted, ch. 86-160 &sect; 58</td><td>&mdash;</td></tr>
+        <tr><td class="y">1987</td><td><span class="tag legis">L</span></td><td>&sect; 45.061 enacted</td><td>&mdash;</td></tr>
+        <tr><td class="y">1988</td><td><span class="tag rules">R</span></td><td>Court refers the conflict to the Rules Committee</td><td>the statutes</td></tr>
+        <tr><td class="y">1989</td><td><span class="tag court">C</span></td><td><em>Unicare</em> &mdash; the purposive pole</td><td>&mdash;</td></tr>
+        <tr><td class="y">1989</td><td><span class="tag rules">R</span></td><td>550 So. 2d 442 &mdash; rule replaced; supersession, not invalidation</td><td>the statutes</td></tr>
+        <tr><td class="y">1990</td><td><span class="tag legis">L</span></td><td>Ch. 90-119 &mdash; &sect;&nbsp;48 rewrites &sect;&nbsp;768.79; &sect;&nbsp;22 repeals &sect;&nbsp;45.061 prospectively</td><td>DCA case law</td></tr>
+        <tr><td class="y">1992</td><td><span class="tag court">C</span></td><td><em>Leapai</em> &mdash; &sect; 45.061 constitutional</td><td>&mdash;</td></tr>
+        <tr><td class="y">1992</td><td><span class="tag court">C</span></td><td><em>Timmons</em> &mdash; rule repealed, statute&rsquo;s procedure adopted</td><td>the statute</td></tr>
+        <tr><td class="y">1992</td><td><span class="tag rules">R</span></td><td>Supplemental Order &mdash; &ldquo;civil actions for damages&rdquo; defect flagged</td><td>commenters</td></tr>
+        <tr><td class="y">1993</td><td><span class="tag court">C</span></td><td><em>Fabre v. Marin</em> &mdash; apportionment of fault</td><td>&mdash;</td></tr>
+        <tr><td class="y">1993</td><td><span class="tag court">C</span></td><td><em>Jones Boatyard</em> &mdash; versioning rule</td><td>&mdash;</td></tr>
+        <tr><td class="y">1995</td><td><span class="tag court">C</span></td><td><em>TGI Friday&rsquo;s</em> &mdash; Wells first argues strict construction</td><td>&mdash;</td></tr>
+        <tr><td class="y">1996</td><td><span class="tag court">C</span></td><td><em>Knealing</em> &mdash; the substance/procedure test</td><td>&mdash;</td></tr>
+        <tr><td class="y">1996</td><td><span class="tag rules">R</span></td><td>682 So. 2d 105 &mdash; the rewrite; <b>(c)(3) adopted to conform with <em>Fabre</em></b></td><td>both tracks</td></tr>
+        <tr><td class="y">2000</td><td><span class="tag rules">R</span></td><td>Rule 1.525 adopted</td><td>&mdash;</td></tr>
+        <tr><td class="y">2002</td><td><span class="tag court">C</span></td><td><em>Hingson</em> &mdash; singular &ldquo;party&rdquo; requires apportionment (4&ndash;3)</td><td>&mdash;</td></tr>
+        <tr><td class="y">2003</td><td><span class="tag court">C</span></td><td><em>Willis Shaw</em> &mdash; derogation canon extended to the rule</td><td><em>Hingson</em></td></tr>
+        <tr><td class="y">2003</td><td><span class="tag rules">R</span></td><td>Court <b>refuses</b> the Committee&rsquo;s vicarious-liability carve-out</td><td><em>Willis Shaw</em></td></tr>
+        <tr><td class="y">2005</td><td><span class="tag court">C</span></td><td><em>Lamb</em> &mdash; apportionment required for vicarious liability</td><td><em>Willis Shaw</em></td></tr>
+        <tr><td class="y">2006</td><td><span class="tag court">C</span></td><td><em>Nichols</em> &mdash; the ambiguity standard; scope by construction</td><td>the 1992 defect</td></tr>
+        <tr><td class="y">2007</td><td><span class="tag court">C</span></td><td><em>Campbell</em> &mdash; Bell attacks the derogation canon</td><td>&mdash;</td></tr>
+        <tr><td class="y">2010</td><td><span class="tag court">C</span></td><td><em>Gorka</em> &mdash; independent-acceptance requirement (4&ndash;3)</td><td>&mdash;</td></tr>
+        <tr><td class="y">2010</td><td><span class="tag rules">R</span></td><td>(c)(4) adopted &mdash; the 2003 proposal, seven years late</td><td><em>Lamb</em></td></tr>
+        <tr><td class="y">2013</td><td><span class="tag court">C</span></td><td><em>Diamond Aircraft</em> &mdash; scope by construction, again</td><td>the 1992 defect</td></tr>
+        <tr><td class="y">2013</td><td><span class="tag rules">R</span></td><td>112 So. 3d 1209 &mdash; (f)(1) cross-reference updated</td><td>another rule</td></tr>
+        <tr><td class="y">2015</td><td><span class="tag court">C</span></td><td><em>Pratt</em> / <em>Audiffred</em> &mdash; the formalism high-water mark (5&ndash;2)</td><td>&mdash;</td></tr>
+        <tr><td class="y">2016</td><td><span class="tag court">C</span></td><td><em>Kuhajda</em> &mdash; the substantive-implementing carve-out</td><td>&mdash;</td></tr>
+        <tr><td class="y">2018</td><td><span class="tag court">C</span></td><td><em>Allen v. Nunez</em> &mdash; &ldquo;inconsistently applied and unpredictable&rdquo; (4&ndash;3)</td><td>&mdash;</td></tr>
+        <tr><td class="y">2022</td><td><span class="tag legis">L</span></td><td>Ch. 2022-271 &sect; 24 &mdash; &sect; 768.79(6), property insurers only</td><td><em>Gorka</em>, in part</td></tr>
+        <tr><td class="y">2022</td><td><span class="tag rules">R</span></td><td>345 So. 3d 845 &mdash; rule conformed</td><td>the statute</td></tr>
+        <tr><td class="y">2023</td><td><span class="tag legis">L</span></td><td>Ch. 2023-15 &sect; 11 &mdash; &sect; 627.428 repealed</td><td><em>Nichols</em>, in reverse</td></tr>
+        <tr><td class="y">2023</td><td><span class="tag court">C</span></td><td><em>Coates</em> &mdash; supremacy of the text; canon unmentioned</td><td>&mdash;</td></tr>
+        <tr><td class="y">2025</td><td><span class="tag rules">R</span></td><td>SC2025-0045 &mdash; (c)(3) restyled, committee notes unchanged</td><td>an administrative order</td></tr>
+        <tr><td class="y">2026</td><td><span class="tag court">C</span></td><td><em>Trace Elements</em> &mdash; apportionment for a unified claim (4&ndash;3); <b>not final</b></td><td><em>Hingson</em> line</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p><em>Trace Elements</em> is not final. A motion for clarification and rehearing was filed
+      17 July 2026 and remains undecided; no mandate has issued. Verify the docket before relying on
+      this chart.</p>
+    <p>Two amendments remain unverified and could change the legislative count: ch. 87-249, which is
+      widely described as rewriting &sect; 768.79 in 1987 but does not appear in the statute&rsquo;s
+      credit line, and ch. 99-225, the 1999 Tort Reform Act later invalidated on single-subject grounds.</p>
+  </footer>
+
+</div>

@@ -18,7 +18,8 @@ Owner: Sam Harden. Working directory: `/Users/samharden/Claudeo/OoJ`. **Git repo
 | `phase-0-findings.md` | Phase 0 — district-attribution cascade, corpus map, coding schema, caveats |
 | `sc-corpus.md` | The 85 Florida Supreme Court opinions: triage, Tier A/B/C split, coded entries. **Also holds the completed Phase 2 rule-track section and the *Trace Elements* rehearing record** |
 | `arc-matrix.md` | **Phase 3 consolidation (Aug 3)** — 39 cases × 10 arcs, the Supreme Court alignment matrix by district, and the two-track timeline |
-| `memo.md` | 🆕 **The doctrinal memorandum (draft 1, Aug 4).** Eleven parts; Part XI states its own limits. Citations not yet run through `analyze_citations` |
+| `memo.md` | ⭐ **The deliverable — a survey of the whole regime** (rewritten Aug 4 after a scope correction). Eight parts: mechanics · two-track history · constitutional architecture · all ten arcs · cross-cutting patterns · open gaps · limits. Every case hyperlinked; citations verified |
+| `visuals/two-track-timeline.html` | The two-track timeline as a standalone page — 35 events, statute vs. Court, with the three causal loops. Also published as an artifact |
 | `phase-1-handoff.md` | **Self-contained brief for the legislative track**, written for an outside collaborator. Four questions, the traps, sources, deliverable standards |
 | `phase-1-findings.md` | **Completed legislative-track findings.** Resolves all four handoff questions and links the retrieved primary PDFs |
 | `Trace Elements/` | Primary documents for the live case — ACIS docket (printed Aug. 3, 2026), rehearing motion, response in opposition |
@@ -53,7 +54,19 @@ The five Phase 1 PDFs were briefly committed under `output/pdf/` before this pol
 
 ---
 
-# THE THESIS
+# SCOPE — read this before adding to the project
+
+⭐ **Scope corrected August 4, 2026.** The project is a **broad survey of Florida's offer-of-judgment regime** — how it works mechanically, and how the statute, the rule, and the case law have changed each other over fifty-four years. It is **not** a brief about *Trace Elements*.
+
+The work drifted toward *Trace Elements* because that case was live and interesting. That was a framing error. *Trace Elements* is **one decision within arc 3**, and arc 3 is one of ten. The deliverable — `memo.md` — is now organised as a survey: the mechanics, the two-track history, the constitutional architecture, all ten arcs, then cross-cutting patterns.
+
+**When adding to this project, ask: does this describe how the regime works, or does it argue about one case?** Both have a place, but the first is the spine and the second is a subsection.
+
+Everything under *The apportionment line* below remains accurate and is the deepest-developed analysis here. Treat it as **arc 3's section of the survey**, not as the project's thesis.
+
+---
+
+# THE APPORTIONMENT LINE — arc 3, developed in depth
 
 *Trace Elements* (2026) **is** doctrinally faithful to *Kuhajda* — rule 1.442(c)(3) does implement what *Hingson* and *Gorka* say § 768.79 requires. The vulnerability is not inconsistency with *Kuhajda*. It is that **the premise *Trace Elements* inherits is the weakest link in a chain that has been repudiated at every point where anyone else got a word.**
 
