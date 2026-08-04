@@ -355,6 +355,7 @@ Not usable until authorized: **Trellis** (highest value — the only route to ci
 
 # WORKING CONVENTIONS
 
+- ⭐ **Deliverables are plain text — no proprietary formats.** The memo is **Markdown** (`memo.md`); the case database is **CSV** (`case-database.csv`). Decision recorded August 4, 2026. Both diff cleanly in Git and neither ties the project to Office. Convert to `.docx` at the end if a recipient needs it — but the source of truth stays plain text. CSV serialisation conventions are in `phase-0-findings.md` §4.
 - **Never assert a holding for an unread case.** `sc-corpus.md` tracks read status per case; keep that column honest.
 - **Verify every citation with `analyze_citations`** before anything ships.
 - **Convert relative dates to absolute** everywhere.

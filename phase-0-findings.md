@@ -115,7 +115,7 @@ The terminology shift is confirmed and it is a real trap. Querying `"768.79" + "
 | `district_signal` | enum | `S1`/`S2`/`S3`/`S4` — provenance |
 | `district_confidence` | enum | `confirmed` (2+ signals agree) / `single` / `manual` |
 | `panel` | str | |
-| `issue_tags` | multi | The six arcs (see plan Phase 3) |
+| `issue_tags` | multi | The **ten** doctrinal arcs (listed in `CLAUDE.md`) — updated from six |
 | `canon_invoked` | enum | `derogation` / `rule_1.010` / `both` / `neither` |
 | `proposal_outcome` | enum | `upheld` / `invalidated` / `n-a` |
 | `fee_disposition` | enum | `awarded` / `denied` / `remanded` |
@@ -126,6 +126,15 @@ The terminology shift is confirmed and it is a real trap. Querying `"768.79" + "
 | `cite_count` | int | For tiering |
 
 `statute_version` and `rule_version` are what make the two-track timeline work — they let you ask whether a case turned on text that no longer exists.
+
+**Serialisation — CSV** (decision recorded August 4, 2026; the database is `case-database.csv`, not a spreadsheet binary):
+
+- **UTF-8, RFC 4180**, header row, `\n` line endings. No BOM.
+- `issue_tags` is the only multi-valued field. Encode as **semicolon-separated arc numbers**, ascending, no spaces — e.g. `1;3;4`. Semicolon rather than comma so the field never needs quoting for its own delimiter.
+- Empty means *not applicable*; `unknown` means *not yet determined*. Keep those distinct — an empty `district` on a Supreme Court row is correct, whereas an undetermined DCA district is `unknown`.
+- Dates ISO-8601 (`YYYY-MM-DD`). Booleans lowercase `true`/`false`.
+- Case names contain commas and quotation marks constantly (*Willis Shaw Express, Inc. v. Hilyer Sod, Inc.*), so **quote every string field** rather than relying on a writer to decide. Escape embedded quotes by doubling.
+- Diffs cleanly in Git, which a spreadsheet binary does not — that is the point of the format. Sort rows by `date_filed` so the diff stays legible.
 
 ---
 

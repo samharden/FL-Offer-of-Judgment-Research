@@ -207,4 +207,4 @@ Compiled from the dispositions in each read opinion. Counts how often the Suprem
 - **Arc coding for Tier B (11) and Tier C (9)** — will not change the shape above; these are the low-density cases.
 - **The real district-split matrix** — needs the ~816 DCA opinions retrieved and coded via the four-signal cascade.
 - **Vote margins marked "—"** in the matrix (*TGI Friday's*, *Hannah*, *Massey*, *Shands*, *Advanced Chiropractic*) — the corpus entries record the lineup but not always a clean count. Verify before publishing any vote-margin claim.
-- **A visual two-track timeline** (`dataviz`) and the master case database (`.xlsx`) — Phase 4 deliverables, not blockers.
+- **A visual two-track timeline** (`dataviz`) and the master case database (**CSV**) — Phase 4 deliverables, not blockers.
