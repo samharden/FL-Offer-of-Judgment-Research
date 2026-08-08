@@ -50,6 +50,8 @@ Florida Supreme Court **No. SC2024-1274**. On review from Fla. 4th DCA No. 4D202
 
 **This creates a real gap, and it should be understood.** The ACIS docket printout is a **point-in-time capture** — it carries a print timestamp of *August 3, 2026, 8:38 a.m.* and shows the docket as it stood while rehearing was pending. That state is **not reproducible**: once rehearing is decided, the live docket will show something different. The local copy is now the only record of it. **Do not delete `Trace Elements/` from disk.**
 
+⚠️ **Subsequent status check — August 8, 2026.** The live ACIS docket was **observed unchanged**: the rehearing motion and response are still the last substantive entries, with **no disposing order and no mandate**. This was a **visual check by Sam Harden, not an archived capture** — nothing was printed, so there is no second PDF, no timestamp, and no checksum, and it is **not** a point-in-time record in the sense the August 3 printout is. It is logged only to document that the opinion remained non-final through this date. The August 3 capture is still the sole archived record of the docket state.
+
 | Local filename | Size | Contents | SHA-256 |
 |---|---:|---|---|
 | `Case View - Trace Elements … Florida Appellate Case Information System.pdf` | 1.4 MB | Full ACIS docket, 48 entries, printed **Aug. 3, 2026, 8:38 a.m.**, case status Open. Records the rehearing motion (07/17/2026) and response (07/20/2026) with **no disposing order and no mandate** | `d7f3cd0359cbf3c224f926c91e4c2b6b934c5788f644c2ef8e5b9e2769e71df8` |

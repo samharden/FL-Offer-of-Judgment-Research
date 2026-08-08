@@ -331,7 +331,11 @@ Era distribution for `"768.79"`: pre-1996 = 100 · 1996–2006 = 302 · 2006–2
 | **07/20/2026** | **Petitioner's Response in Opposition** (Trace Elements) |
 | — | **No order disposing of the motion. No mandate.** |
 
+⚠️ **Still unchanged as of August 8, 2026.** Checked by Sam Harden against the live docket — motion and response still the last substantive entries, no disposing order, no mandate. **This was a visual check, not an archived capture**: no print, no timestamp, no checksum. The August 3 printout remains the only archived record of the docket state. Logged in `sources/manifest.md` § 2.
+
 **The opinion is not final and the thesis is exposed until this is resolved.** Re-pull the docket before anything ships. Note the motion seeks **clarification *and* rehearing** — a clarification grant could narrow the holding without a full rehearing, which would still move the analysis.
+
+⭐ **Where the risk actually sits, recorded August 8, 2026.** Rehearing grants are rare and a denial remains the likely outcome — but **the exposure here is not principally to rehearing.** The two forms of relief carry different bars: a **clarification** grant does not require revisiting the result and can narrow or gloss the holding while leaving the disposition intact. Because this project's apportionment analysis turns on **what the majority held** rather than on who won, clarification is both the more plausible grant and the one that would move the analysis. **Weigh the clarification branch, not the rehearing branch** — and note that a low probability of grant still does not make the opinion final. Only the mandate does.
 
 **Procedural history worth having:**
 - Trial court: **Indian River County**, Hon. **Robyn Stone**. DCA: **4th**, No. 4D2023-1707. Notice to invoke filed 08/29/2024.
@@ -423,7 +427,7 @@ Not usable until authorized: **Trellis** (highest value — the only route to ci
 1. ✅ ~~Consolidate Phase 3 analytically~~ — **done August 3, 2026.** See `arc-matrix.md`. Three findings feed the memo: the 4–3s cluster in the apportionment arc; **arc 6 (good faith) has no squarely decided case** and is the corpus's real gap; the district work to date is the **Supreme Court's alignment matrix**, not the district-split matrix.
 2. ✅ ~~Draft the doctrinal memo~~ — **done August 4, 2026.** `memo.md`, eight parts, citations verified, scope corrected to a survey.
 3. ✅ ~~Build the master case database~~ — **done August 4, 2026.** `case-database.csv`, 87 rows. Four columns remain uncoded; see `phase-0-findings.md` §4.
-4. ⚠️ **Re-pull the ACIS docket immediately before anything ships.** ⬅️ **Now the critical path.** Rehearing is pending; denial looks likely but is not certain. Last pulled **August 3, 2026, 8:38 a.m.**
+4. ⚠️ **Re-pull the ACIS docket immediately before anything ships.** ⬅️ **Now the critical path.** Rehearing is pending; denial looks likely but is not certain. Last **archived** pull **August 3, 2026, 8:38 a.m.**; last **visual check** **August 8, 2026** — unchanged, no disposing order, no mandate. ⭐ Watch the **clarification** branch rather than the rehearing branch; see Live case status.
 5. **Practitioner checklist** — the remaining Phase 4 deliverable. Spine is sketched in `research-plan.md` § Phase 4 item 5.
 
 ### Supporting research — parallelizable, none blocking
