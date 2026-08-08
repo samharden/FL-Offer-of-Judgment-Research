@@ -22,7 +22,7 @@ The regime is split across two instruments by constitutional necessity — the s
 
 ## The two legislative strategy folders
 
-**Added August 7, 2026.** Two advocacy planning exercises sit on top of the survey, in [`legislative-strategy/`](legislative-strategy/) and [`intentional-tort-strategy/`](intentional-tort-strategy/). Each asks how the Legislature would amend § 768.79 to serve one interest, and whether the result would survive the Florida Supreme Court.
+**Added August 7, 2026.** Two advocacy planning exercises sit on top of the survey, in [`legislative-strategy-insurer/`](legislative-strategy-insurer/) and [`legislative-strategy-victim/`](legislative-strategy-victim/). Each asks how the Legislature would amend § 768.79 to serve one interest, and whether the result would survive the Florida Supreme Court.
 
 ### Why they exist
 
@@ -36,24 +36,26 @@ The regime is split across two instruments by constitutional necessity — the s
 
 | Folder | The chair it argues from | Question |
 |---|---|---|
-| [`legislative-strategy/`](legislative-strategy/) | A medical malpractice **insurer** | How would a carrier amend § 768.79 to improve its own outcomes? |
-| [`intentional-tort-strategy/`](intentional-tort-strategy/) | **Victims of intentional torts** | How would the Legislature reduce claimants' fee-shifting exposure? |
+| [`legislative-strategy-insurer/`](legislative-strategy-insurer/) | A medical malpractice **insurer** | How would a carrier amend § 768.79 to improve its own outcomes? |
+| [`legislative-strategy-victim/`](legislative-strategy-victim/) | **Victims of intentional torts** | How would the Legislature reduce claimants' fee-shifting exposure? |
 
 Each folder holds a `strategy-memo.md` (the deliverable — levers, constitutional gates, three scenarios with passage and survival odds, coalition, calendar, the case against, and what is unverified) and a `draft-language.md` (working statutory text for every scenario).
 
-⭐ **Two different kinds of thought trace, and they are not interchangeable.** `legislative-strategy/` holds both; the distinction is the more interesting artifact of the experiment.
+⭐ **Two different kinds of thought trace, and they are not interchangeable.** `legislative-strategy-insurer/` holds both; the distinction is the more interesting artifact of the experiment.
 
 | File | What it is |
 |---|---|
 | `thought-trace-copied-from-claude-code.md` | The **raw reasoning stream**, copied out of the run as it happened. Unstructured, starts mid-thought, interleaved with tool calls. ⚠️ **Partial** — see the two limits below |
 | `thought-trace.md` | The **reconstruction** — written afterwards, on request, describing how the memo was built: the moves discarded, the errors caught mid-draft, and where the analysis turned on something unverifiable |
 
-The second is not a cleaned-up copy of the first. It is a **self-report**, produced separately, and it differs from the contemporaneous record. Anyone evaluating what the model actually did should read the raw trace; anyone evaluating what it says it did should read the reconstruction. ⚠️ `intentional-tort-strategy/` has **only the reconstruction** — no raw trace was captured for that run, so the comparison is available on the carrier side only.
+The second is not a cleaned-up copy of the first. It is a **self-report**, produced separately, and it differs from the contemporaneous record. Anyone evaluating what the model actually did should read the raw trace; anyone evaluating what it says it did should read the reconstruction. ⚠️ `legislative-strategy-victim/` has **only the reconstruction** — no raw trace was captured for that run, so the comparison is available on the carrier side only.
 
 ⚠️ **Two limits on the raw trace, established by reading it August 8, 2026.**
 
 1. **It stops before drafting starts.** The last line is the model planning the memo's architecture. Everything after that — the actual writing — is unrecorded. So the raw trace covers **research and scenario design only**, and it does **not** independently corroborate the reconstruction's account of the errors caught mid-draft. That part of `thought-trace.md` has no contemporaneous check against it.
 2. **The copy is lossy.** At least four points drop text mid-sentence or mid-word — a sentence about equal protection runs straight into `ily impair the constitutional guarantee`, and two tool-call summaries cut off (`—Mc`, `— that`). Treat gaps as copy artifacts, not as the model trailing off.
+
+📌 **The raw trace names a folder that no longer exists, and that is deliberate.** It refers to writing into `legislative-strategy/` — the name both folders were renamed away from on **August 8, 2026**. The reference was **left unedited**: the file is a verbatim record of what the model said while it worked, and editing it to match a later decision would destroy the only property that makes it worth keeping. **Every other file was updated; this one is frozen by design.** Expect the same of any future rename.
 
 ✅ **What the comparison does show, on the stretch that is recorded.** Two things the raw trace flagged survived into the deliverable intact: the **November 3, 2026 gubernatorial election** — noted in the trace as an unverifiable input because it has not happened yet — is carried into the memo as *"the highest-variance input"* and repeated in the unverified list; and the instinct to verify the *McCall* and *Kalitan* citations **because this project had previously caught fabricated ones** is recorded in the trace before the check and reflected in the verification table. On the recorded stretch, the self-report and the contemporaneous record agree.
 
@@ -91,8 +93,8 @@ Both folders share four open items with each other: re-pulling the *Trace Elemen
 | The case law, coded | [`sc-corpus.md`](sc-corpus.md) |
 | The analytical consolidation | [`arc-matrix.md`](arc-matrix.md) |
 | The corpus as data you can query | [`case-database.csv`](case-database.csv) |
-| How a carrier would amend the statute | [`legislative-strategy/`](legislative-strategy/) |
-| How claimants' advocates would amend it | [`intentional-tort-strategy/`](intentional-tort-strategy/) |
+| How a carrier would amend the statute | [`legislative-strategy-insurer/`](legislative-strategy-insurer/) |
+| How claimants' advocates would amend it | [`legislative-strategy-victim/`](legislative-strategy-victim/) |
 
 ### 💡 Consider reading this in Obsidian
 
@@ -117,8 +119,8 @@ Nothing here *requires* Obsidian, and no file depends on it — plain Markdown r
 | `sc-corpus.md` | The 85 Florida Supreme Court opinions — triage, Tier A/B/C, coded entries, the Phase 2 rule track, the *Trace Elements* rehearing record, and district decisions read in full |
 | `arc-matrix.md` | 39 cases × 10 doctrinal arcs, the Supreme Court alignment matrix by district, the two-track timeline |
 | `case-database.csv` | **The reusable asset.** 87 rows × 24 columns — the whole 85-opinion Supreme Court set plus *Fabre* and *Hoang Dinh Duong*, keyed on CourtListener `cluster_id`, with citation, docket, category, read status, and (for the 39 read merits cases) panel, vote, and arc tags. Four columns remain uncoded and are marked `unknown` rather than guessed |
-| `legislative-strategy/` | **Strategy exercise — carrier side.** Strategy memo, draft statutory language, and **both** thought traces — the raw reasoning stream and the after-the-fact reconstruction — for amending § 768.79 in a medical malpractice insurer's favour. One-sided by design; see *The two legislative strategy folders* |
-| `intentional-tort-strategy/` | **Strategy exercise — claimant side.** The mirror image: reducing intentional-tort victims' fee-shifting exposure. Memo, draft language, and the reconstruction trace only |
+| `legislative-strategy-insurer/` | **Strategy exercise — carrier side.** Strategy memo, draft statutory language, and **both** thought traces — the raw reasoning stream and the after-the-fact reconstruction — for amending § 768.79 in a medical malpractice insurer's favour. One-sided by design; see *The two legislative strategy folders* |
+| `legislative-strategy-victim/` | **Strategy exercise — claimant side.** The mirror image: reducing intentional-tort victims' fee-shifting exposure. Memo, draft language, and the reconstruction trace only |
 | `phase-1-handoff.md` | The legislative-track assignment as handed off (completed; retained as the assignment record) |
 | `phase-1-findings.md` | Legislative-track findings and provenance |
 | `LICENSE` | MIT, covering the original work only — see *Licence and scope of it* above |

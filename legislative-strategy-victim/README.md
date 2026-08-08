@@ -1,10 +1,10 @@
-# intentional-tort-strategy/
+# legislative-strategy-victim/
 
 **Created August 7, 2026.**
 
 An advocacy planning exercise built on the § 768.79 research project: **how would the Legislature amend Fla. Stat. § 768.79 to reduce the fee-shifting exposure of victims of intentional torts, and would it survive the Florida Supreme Court?**
 
-⚠️ **This folder is one-sided by design.** It is the **mirror image** of [`../legislative-strategy/`](../legislative-strategy/), which argues the same statute from the medical malpractice carrier's chair. The parent project ([`../memo.md`](../memo.md)) is the neutral survey. Part 9 of the strategy memo states the case against; Part 10 states what is unverified. **Do not let this material migrate into the survey.**
+⚠️ **This folder is one-sided by design.** It is the **mirror image** of [`../legislative-strategy-insurer/`](../legislative-strategy-insurer/), which argues the same statute from the medical malpractice carrier's chair. The parent project ([`../memo.md`](../memo.md)) is the neutral survey. Part 9 of the strategy memo states the case against; Part 10 states what is unverified. **Do not let this material migrate into the survey.**
 
 ## Files
 
@@ -51,7 +51,7 @@ In the carrier-side memo, the largest ask carried the largest constitutional ris
 | **Art. I, § 16(b)**, Fla. Const. — crime victims' rights; "full and timely restitution in every case and from each convicted offender"; self-executing. Also art. I, §§ 21 and 26 | [flsenate.gov/Laws/Constitution](https://www.flsenate.gov/Laws/Constitution) |
 | **Florida Justice Association** — 8 registered lobbyists; appeared on **HB 1269** and **HB 6003** among ~30 bills; issue areas insurance, health, consumer protection, business and professional regulation | Florida lobbyist registration data, `fl-lobbyist` |
 | **No 2026 Florida bill amended § 768.79.** HB 1269 (attorney fees in insurance claims) died in House Civil Justice & Claims, March 13, 2026 | LegiScan FL search, bill_id 2068453 — [flsenate.gov/Session/Bill/2026/1269](https://www.flsenate.gov/Session/Bill/2026/1269) |
-| **2027 Regular Session convenes March 2, 2027**; interim committee weeks begin fall 2026 | Carried from [`../legislative-strategy/README.md`](../legislative-strategy/README.md), retrieved August 7, 2026 |
+| **2027 Regular Session convenes March 2, 2027**; interim committee weeks begin fall 2026 | Carried from [`../legislative-strategy-insurer/README.md`](../legislative-strategy-insurer/README.md), retrieved August 7, 2026 |
 
 ### Drawn from the parent project (verified there)
 

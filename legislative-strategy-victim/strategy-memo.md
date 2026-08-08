@@ -10,7 +10,7 @@
 
 > ⚠️ **Source discipline.** Everything about § 768.79 and rule 1.442 rests on the parent project's verified corpus. Statutory and constitutional text quoted here was pulled from official Florida sources on **August 7, 2026** and is listed in [`README.md`](README.md). Propositions that rest on unread cases or on secondary description are marked ⚠️ and listed in Part 10.
 >
-> ⚠️ This folder is the **mirror image** of [`../legislative-strategy/`](../legislative-strategy/strategy-memo.md), which argues the same statute from the medical malpractice carrier's chair. Both are one-sided by design. Neither belongs in [`../memo.md`](../memo.md), which is the neutral survey.
+> ⚠️ This folder is the **mirror image** of [`../legislative-strategy-insurer/`](../legislative-strategy-insurer/strategy-memo.md), which argues the same statute from the medical malpractice carrier's chair. Both are one-sided by design. Neither belongs in [`../memo.md`](../memo.md), which is the neutral survey.
 
 ---
 
@@ -432,4 +432,4 @@ Stated plainly, because a strategy paper that does not is not worth much.
 
 ---
 
-*Companion drafting appendix: [`draft-language.md`](draft-language.md). Sources and retrieval record: [`README.md`](README.md). Mirror-image analysis from the defense side: [`../legislative-strategy/strategy-memo.md`](../legislative-strategy/strategy-memo.md).*
+*Companion drafting appendix: [`draft-language.md`](draft-language.md). Sources and retrieval record: [`README.md`](README.md). Mirror-image analysis from the defense side: [`../legislative-strategy-insurer/strategy-memo.md`](../legislative-strategy-insurer/strategy-memo.md).*

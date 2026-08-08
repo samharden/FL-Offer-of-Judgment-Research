@@ -16,7 +16,7 @@
 
 **First move:** read the parent project before anything else — [`../memo.md`](../memo.md) for the regime, [`../phase-1-findings.md`](../phase-1-findings.md) for how the project treats legislative history. `CLAUDE.md` was already in context and carried the doctrinal spine.
 
-**Then a `ls` turned up something that changed the shape of the job:** [`../legislative-strategy/`](../legislative-strategy/) already existed, untracked, dated the same day — **the identical exercise run from the medical malpractice carrier's chair.**
+**Then a `ls` turned up something that changed the shape of the job:** [`../legislative-strategy-insurer/`](../legislative-strategy-insurer/) already existed, untracked, dated the same day — **the identical exercise run from the medical malpractice carrier's chair.**
 
 That mattered three ways, and I decided all three before writing a word:
 
@@ -146,4 +146,4 @@ The parent project's conventions made most of these automatic. Recording them so
 
 ---
 
-*Deliverables: [`strategy-memo.md`](strategy-memo.md) · [`draft-language.md`](draft-language.md) · [`README.md`](README.md). Mirror-image analysis: [`../legislative-strategy/`](../legislative-strategy/).*
+*Deliverables: [`strategy-memo.md`](strategy-memo.md) · [`draft-language.md`](draft-language.md) · [`README.md`](README.md). Mirror-image analysis: [`../legislative-strategy-insurer/`](../legislative-strategy-insurer/).*
