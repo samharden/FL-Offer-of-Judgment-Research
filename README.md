@@ -94,6 +94,17 @@ Both folders share four open items with each other: re-pulling the *Trace Elemen
 | How a carrier would amend the statute | [`legislative-strategy/`](legislative-strategy/) |
 | How claimants' advocates would amend it | [`intentional-tort-strategy/`](intentional-tort-strategy/) |
 
+### 💡 Consider reading this in Obsidian
+
+This project is a set of **densely cross-linked Markdown files** — the memo cites the corpus, the corpus cites the arc matrix, the strategy folders cite the parent project, and `CLAUDE.md` is referenced from nearly everything. On GitHub or in a plain editor you follow those links one at a time and lose your place. [Obsidian](https://obsidian.md) is free, reads a plain folder with no import step, and makes the structure navigable:
+
+- **Open the repository folder as a vault.** Nothing needs converting — the files are ordinary Markdown and the links are ordinary relative links, so they resolve as-is.
+- **Backlinks** show which files point *at* the one you're reading, which is the fastest way to see what depends on a given finding before you change it.
+- **Graph view** makes the shape of the project visible — including that the two strategy folders hang off the survey rather than feeding into it.
+- **Search across the vault** is the practical way to use the working conventions: finding every ⚠️ or 🔴 marker, or every mention of a case, in one pass.
+
+Nothing here *requires* Obsidian, and no file depends on it — plain Markdown remains the source of truth, per the deliverable-format decision below. ⚠️ Note that `.obsidian/` is **Git-ignored**, so the vault config is not shared; opening the folder creates your own local one.
+
 ## File map
 
 | Path | Contents |
