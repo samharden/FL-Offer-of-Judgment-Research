@@ -1,0 +1,1328 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proposals for Settlement in Florida — A Practice Guide</title>
+<meta name="description" content="Practice guide to Fla. Stat. § 768.79 and Fla. R. Civ. P. 1.442 — mechanics, drafting, joint proposals, and pitfalls. Every case hyperlinked.">
+<style>
+:root{
+  --bg:#fbfaf8; --fg:#1b1a17; --muted:#6b6660; --rule:#e0dbd3; --rule2:#efebe5;
+  --accent:#7a2e1e; --accent2:#2f4858; --link:#8a3324; --code-bg:#f2efe9;
+  --card:#ffffff; --shadow:0 1px 2px rgba(0,0,0,.05),0 8px 24px rgba(0,0,0,.04);
+  --red:#a4342a; --amber:#8a6100; --star:#6b4b8a;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#16151a; --fg:#e8e4dd; --muted:#a09a92; --rule:#33313a; --rule2:#26242c;
+    --accent:#e0906f; --accent2:#8fb3c7; --link:#e59a78; --code-bg:#21202a;
+    --card:#1d1c23; --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.3);
+    --red:#e8776a; --amber:#d4a54a; --star:#b491d6;
+  }
+}
+:root[data-theme="light"]{
+  --bg:#fbfaf8; --fg:#1b1a17; --muted:#6b6660; --rule:#e0dbd3; --rule2:#efebe5;
+  --accent:#7a2e1e; --accent2:#2f4858; --link:#8a3324; --code-bg:#f2efe9;
+  --card:#ffffff; --shadow:0 1px 2px rgba(0,0,0,.05),0 8px 24px rgba(0,0,0,.04);
+  --red:#a4342a; --amber:#8a6100; --star:#6b4b8a;
+}
+:root[data-theme="dark"]{
+  --bg:#16151a; --fg:#e8e4dd; --muted:#a09a92; --rule:#33313a; --rule2:#26242c;
+  --accent:#e0906f; --accent2:#8fb3c7; --link:#e59a78; --code-bg:#21202a;
+  --card:#1d1c23; --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.3);
+  --red:#e8776a; --amber:#d4a54a; --star:#b491d6;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font:17px/1.65 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+  -webkit-text-size-adjust:100%;
+}
+.wrap{display:grid; grid-template-columns:minmax(0,1fr); max-width:1240px; margin:0 auto; padding:0 1.25rem}
+@media (min-width:1040px){
+  .wrap{grid-template-columns:250px minmax(0,1fr); gap:3rem; padding:0 2rem}
+}
+
+/* ---- sidebar TOC ---- */
+nav.toc{
+  font:13.5px/1.5 ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  border-bottom:1px solid var(--rule); padding:1.25rem 0; margin-bottom:1rem;
+}
+@media (min-width:1040px){
+  nav.toc{
+    position:sticky; top:0; align-self:start; max-height:100vh; overflow-y:auto;
+    border-bottom:none; border-right:1px solid var(--rule);
+    padding:2.5rem 1.25rem 2.5rem 0; margin:0;
+  }
+}
+nav.toc .lbl{
+  text-transform:uppercase; letter-spacing:.09em; font-size:10.5px; font-weight:700;
+  color:var(--muted); margin-bottom:.6rem;
+}
+nav.toc ul{list-style:none; margin:0; padding:0}
+nav.toc ul ul{margin-left:.7rem; border-left:1px solid var(--rule2); padding-left:.6rem}
+nav.toc li{margin:.16rem 0}
+nav.toc a{color:var(--muted); text-decoration:none; display:block; padding:.14rem 0}
+nav.toc a:hover{color:var(--link)}
+nav.toc > ul > li > a{color:var(--fg); font-weight:600}
+
+main{padding:1rem 0 5rem; min-width:0}
+@media (min-width:1040px){ main{padding:2.5rem 0 6rem} }
+
+/* ---- typography ---- */
+h1,h2,h3{font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.25}
+h1{
+  font-size:1.72rem; font-weight:750; letter-spacing:-.015em;
+  margin:3.2rem 0 1.1rem; padding-top:1.6rem; border-top:2px solid var(--rule);
+  color:var(--accent);
+}
+main > h1:first-child{border-top:none; padding-top:0; margin-top:0; font-size:2.15rem}
+h2{font-size:1.2rem; font-weight:700; margin:2.1rem 0 .7rem; color:var(--accent2)}
+h3{font-size:1.02rem; font-weight:700; margin:1.5rem 0 .5rem; letter-spacing:.005em}
+h1 .headerlink,h2 .headerlink,h3 .headerlink{
+  opacity:0; margin-left:.35rem; font-size:.7em; text-decoration:none; color:var(--muted);
+}
+h1:hover .headerlink,h2:hover .headerlink,h3:hover .headerlink{opacity:.5}
+p{margin:.85rem 0}
+a{color:var(--link); text-decoration:underline; text-underline-offset:2px; text-decoration-thickness:.055em}
+a:hover{text-decoration-thickness:.12em}
+em{font-style:italic}
+strong{font-weight:700}
+hr{border:none; border-top:1px solid var(--rule2); margin:2.2rem 0}
+main > hr:last-of-type{margin-top:3rem}
+
+/* case links get a subtle marker so they read as citations */
+a[href*="courtlistener"]{
+  color:var(--link); text-decoration-color:color-mix(in srgb, var(--link) 40%, transparent);
+}
+a[href*="courtlistener"]:hover{
+  background:color-mix(in srgb, var(--link) 9%, transparent);
+  text-decoration-color:var(--link);
+}
+
+/* ---- lists ---- */
+ul,ol{margin:.8rem 0; padding-left:1.35rem}
+li{margin:.34rem 0}
+li>ul,li>ol{margin:.3rem 0}
+.task-list{list-style:none; padding-left:1.75rem}
+.task-list-item{position:relative; margin:.44rem 0}
+.task-list-control{position:absolute; left:-1.6rem; top:.3em; line-height:1}
+.task-list-indicator{
+  display:inline-block; width:1.02em; height:1.02em; border:1.5px solid var(--muted);
+  border-radius:3px; background:var(--card);
+}
+.task-list-item input{display:none}
+
+/* ---- tables ---- */
+.tw{overflow-x:auto; margin:1.15rem 0; border:1px solid var(--rule); border-radius:8px; background:var(--card); box-shadow:var(--shadow)}
+table{border-collapse:collapse; width:100%; font-size:.9rem; line-height:1.5}
+th,td{padding:.6rem .8rem; text-align:left; vertical-align:top; border-bottom:1px solid var(--rule2)}
+th{
+  font-family:ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:.74rem; text-transform:uppercase; letter-spacing:.07em; font-weight:700;
+  color:var(--muted); background:color-mix(in srgb, var(--fg) 3.5%, transparent);
+  border-bottom:1px solid var(--rule); white-space:nowrap;
+}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:color-mix(in srgb, var(--fg) 2.5%, transparent)}
+
+/* ---- blockquote / callout ---- */
+blockquote{
+  margin:1.4rem 0; padding:1.1rem 1.3rem; background:var(--card);
+  border:1px solid var(--rule); border-left:4px solid var(--red); border-radius:8px;
+  box-shadow:var(--shadow);
+}
+blockquote h2{margin-top:0; font-size:1.02rem; color:var(--red)}
+blockquote p{margin:.65rem 0; font-size:.95rem}
+blockquote p:first-of-type{margin-top:0}
+blockquote p:last-child{margin-bottom:0}
+/* pull-quotes inside the body (single-paragraph quotes) */
+main > blockquote:not(:first-of-type){border-left-color:var(--accent2)}
+
+/* ---- code ---- */
+code{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace; font-size:.86em; background:var(--code-bg); padding:.12em .38em; border-radius:4px}
+pre{
+  background:var(--card); border:1px solid var(--rule); border-radius:8px;
+  padding:1rem 1.1rem; overflow-x:auto; box-shadow:var(--shadow); margin:1.3rem 0;
+}
+pre code{background:none; padding:0; font-size:.78rem; line-height:1.55; white-space:pre}
+
+/* ---- theme toggle ---- */
+#themer{
+  position:fixed; top:.85rem; right:.85rem; z-index:20;
+  font:12px/1 ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif;
+  background:var(--card); color:var(--muted); border:1px solid var(--rule);
+  border-radius:999px; padding:.5rem .8rem; cursor:pointer; box-shadow:var(--shadow);
+}
+#themer:hover{color:var(--fg)}
+
+/* ---- print ---- */
+@media print{
+  :root{--bg:#fff; --fg:#000; --card:#fff; --rule:#bbb; --rule2:#ddd;
+        --accent:#000; --accent2:#000; --link:#000; --muted:#444; --shadow:none}
+  body{font-size:10.5pt; line-height:1.45}
+  nav.toc,#themer{display:none}
+  .wrap{display:block; max-width:none; padding:0}
+  h1{page-break-after:avoid; break-after:avoid; font-size:15pt; border-top:1.5pt solid #000}
+  h2,h3{page-break-after:avoid; break-after:avoid}
+  table,pre,blockquote,.tw{page-break-inside:avoid; break-inside:avoid}
+  a{text-decoration:none; color:#000}
+  a[href*="courtlistener"]::after{content:""}
+  .tw{box-shadow:none; border:1px solid #999}
+  thead{display:table-header-group}
+}
+</style>
+</head>
+<body>
+<button id="themer" type="button">theme</button>
+<div class="wrap">
+  <nav class="toc">
+    <div class="lbl">Contents</div>
+    <div class="toc">
+<ul>
+<li><a href="#proposals-for-settlement-in-florida-a-practice-guide">Proposals for Settlement in Florida — A Practice Guide</a><ul>
+<li><a href="#currency-warnings-read-before-relying-on-anything-below">🔴 Currency warnings — read before relying on anything below</a></li>
+<li><a href="#contents">Contents</a></li>
+</ul>
+</li>
+<li><a href="#part-1-what-the-device-actually-does">Part 1 — What the device actually does</a></li>
+<li><a href="#part-2-the-decision-to-serve">Part 2 — The decision to serve</a><ul>
+<li><a href="#a-plaintiff-side">A. Plaintiff-side</a></li>
+<li><a href="#b-defendant-side">B. Defendant-side</a></li>
+<li><a href="#c-the-cost-of-getting-it-wrong">C. The cost of getting it wrong</a></li>
+</ul>
+</li>
+<li><a href="#part-3-the-calendar">Part 3 — The calendar</a><ul>
+<li><a href="#a-the-service-window-rule-1442b">A. The service window — rule 1.442(b)</a></li>
+<li><a href="#b-the-acceptance-clock-rule-1442f1">B. The acceptance clock — rule 1.442(f)(1)</a></li>
+<li><a href="#c-the-fee-motion-deadline-rule-1442g-and-rule-1525">C. The fee-motion deadline — rule 1.442(g) and rule 1.525</a></li>
+</ul>
+</li>
+<li><a href="#part-4-joint-proposals">Part 4 — 🔴 Joint proposals</a><ul>
+<li><a href="#a-the-rule">A. The rule</a></li>
+<li><a href="#b-when-is-a-proposal-joint-the-operative-test">B. When is a proposal "joint"? — the operative test</a></li>
+<li><a href="#c-apportionment-is-required-even-when-it-makes-no-sense">C. Apportionment is required even when it makes no sense</a></li>
+<li><a href="#d-conditioning-acceptance-what-is-and-is-not-allowed">D. Conditioning acceptance — what is and is not allowed</a></li>
+<li><a href="#e-the-price-of-an-all-or-nothing-allocated-offer-the-25-test-becomes-conjunctive">E. ⚠️ The price of an all-or-nothing allocated offer: the 25% test becomes conjunctive</a></li>
+<li><a href="#f-joint-proposal-decision-tree">F. Joint-proposal decision tree</a></li>
+</ul>
+</li>
+<li><a href="#part-5-the-drafting-checklist">Part 5 — The drafting checklist</a><ul>
+<li><a href="#a-threshold-requirements">A. Threshold requirements</a></li>
+<li><a href="#b-rule-1442c2-content-requirements">B. Rule 1.442(c)(2) content requirements</a></li>
+<li><a href="#c-the-particularity-standard-nichols">C. The particularity standard — Nichols</a></li>
+<li><a href="#d-attach-and-align">D. Attach and align</a></li>
+</ul>
+</li>
+<li><a href="#part-6-serving-the-proposal">Part 6 — Serving the proposal</a></li>
+<li><a href="#part-7-receiving-a-proposal">Part 7 — Receiving a proposal</a><ul>
+<li><a href="#a-calendar-first-analyze-second">A. Calendar first, analyze second</a></li>
+<li><a href="#b-deciding">B. Deciding</a></li>
+<li><a href="#c-mechanics-of-acceptance-rejection-and-withdrawal">C. Mechanics of acceptance, rejection, and withdrawal</a></li>
+<li><a href="#d-attacking-a-proposal-served-on-you">D. Attacking a proposal served on you</a></li>
+</ul>
+</li>
+<li><a href="#part-8-running-the-25-comparison">Part 8 — Running the 25% comparison</a><ul>
+<li><a href="#a-the-thresholds">A. The thresholds</a></li>
+<li><a href="#b-judgment-obtained-is-a-term-of-art-the-white-formula">B. "Judgment obtained" is a term of art — the White formula</a></li>
+<li><a href="#c-worked-examples">C. Worked examples</a></li>
+</ul>
+</li>
+<li><a href="#part-9-claiming-the-fees">Part 9 — Claiming the fees</a><ul>
+<li><a href="#a-the-deadline">A. The deadline</a></li>
+<li><a href="#b-pleading">B. Pleading</a></li>
+<li><a href="#c-amount">C. Amount</a></li>
+</ul>
+</li>
+<li><a href="#part-10-when-76879-does-not-apply-at-all">Part 10 — When § 768.79 does not apply at all</a><ul>
+<li><a href="#a-actions-seeking-damages-and-equitable-relief">A. Actions seeking damages and equitable relief</a></li>
+<li><a href="#b-contractual-choice-of-another-states-law">B. Contractual choice of another state's law</a></li>
+<li><a href="#c-voluntary-dismissal-without-prejudice">C. Voluntary dismissal without prejudice</a></li>
+<li><a href="#d-old-accrual-dates">D. Old accrual dates</a></li>
+<li><a href="#e-things-that-are-not-exclusions">E. Things that are not exclusions</a></li>
+</ul>
+</li>
+<li><a href="#part-11-traps-ranked">Part 11 — Traps, ranked</a><ul>
+<li><a href="#the-numbering-trap">The numbering trap</a></li>
+<li><a href="#the-terminology-trap-for-research">The terminology trap (for research)</a></li>
+</ul>
+</li>
+<li><a href="#part-12-unsettled-ground">Part 12 — Unsettled ground</a><ul>
+<li><a href="#a-good-faith-is-the-least-developed-area-in-the-regime">A. Good faith is the least-developed area in the regime</a></li>
+<li><a href="#b-the-diamond-aircraft-reservation">B. The Diamond Aircraft reservation</a></li>
+<li><a href="#c-wheatons-alternative-holding">C. Wheaton's alternative holding</a></li>
+<li><a href="#d-the-white-formula">D. The White formula</a></li>
+<li><a href="#e-trace-elements-itself">E. Trace Elements itself</a></li>
+<li><a href="#f-the-courts-own-assessment">F. The Court's own assessment</a></li>
+</ul>
+</li>
+<li><a href="#quick-reference-one-page-drafting-checklist">Quick-reference — one-page drafting checklist</a></li>
+<li><a href="#table-of-authorities">Table of Authorities</a><ul>
+<li><a href="#statutes-and-rules">Statutes and rules</a></li>
+<li><a href="#florida-supreme-court">Florida Supreme Court</a></li>
+<li><a href="#district-court-of-appeal">District Court of Appeal</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+  </nav>
+  <main>
+<h1 id="proposals-for-settlement-in-florida-a-practice-guide">Proposals for Settlement in Florida — A Practice Guide<a class="headerlink" href="#proposals-for-settlement-in-florida-a-practice-guide" title="Permanent link">¶</a></h1>
+<h3 id="fla-stat-76879-fla-r-civ-p-1442">Fla. Stat. § 768.79 · Fla. R. Civ. P. 1.442<a class="headerlink" href="#fla-stat-76879-fla-r-civ-p-1442" title="Permanent link">¶</a></h3>
+<p><strong>Prepared:</strong> August 11, 2026 · <strong>Companion to</strong> <a href="memo.md"><code>memo.md</code></a>, which explains <em>why</em> the regime looks like this. This guide explains <em>how to use it</em>.</p>
+<hr />
+<blockquote>
+<h2 id="currency-warnings-read-before-relying-on-anything-below">🔴 Currency warnings — read before relying on anything below<a class="headerlink" href="#currency-warnings-read-before-relying-on-anything-below" title="Permanent link">¶</a></h2>
+<p><strong>1. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/10883903/trace-elements-inc-v-nadja-mackensen/"><em>Trace Elements, Inc. v. MacKensen</em></a>, No. SC2024-1274 (Fla. July 2, 2026), is not final.</strong> A motion for <strong>clarification and rehearing</strong> was filed July 17, 2026; the response in opposition was filed July 20, 2026. As of the last docket check — <strong>August 8, 2026, a visual check of the live ACIS docket</strong> — there was <strong>no disposing order and no mandate</strong>. Denial is the likelier outcome, but a grant of <em>clarification</em> alone could narrow the holding without disturbing the result. <strong>Re-pull the docket before advising a client on Part 4.</strong></p>
+<p><strong>2. Rule 1.442 was restyled effective January 1, 2026</strong> (SC2025-0045, Nov. 13, 2025). Subdivision (c)(3) was reopened and re-adopted with a single change — <em>shall</em> → <em>must</em>. <strong>The Committee Notes were left unchanged.</strong> Quote the current text, not a pre-2026 reporter version.</p>
+<p><strong>3. Chapter 2022-271 renumbered § 768.79.</strong> A bare subsection pin cite is ambiguous without a year. See <a href="#the-numbering-trap">Part 11</a>.</p>
+<p><strong>4. This is a research work product, not advice on any matter.</strong> Every proposition below traces to a decision listed in the <a href="#table-of-authorities">Table of Authorities</a>; the underlying coding is in <a href="sc-corpus.md"><code>sc-corpus.md</code></a>. Read the case before you rely on it.</p>
+</blockquote>
+<hr />
+<h2 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">¶</a></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Subject</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>What the device actually does — and what it is worth</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>The decision to serve: plaintiff-side and defendant-side</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>The calendar</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>🔴 Joint proposals — the single largest source of loss</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>The drafting checklist</td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td>Serving the proposal</td>
+</tr>
+<tr>
+<td><strong>7</strong></td>
+<td>Receiving a proposal: accept, reject, or attack</td>
+</tr>
+<tr>
+<td><strong>8</strong></td>
+<td>After the verdict — running the 25% comparison</td>
+</tr>
+<tr>
+<td><strong>9</strong></td>
+<td>Claiming the fees</td>
+</tr>
+<tr>
+<td><strong>10</strong></td>
+<td>When § 768.79 does not apply at all</td>
+</tr>
+<tr>
+<td><strong>11</strong></td>
+<td>Traps, ranked by how often they kill a fee claim</td>
+</tr>
+<tr>
+<td><strong>12</strong></td>
+<td>Unsettled ground — where not to build a strategy</td>
+</tr>
+<tr>
+<td>—</td>
+<td><a href="#quick-reference--one-page-drafting-checklist">Quick-reference drafting checklist</a></td>
+</tr>
+<tr>
+<td>—</td>
+<td><a href="#table-of-authorities">Table of Authorities</a></td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h1 id="part-1-what-the-device-actually-does">Part 1 — What the device actually does<a class="headerlink" href="#part-1-what-the-device-actually-does" title="Permanent link">¶</a></h1>
+<p>A proposal for settlement is a <strong>fee-shifting sanction for unreasonably rejecting a settlement offer</strong>. You serve a written proposal; if the other side rejects it and then does sufficiently worse at trial, they pay your fees and costs <strong>from the date the proposal was served</strong>.</p>
+<p>Four features drive everything else:</p>
+<p><strong>1. Entitlement is arithmetic, not equitable.</strong> Once the numbers line up, the trial court has no discretion to deny fees on the ground that the rejection was reasonable. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1715682/tgi-fridays-inc-v-dvorak/"><em>TGI Friday's, Inc. v. Dvorak</em></a>, 663 So. 2d 606 (Fla. 1995), adopting <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1676218/schmidt-v-fortner/"><em>Schmidt v. Fortner</em></a>, 629 So. 2d 1036 (Fla. 4th DCA 1993). The court's discretion goes to the <strong>amount</strong>, not the entitlement.</p>
+<p><strong>2. There is exactly one escape hatch, and it is narrow.</strong> § 768.79(8)(a) (2024; <strong>(7)(a)</strong> in pre-2022 sources) lets the court disallow an award on a finding that the proposal <strong>was not made in good faith</strong>. The reasonableness factors at (8)(b) go to the <em>amount</em>. See <a href="#the-good-faith-challenge">Part 7.D</a>.</p>
+<p><strong>3. You do not have to win.</strong> § 768.79 is <strong>not a prevailing-party statute</strong>. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/9406669/brinda-coates-etc-v-rj-reynolds-tobacco-company/"><em>Coates v. R.J. Reynolds Tobacco Co.</em></a>, 365 So. 3d 353 (Fla. 2023). A defendant can recover fees even where the plaintiff takes a substantial judgment, so long as the judgment falls 25% below the defendant's proposal.</p>
+<p><strong>4. The requirements live in two instruments, and both bind you.</strong> The substantive right is in <strong>§ 768.79</strong>; the procedure is in <strong>rule 1.442</strong>. Compliance with one is not compliance with the other — the classic casualty is a proposal that tracks the rule perfectly and never cites the statute. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1140885/campbell-v-goldman/"><em>Campbell v. Goldman</em></a>, 959 So. 2d 223 (Fla. 2007).</p>
+<h3 id="what-the-fee-award-is-worth">What the fee award is worth<a class="headerlink" href="#what-the-fee-award-is-worth" title="Permanent link">¶</a></h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Included</th>
+<th>Authority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reasonable attorney's fees <strong>and</strong> costs incurred <strong>from the date of service</strong> of the proposal</td>
+<td>§ 768.79(1)</td>
+</tr>
+<tr>
+<td><strong>Appellate</strong> fees</td>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1785275/frosti-v-creel/"><em>Frosti v. Creel</em></a>, 979 So. 2d 912 (Fla. 2008); <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/9406669/brinda-coates-etc-v-rj-reynolds-tobacco-company/"><em>Coates</em></a></td>
+</tr>
+<tr>
+<td>Fees even though your client lost the case outright</td>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/9406669/brinda-coates-etc-v-rj-reynolds-tobacco-company/"><em>Coates</em></a></td>
+</tr>
+</tbody>
+</table></div>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Excluded</th>
+<th>Authority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Any <strong>contingency risk multiplier</strong></td>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1831641/sarkis-v-allstate-ins-co/"><em>Sarkis v. Allstate Ins. Co.</em></a>, 863 So. 2d 210 (Fla. 2003)</td>
+</tr>
+<tr>
+<td>Fees incurred <strong>before</strong> service</td>
+<td>§ 768.79(1)</td>
+</tr>
+</tbody>
+</table></div>
+<p>⚠️ <strong>Do not aggregate.</strong> If you served several separate proposals, you may not sum them and compare the total against the judgment. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4317987/troy-anderson-v-hilton-hotels-corporation-etc/"><em>Anderson v. Hilton Hotels Corp.</em></a>, 202 So. 3d 846 (Fla. 2016). Each proposal stands or falls on its own.</p>
+<hr />
+<h1 id="part-2-the-decision-to-serve">Part 2 — The decision to serve<a class="headerlink" href="#part-2-the-decision-to-serve" title="Permanent link">¶</a></h1>
+<h2 id="a-plaintiff-side">A. Plaintiff-side<a class="headerlink" href="#a-plaintiff-side" title="Permanent link">¶</a></h2>
+<p><strong>Threshold:</strong> the judgment obtained must be <strong>at least 25% greater</strong> than your demand.</p>
+<p><strong>Price the demand off the <em>judgment</em>, not the verdict.</strong> "Judgment obtained" is a term of art (Part 8) — it is the net judgment <strong>plus</strong> your fees, taxable costs, and prejudgment interest <strong>as of the date of the offer</strong>. On an older, heavily-worked file, those accrued items can carry a demand over the threshold that the raw verdict would not.</p>
+<p><strong>Serve early, but not too early.</strong> Fees run from service, so an early proposal maximizes exposure. But the earlier you serve, the less you know about value — and a demand that turns out to be 25% <em>below</em> four-fifths of the judgment is simply money left on the table.</p>
+<p><strong>⚠️ Setoffs can be decisive.</strong> Because the comparison is arithmetic, a setoff of a few hundred dollars can eliminate entitlement outright. In <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1770539/rollins-v-pizzarelli/"><em>Rollins v. Pizzarelli</em></a>, 761 So. 2d 294 (Fla. 2000), a PIP setoff moved a $25,048 judgment to $24,523.22 and destroyed the fee claim on a $20,000 demand. <strong>Model your comparator net of every setoff you can foresee</strong> — PIP deductibles, collateral sources, <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1617274/fabre-v-marin/"><em>Fabre</em></a> allocations, prior settlements.</p>
+<h2 id="b-defendant-side">B. Defendant-side<a class="headerlink" href="#b-defendant-side" title="Permanent link">¶</a></h2>
+<p><strong>Threshold:</strong> the judgment is <strong>one of no liability</strong>, or the judgment obtained by the plaintiff is <strong>at least 25% less</strong> than your proposal.</p>
+<p>A defense verdict satisfies the threshold automatically. That has been true only since <strong>October 1, 1990</strong> — before ch. 90-119 § 48, the statute measured against "the judgment obtained <em>by the plaintiff</em>," so defendants could not recover on a defense verdict. Irrelevant to a modern file; relevant if you are dealing with an old accrual date (Part 10.D).</p>
+<p><strong>The nominal proposal is legal but untested.</strong> Nothing squarely forbids a $1 proposal, and one went unchallenged in <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1785275/frosti-v-creel/"><em>Frosti</em></a>. But the Court flagged doubt about "a one dollar offer of settlement" as early as <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1769501/leapai-v-milton/"><em>Leapai v. Milton</em></a>, 595 So. 2d 12 (Fla. 1992) (n.2), and <strong>no decision in the Supreme Court corpus squarely resolves a good-faith challenge</strong>. Treat a nominal proposal as carrying real, undecided risk — see <a href="#a-good-faith-is-the-least-developed-area-in-the-regime">Part 12.A</a>.</p>
+<p><strong>Differentiated proposals among codefendants are legitimate.</strong> <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4317987/troy-anderson-v-hilton-hotels-corporation-etc/"><em>Anderson</em></a> records the ordinary strategic reasons approvingly: to force one defendant to settle, to "eliminate the defendant for whom the jury may have sympathy," or to remove the defendant with the best lawyer. And <strong>motive is irrelevant to facial validity</strong> — it goes to good faith only. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4317987/troy-anderson-v-hilton-hotels-corporation-etc/"><em>Anderson</em></a>.</p>
+<h2 id="c-the-cost-of-getting-it-wrong">C. The cost of getting it wrong<a class="headerlink" href="#c-the-cost-of-getting-it-wrong" title="Permanent link">¶</a></h2>
+<p>Two asymmetries worth putting in front of a client:</p>
+<ul>
+<li>An <strong>invalid</strong> proposal costs you the fee claim you were building — but it does not otherwise hurt you.</li>
+<li><strong>Rejecting</strong> a valid proposal that you then fail to beat by the margin can transfer the entire post-service cost of the litigation. On a case tried two years after service, that is usually the largest single number in the file.</li>
+</ul>
+<p>The Court itself has said the device increases litigation rather than reducing it. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1555417/attorneys-title-insurance-fund-inc-v-gorka/"><em>Attorneys' Title Ins. Fund, Inc. v. Gorka</em></a>, 36 So. 3d 646, 650 (Fla. 2010): the intended effect "has been in sharp contrast to the intended outcome." Budget for a fight over validity.</p>
+<hr />
+<h1 id="part-3-the-calendar">Part 3 — The calendar<a class="headerlink" href="#part-3-the-calendar" title="Permanent link">¶</a></h1>
+<h2 id="a-the-service-window-rule-1442b">A. The service window — rule 1.442(b)<a class="headerlink" href="#a-the-service-window-rule-1442b" title="Permanent link">¶</a></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Earliest</th>
+<th>Latest</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proposal <strong>to a defendant</strong></td>
+<td>90 days after <strong>service of process on that defendant</strong></td>
+<td>45 days before the trial date or the first day of the trial docket, <strong>whichever is earlier</strong></td>
+</tr>
+<tr>
+<td>Proposal <strong>to a plaintiff</strong></td>
+<td>90 days after <strong>the action was commenced</strong></td>
+<td>same</td>
+</tr>
+</tbody>
+</table></div>
+<p>⚠️ <strong>Mediation does not move these dates.</strong> Rule 1.442(j). The Legislature tried to alter the timing through § 44.102(6) and the Court struck the attempt as purely procedural. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1725782/knealing-v-puleo/"><em>Knealing v. Puleo</em></a>, 675 So. 2d 593 (Fla. 1996).</p>
+<p>⚠️ <strong>A continuance changes the outside date.</strong> The 45-day limit runs off the trial setting, so a reset trial date reopens the window. Diary it against the <em>current</em> order setting trial, not the original one.</p>
+<h2 id="b-the-acceptance-clock-rule-1442f1">B. The acceptance clock — rule 1.442(f)(1)<a class="headerlink" href="#b-the-acceptance-clock-rule-1442f1" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>30 days.</strong> A proposal is <strong>deemed rejected</strong> unless a written acceptance is delivered within 30 days of service.</li>
+<li>🔴 <strong>The extra-days-for-service provision does not apply.</strong> Rule 1.442(f)(1) expressly excludes Fla. R. Jud. Admin. <strong>2.514(b)</strong>. Thirty days means thirty days — no five-day add-on, whatever the method of service.</li>
+<li>🔴 <strong>A motion to enlarge does not toll the clock.</strong> <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4498881/donna-koppel-v-laura-ochoa/"><em>Koppel v. Ochoa</em></a>, 243 So. 3d 886 (Fla. 2018), disapproving <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/7767343/goldy-v-corbett-cranes-services-inc/"><em>Goldy v. Corbett Cranes</em></a> after nineteen years of contrary practice. The offeree in <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4498881/donna-koppel-v-laura-ochoa/"><em>Koppel</em></a> filed one day before expiry, got a hearing two months later, and purported to accept on day 90. It did not work.</li>
+<li><strong>No oral communication</strong> constitutes acceptance, rejection, or counteroffer. Rule 1.442(f)(1).</li>
+</ul>
+<h2 id="c-the-fee-motion-deadline-rule-1442g-and-rule-1525">C. The fee-motion deadline — rule 1.442(g) and rule 1.525<a class="headerlink" href="#c-the-fee-motion-deadline-rule-1442g-and-rule-1525" title="Permanent link">¶</a></h2>
+<p><strong>30 days</strong>, and the two instruments measure from different events:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Instrument</th>
+<th>Runs from</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Rule 1.442(g)</strong> — <strong>jury</strong> action</td>
+<td><strong>Return of the verdict</strong></td>
+</tr>
+<tr>
+<td><strong>Rule 1.442(g)</strong> — <strong>nonjury</strong> action</td>
+<td><strong>Entry of judgment</strong></td>
+</tr>
+<tr>
+<td>§ 768.79</td>
+<td>Entry of judgment</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The rule prevails where it differs from the statute</strong>, because the timing is procedural. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1843592/gulliver-academy-inc-v-bodek/"><em>Gulliver Academy, Inc. v. Bodek</em></a>, 694 So. 2d 675 (Fla. 1997). <strong>In a jury trial, calendar from the verdict.</strong></p>
+<p>See Part 9 for what the 30 days does and does not tolerate.</p>
+<hr />
+<h1 id="part-4-joint-proposals">Part 4 — 🔴 Joint proposals<a class="headerlink" href="#part-4-joint-proposals" title="Permanent link">¶</a></h1>
+<p><strong>This is where practitioners lose most often.</strong> Read this part even if you think your proposal is not joint.</p>
+<h2 id="a-the-rule">A. The rule<a class="headerlink" href="#a-the-rule" title="Permanent link">¶</a></h2>
+<p><strong>Rule 1.442(c)(3):</strong> a proposal may be made by or to any party or parties and any combination of them, but <strong>"[a] joint proposal must state the amount and terms attributable to each party."</strong></p>
+<p><strong>Rule 1.442(c)(4)</strong> is the one exception: where a party is alleged to be <strong>solely vicariously, constructively, derivatively, or technically liable</strong>, a joint proposal made by or served on that party need not apportion as to that party. Adopted in 2010 to undo <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1950924/lamb-v-matetzschk/"><em>Lamb v. Matetzschk</em></a>, 906 So. 2d 1037 (Fla. 2005).</p>
+<h2 id="b-when-is-a-proposal-joint-the-operative-test">B. When is a proposal "joint"? — the operative test<a class="headerlink" href="#b-when-is-a-proposal-joint-the-operative-test" title="Permanent link">¶</a></h2>
+<p>⭐ <strong>A proposal becomes joint when it <em>speaks for</em> or <em>binds</em> another party — not merely because another party has claims pending.</strong> <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4317987/troy-anderson-v-hilton-hotels-corporation-etc/"><em>Anderson</em></a> (2016) and <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4540927/w-riley-allen-v-jairo-rafael-nunez/"><em>Allen v. Nunez</em></a>, 258 So. 3d 1207 (Fla. 2018).</p>
+<p>The line is drawn precisely by comparing two cases:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/2794251/valerie-audiffred-v-thomas-b-arnold/"><em>Audiffred v. Arnold</em></a>, 161 So. 3d 1274 (Fla. 2015)</th>
+<th><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4317987/troy-anderson-v-hilton-hotels-corporation-etc/"><em>Anderson</em></a> (2016)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Recital</td>
+<td>resolves "[a]ny and all claims <strong>Plaintiffs</strong> have brought"</td>
+<td>"PLAINTIFF," defined as <strong>Troy Anderson alone</strong></td>
+</tr>
+<tr>
+<td>Required of the non-offeror spouse</td>
+<td><strong>both</strong> spouses had to dismiss</td>
+<td>never mentioned</td>
+</tr>
+<tr>
+<td>Result</td>
+<td><strong>joint</strong> — apportionment required, proposal invalid</td>
+<td><strong>not joint</strong> — "[a]pportionment simply was not an issue"</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Practical rule: police your defined terms and your dismissal language.</strong> A plural noun, an undefined "Plaintiffs," or a release/dismissal clause that reaches a non-offeror converts a single-party proposal into a joint one that must apportion.</p>
+<p>Two further boundary points:</p>
+<ul>
+<li><strong>A single offeror can make a "joint" proposal</strong> if it resolves claims by or against parties who are neither offerors nor offerees. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/2794251/valerie-audiffred-v-thomas-b-arnold/"><em>Audiffred</em></a>.</li>
+<li><strong>A proposal captioned from one entity but written in the plural is joint.</strong> <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/2794254/ancel-pratt-jr-v-michael-c-weiss-do/"><em>Pratt v. Weiss</em></a>, 161 So. 3d 1268 (Fla. 2015) — a limited partnership and its general partner are distinct entities, and the text controlled over the caption.</li>
+</ul>
+<h2 id="c-apportionment-is-required-even-when-it-makes-no-sense">C. Apportionment is required even when it makes no sense<a class="headerlink" href="#c-apportionment-is-required-even-when-it-makes-no-sense" title="Permanent link">¶</a></h2>
+<ul>
+<li>"<strong>Even where no logical apportionment can be made, it is nonetheless required</strong> where more than one offeror or offeree is involved." <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/2794254/ancel-pratt-jr-v-michael-c-weiss-do/"><em>Pratt</em></a>, 161 So. 3d at 1272–73. Difficulty, coextensive liability, and the ability to apportion after acceptance are "not recognized legal elements to disregard or circumvent the rule."</li>
+<li>"It may take some <strong>creative drafting</strong>." <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1950924/lamb-v-matetzschk/"><em>Lamb</em></a>.</li>
+<li>🔴 <strong>Required even for a unified, single claim held by spouses.</strong> <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/10883903/trace-elements-inc-v-nadja-mackensen/"><em>Trace Elements</em></a> (Fla. July 2, 2026), 4–3 — <strong>subject to the pending rehearing motion</strong>. The proposal there was a joint, unapportioned <strong>$10,000</strong> from a husband and wife; the verdict was <strong>$41,273.70</strong>; the fee claim failed on (c)(3).</li>
+</ul>
+<p><strong>Spouses are the recurring casualty.</strong> <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1860954/allstate-indem-co-v-hingson/"><em>Allstate Indemnity Co. v. Hingson</em></a>, 808 So. 2d 197 (Fla. 2002); <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1831568/dangelo-v-fitzmaurice/"><em>D'Angelo v. Fitzmaurice</em></a>, 863 So. 2d 311 (Fla. 2003); <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/2794251/valerie-audiffred-v-thomas-b-arnold/"><em>Audiffred</em></a>; <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/10883903/trace-elements-inc-v-nadja-mackensen/"><em>Trace Elements</em></a> — four sets of spouses, plus the <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1727784/herzog-v-k-mart-corp/"><em>Herzogs</em></a> in the case <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1860954/allstate-indem-co-v-hingson/"><em>Hingson</em></a> disapproved. <strong>There is no spousal-unity exception.</strong> Pariente, C.J., objected in 2005 that the rule as construed means "a joint offer to a husband and wife is no longer authorized" (<a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1950924/lamb-v-matetzschk/"><em>Lamb</em></a>, specially concurring); the objection has never been adopted.</p>
+<h2 id="d-conditioning-acceptance-what-is-and-is-not-allowed">D. Conditioning acceptance — what is and is not allowed<a class="headerlink" href="#d-conditioning-acceptance-what-is-and-is-not-allowed" title="Permanent link">¶</a></h2>
+<p>🔴 <strong>One offeror → multiple offerees, conditioned on all of them accepting: INVALID.</strong> <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1555417/attorneys-title-insurance-fund-inc-v-gorka/"><em>Gorka</em></a> (2010). "An offer that cannot be unilaterally accepted to create a binding settlement is an <strong>illusory offer</strong>" — it divests each offeree of independent control.</p>
+<p>✅ <strong>Multiple offerors → one offeree, conditioned on that offeree accepting as to all offerors: approved by the district courts.</strong> The <strong>"all-or-nothing allocated offer."</strong> <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/5004631/hoang-dinh-duong-v-ziadie/"><em>Hoang Dinh Duong v. Ziadie</em></a>, 153 So. 3d 354, 358–60 (Fla. 4th DCA 2014), collecting <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4987556/wolfe-v-culpepper-constructors-inc/"><em>Wolfe v. Culpepper Constructors</em></a> (2d DCA 2012), <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/5048550/rossmore-v-smith/"><em>Rossmore v. Smith</em></a> (5th DCA 2011), <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/2498180/andrews-v-frey/"><em>Andrews v. Frey</em></a> (5th DCA 2011), and <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/2532139/donovan-marine-inc-v-delmonico/"><em>Donovan Marine v. Delmonico</em></a> (4th DCA 2010).</p>
+<p>The distinction is <strong>structural</strong>, and it is why <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1555417/attorneys-title-insurance-fund-inc-v-gorka/"><em>Gorka</em></a> does not reach the second structure:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1555417/attorneys-title-insurance-fund-inc-v-gorka/"><em>Gorka</em></a></th>
+<th>All-or-nothing allocated offer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Direction</td>
+<td>one offeror → <strong>multiple offerees</strong></td>
+<td><strong>multiple offerors</strong> → one offeree</td>
+</tr>
+<tr>
+<td>Condition</td>
+<td>all <strong>offerees</strong> must accept</td>
+<td>the single offeree must accept as to all <strong>offerors</strong></td>
+</tr>
+<tr>
+<td>Independent control</td>
+<td>destroyed</td>
+<td>intact — there is only one decision-maker</td>
+</tr>
+<tr>
+<td>Result</td>
+<td><strong>invalid</strong></td>
+<td><strong>valid</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>⚠️ <strong>Two cautions before you rely on the collection.</strong> <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/2498180/andrews-v-frey/"><em>Andrews v. Frey</em></a> was later disapproved by the Supreme Court in <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/2794251/valerie-audiffred-v-thomas-b-arnold/"><em>Audiffred</em></a> — on a different question (sole-offeror vs. joint proposal), not on the all-or-nothing structure, but say so if you cite it. And the Supreme Court has not itself passed on the structure.</p>
+<p>⚠️ <strong>The statutory carve-out is narrow.</strong> § 768.79(6) (2022) permits a conditional joint offer only where a <strong>property insurer</strong> makes it in a <strong>breach of contract action</strong>. It is not a general relaxation of <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1555417/attorneys-title-insurance-fund-inc-v-gorka/"><em>Gorka</em></a>, and it is <strong>not</strong> an apportionment provision. Do not describe it as one.</p>
+<h2 id="e-the-price-of-an-all-or-nothing-allocated-offer-the-25-test-becomes-conjunctive">E. ⚠️ The price of an all-or-nothing allocated offer: the 25% test becomes conjunctive<a class="headerlink" href="#e-the-price-of-an-all-or-nothing-allocated-offer-the-25-test-becomes-conjunctive" title="Permanent link">¶</a></h2>
+<p>This is the most under-appreciated consequence in the field, and it is stated plainly in <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/5004631/hoang-dinh-duong-v-ziadie/"><em>Hoang Dinh Duong</em></a>:</p>
+<blockquote>
+<p>if the verdict for <strong>any</strong> claimant was not 25% higher than that claimant's allocated share, <strong>none</strong> of the claimants recovers fees. "[I]t was not enough that the total amount of the verdict exceed the total amount of the offer by twenty-five percent."</p>
+</blockquote>
+<p><strong>Allocate deliberately.</strong> Loading one claimant heavily to make the aggregate look reasonable can hand the offeree a defense: if that claimant underperforms at trial, the whole fee claim fails, however well the others did.</p>
+<h2 id="f-joint-proposal-decision-tree">F. Joint-proposal decision tree<a class="headerlink" href="#f-joint-proposal-decision-tree" title="Permanent link">¶</a></h2>
+<pre><code>Does the proposal, read as a whole, speak for or bind anyone
+who is not the named offeror/offeree?
+│
+├── NO  ──►  Not joint. Apportionment is not an issue (Anderson).
+│           Verify: defined terms singular, no dismissal/release
+│           clause reaching a non-party to the proposal.
+│
+└── YES ──►  It is a JOINT proposal. (c)(3) applies.
+             │
+             ├── Is every non-apportioned party alleged to be SOLELY
+             │   vicariously / constructively / derivatively /
+             │   technically liable?
+             │   └── YES ──► (c)(4) exception. No apportionment
+             │                needed as to that party.
+             │
+             └── NO ──► You MUST state the amount and terms
+                        attributable to each party. No exception for:
+                          · unified or indivisible claims
+                          · spouses / tenancy by the entireties
+                          · claims where apportionment is illogical
+                        │
+                        └── Conditioning acceptance?
+                            ├── Multiple OFFEREES, all must accept
+                            │        ──► INVALID (Gorka), unless the
+                            │            § 768.79(6) property-insurer
+                            │            carve-out applies
+                            └── Multiple OFFERORS, one OFFEREE
+                                     ──► Permissible all-or-nothing
+                                         allocated offer, BUT the 25%
+                                         test becomes CONJUNCTIVE
+</code></pre>
+<hr />
+<h1 id="part-5-the-drafting-checklist">Part 5 — The drafting checklist<a class="headerlink" href="#part-5-the-drafting-checklist" title="Permanent link">¶</a></h1>
+<p>Each row is a requirement and the decision that enforces it. Requirements marked 🔴 have killed fee claims in the Supreme Court.</p>
+<h2 id="a-threshold-requirements">A. Threshold requirements<a class="headerlink" href="#a-threshold-requirements" title="Permanent link">¶</a></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Requirement</th>
+<th>Source</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>In writing</strong></td>
+<td>rule 1.442(c)(1)</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>🔴 <strong>Cite § 768.79 itself</strong> — not just rule 1.442</td>
+<td>§ 768.79(2)(a); rule 1.442(c)(1); <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1140885/campbell-v-goldman/"><em>Campbell</em></a></td>
+<td>Citing only the rule is <strong>fatal</strong>. The statute requires the proposal to "state that it is being made pursuant to this section." Belt and braces: cite both.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Name the party making it and the party to whom it is made</strong></td>
+<td>rule 1.442(c)(2)(A)</td>
+<td>Use defined terms. Define them in the singular unless you intend a joint proposal.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="b-rule-1442c2-content-requirements">B. Rule 1.442(c)(2) content requirements<a class="headerlink" href="#b-rule-1442c2-content-requirements" title="Permanent link">¶</a></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Subdiv.</th>
+<th>Requirement</th>
+<th>Drafting note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>(A)</strong></td>
+<td>Name the offeror and the offeree</td>
+<td>See above</td>
+</tr>
+<tr>
+<td><strong>(B)</strong></td>
+<td>State that it <strong>resolves all damages</strong> that would otherwise be awarded in final judgment</td>
+<td>An <strong>unqualified</strong> proposal resolves every pending claim, counterclaims included — § 768.79(2); <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1846806/mgr-equip-v-wilson-ice-enterprises/"><em>MGR Equipment Corp. v. Wilson Ice Enterprises</em></a>, 731 So. 2d 1262 (Fla. 1999). If you intend something narrower, say so with particularity, and understand you are creating a "condition" under (C).</td>
+</tr>
+<tr>
+<td><strong>(C)</strong></td>
+<td>State <strong>with particularity any relevant conditions</strong></td>
+<td>A <strong>general release is a condition</strong> and must be stated with particularity. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1697927/state-farm-mut-auto-ins-co-v-nichols/"><em>State Farm Mut. Auto. Ins. Co. v. Nichols</em></a>, 932 So. 2d 1067 (Fla. 2006).</td>
+</tr>
+<tr>
+<td><strong>(D)</strong></td>
+<td>State the <strong>total amount</strong> and <strong>all nonmonetary terms</strong> with particularity</td>
+<td>Every nonmonetary term is a place to lose.</td>
+</tr>
+<tr>
+<td><strong>(E)</strong></td>
+<td>State with particularity the amount proposed to settle a <strong>punitive damages</strong> claim, if any</td>
+<td>Required only if punitive damages are claimed.</td>
+</tr>
+<tr>
+<td><strong>(F)</strong></td>
+<td>State whether it <strong>includes attorney's fees</strong> and whether fees <strong>are part of the legal claim</strong></td>
+<td>🔴 Invalid for omission <strong>where the complaint actually pleaded a fee claim</strong> — <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4988617/diamond-aircraft-industries-inc-v-horowitch/"><em>Diamond Aircraft Industries, Inc. v. Horowitch</em></a>, 107 So. 3d 362 (Fla. 2013). <strong>Excused</strong> where fees were not sought in the pleadings — <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4314140/susanne-l-kuhajda-v-borden-dairy-company-of-alabama-llc/"><em>Kuhajda v. Borden Dairy Co.</em></a>, 202 So. 3d 391 (Fla. 2016). <strong>Always include it anyway</strong>; the exception depends on facts you cannot control.</td>
+</tr>
+<tr>
+<td><strong>(G)</strong></td>
+<td><strong>Certificate of service</strong></td>
+<td>See Part 6.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="c-the-particularity-standard-nichols">C. The particularity standard — <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1697927/state-farm-mut-auto-ins-co-v-nichols/"><em>Nichols</em></a><a class="headerlink" href="#c-the-particularity-standard-nichols" title="Permanent link">¶</a></h2>
+<p>The operative test, and the one the trial court will apply:</p>
+<blockquote>
+<p>A proposal must be "<strong>sufficiently clear and definite to allow the offeree to make an informed decision without needing clarification</strong>." The rule "does not demand the impossible." <strong>"If ambiguity within the proposal could reasonably affect the offeree's decision, the proposal will not satisfy the particularity requirement."</strong></p>
+</blockquote>
+<p>⭐ <strong>And the qualifier that saves most releases:</strong> "<strong>The rule aims to prevent ambiguity, not breadth.</strong>" A sweeping general release is fine if it is unambiguous. Summarize it if you like — a summary suffices "as long as it eliminates any reasonable ambiguity about its scope."</p>
+<p><strong>Two rules of construction that work in the drafter's favor:</strong></p>
+<ul>
+<li><strong>The proposal is read as a whole.</strong> An arguably loose recital in one paragraph is cured by the rest of the document. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4540927/w-riley-allen-v-jairo-rafael-nunez/"><em>Allen v. Nunez</em></a>.</li>
+<li><strong>Courts are discouraged from "nitpicking."</strong> <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4317987/troy-anderson-v-hilton-hotels-corporation-etc/"><em>Anderson</em></a> and <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4540927/w-riley-allen-v-jairo-rafael-nunez/"><em>Allen</em></a> both reversed district courts for manufacturing ambiguity, in the same words: the courts below "<strong>unnecessarily injected ambiguity into these proceedings and created more judicial labor, not less</strong>."</li>
+<li><strong>A transmittal letter is not a second, conflicting proposal.</strong> Reading it as one is "grammatically possible" but "substantively unreasonable." <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/5004631/hoang-dinh-duong-v-ziadie/"><em>Hoang Dinh Duong</em></a>. Still — do not put settlement terms in the cover letter.</li>
+</ul>
+<h2 id="d-attach-and-align">D. Attach and align<a class="headerlink" href="#d-attach-and-align" title="Permanent link">¶</a></h2>
+<ul>
+<li>If a release is referenced, <strong>attach it</strong>. Do not incorporate a document the offeree has not seen.</li>
+<li>Check that the release's scope, the (c)(2)(B) all-damages recital, and any (c)(2)(C) conditions do not contradict each other.</li>
+<li>Check that no term reaches a party who is not named as an offeror or offeree — that is what converts the proposal to a joint one (Part 4.B).</li>
+</ul>
+<hr />
+<h1 id="part-6-serving-the-proposal">Part 6 — Serving the proposal<a class="headerlink" href="#part-6-serving-the-proposal" title="Permanent link">¶</a></h1>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Point</th>
+<th>Authority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proposals are <strong>served, not filed</strong>, unless filing is necessary to enforce the rule</td>
+<td>rule 1.442(d)</td>
+</tr>
+<tr>
+<td><strong>Premature filing is not fatal.</strong> The remedy is a motion to strike, with leave to refile</td>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1785275/frosti-v-creel/"><em>Frosti</em></a></td>
+</tr>
+<tr>
+<td>⭐ <strong>Proposals are NOT subject to the e-mail service requirements of Fla. R. Jud. Admin. 2.516</strong> — a proposal is neither a pleading nor a document filed in a court proceeding</td>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4581389/sandra-kent-wheaton-v-mardella-wheaton/"><em>Wheaton v. Wheaton</em></a>, 261 So. 3d 1236 (Fla. 2019)</td>
+</tr>
+<tr>
+<td>The 30-day acceptance period gets <strong>no extra days for the method of service</strong></td>
+<td>rule 1.442(f)(1) (excluding rule 2.514(b))</td>
+</tr>
+</tbody>
+</table></div>
+<p>⚠️ <strong>Practical advice notwithstanding <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4581389/sandra-kent-wheaton-v-mardella-wheaton/"><em>Wheaton</em></a>: serve by e-mail in conformity with rule 2.516 anyway, and keep the certificate.</strong> <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4581389/sandra-kent-wheaton-v-mardella-wheaton/"><em>Wheaton</em></a>'s primary holding is that 2.516 does not apply; its alternative holding — that noncompliance would be excused because the proposal satisfied § 768.79's substantive requirements — applies a substantive-compliance test broader than anything in <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4314140/susanne-l-kuhajda-v-borden-dairy-company-of-alabama-llc/"><em>Kuhajda</em></a>, and the Supreme Court has <strong>not revisited it since 2019</strong>. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/10883903/trace-elements-inc-v-nadja-mackensen/"><em>Trace Elements</em></a> does not mention it. Do not build a strategy on the alternative holding.</p>
+<p><strong>Prove service.</strong> Include the (c)(2)(G) certificate, keep the transmission record, and calendar day 30 the moment it goes out.</p>
+<hr />
+<h1 id="part-7-receiving-a-proposal">Part 7 — Receiving a proposal<a class="headerlink" href="#part-7-receiving-a-proposal" title="Permanent link">¶</a></h1>
+<h2 id="a-calendar-first-analyze-second">A. Calendar first, analyze second<a class="headerlink" href="#a-calendar-first-analyze-second" title="Permanent link">¶</a></h2>
+<p>Day 1 is service. Day 30 is the deadline. <strong>No add-on days. No tolling by motion.</strong> <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4498881/donna-koppel-v-laura-ochoa/"><em>Koppel</em></a>. Put the date in the file, on the calendar, and in the client letter the same day.</p>
+<h2 id="b-deciding">B. Deciding<a class="headerlink" href="#b-deciding" title="Permanent link">¶</a></h2>
+<p>Model the comparator honestly, using the <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1912574/white-v-steak-and-ale-of-florida-inc/"><em>White</em></a> formula (Part 8) — not the verdict you hope for. On a plaintiff-side file, ask: is there a realistic verdict at which the <strong>judgment obtained</strong>, computed as of today, falls below 75% of this proposal? On a defense file: above 125% of the demand?</p>
+<p>⚠️ <strong>Accepting a proposal silent as to fees ends the fee claim too.</strong> An accepted offer of judgment that says nothing about attorney's fees <strong>terminates the litigation</strong> and forecloses a later motion for statutory fees; statutory fee rights <strong>can be waived</strong>. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1670587/unicare-health-facilities-inc-v-mort/"><em>Unicare Health Facilities, Inc. v. Mort</em></a>, 553 So. 2d 159 (Fla. 1989) (the "organic right of parties to contract a settlement, which by definition concludes all claims unless the contract of settlement specifies otherwise"). <strong>If you have a separate fee entitlement, do not accept a silent proposal without resolving it.</strong></p>
+<h2 id="c-mechanics-of-acceptance-rejection-and-withdrawal">C. Mechanics of acceptance, rejection, and withdrawal<a class="headerlink" href="#c-mechanics-of-acceptance-rejection-and-withdrawal" title="Permanent link">¶</a></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Acceptance</strong></td>
+<td>Written notice delivered within 30 days — rule 1.442(f)(1). <strong>A filed written acceptance forms a binding settlement contract</strong>; acceptance is not performance. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/8404436/suarez-trucking-fl-corp-v-adam-j-souders/"><em>Suarez Trucking FL Corp. v. Souders</em></a>, No. SC21-369 (Fla. Oct. 20, 2022): "Once a proper acceptance … is filed as specified in the statute, <strong>that's it</strong>: a settlement contract has been entered."</td>
+</tr>
+<tr>
+<td><strong>The acceptance need not recite the offer's terms</strong></td>
+<td>The mirror-image rule is "a rule of <strong>consistency</strong>. It is not … a rule of <strong>regurgitation</strong>." <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/8404436/suarez-trucking-fl-corp-v-adam-j-souders/"><em>Suarez Trucking</em></a>. But an acceptance must be <strong>unqualified</strong> — do not add terms.</td>
+</tr>
+<tr>
+<td><strong>Rejection</strong></td>
+<td>Automatic. A proposal is deemed rejected if not accepted in 30 days. You need do nothing.</td>
+</tr>
+<tr>
+<td><strong>Counteroffer</strong></td>
+<td><strong>Does not terminate the proposal.</strong> <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/7744665/scope-v-fannelli/"><em>Scope v. Fannelli</em></a>, 639 So. 2d 141 (Fla. 5th DCA 1994). The original proposal remains open until written withdrawal or expiry — which cuts both ways: it means negotiating does not forfeit your right to accept, and it means an offeror who wants the proposal dead must <strong>withdraw it in writing</strong>.</td>
+</tr>
+<tr>
+<td><strong>Withdrawal</strong></td>
+<td>In writing, <strong>before</strong> a written acceptance is delivered; once withdrawn the proposal is void. Rule 1.442(e).</td>
+</tr>
+<tr>
+<td><strong>Oral anything</strong></td>
+<td>Irrelevant. Rule 1.442(f)(1).</td>
+</tr>
+</tbody>
+</table></div>
+<p>⚠️ <strong>The framework "does not envision a process of negotiation."</strong> Proposals are "by their very nature <strong>take-it-or-leave-it propositions</strong>." <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/8404436/suarez-trucking-fl-corp-v-adam-j-souders/"><em>Suarez Trucking</em></a>. Side conversations about terms are legally inert; only the writing counts.</p>
+<h2 id="d-attacking-a-proposal-served-on-you">D. Attacking a proposal served on you<a class="headerlink" href="#d-attacking-a-proposal-served-on-you" title="Permanent link">¶</a></h2>
+<p>The grounds that have actually worked, in rough order of success rate:</p>
+<ol>
+<li><strong>Failure to apportion a joint proposal</strong> — rule 1.442(c)(3). Part 4. The largest category by a wide margin. Look first at defined terms, plural nouns, and any clause that binds a non-offeror.</li>
+<li><strong>Conditioned on mutual acceptance by multiple offerees</strong> — <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1555417/attorneys-title-insurance-fund-inc-v-gorka/"><em>Gorka</em></a>. Check whether the § 768.79(6) property-insurer carve-out applies before arguing this.</li>
+<li><strong>No citation to § 768.79</strong> — <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1140885/campbell-v-goldman/"><em>Campbell</em></a>.</li>
+<li><strong>Ambiguity that could reasonably affect the decision</strong> — <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1697927/state-farm-mut-auto-ins-co-v-nichols/"><em>Nichols</em></a>. ⚠️ But read <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4317987/troy-anderson-v-hilton-hotels-corporation-etc/"><em>Anderson</em></a> and <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4540927/w-riley-allen-v-jairo-rafael-nunez/"><em>Allen</em></a> first: the Court has twice reversed courts for manufacturing ambiguity, and the proposal is read <strong>as a whole</strong>. A nitpicking argument is now more likely to draw a rebuke than a win.</li>
+<li><strong>(c)(2)(F) omission where fees were pleaded</strong> — <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4988617/diamond-aircraft-industries-inc-v-horowitch/"><em>Diamond Aircraft</em></a>. Check the complaint; if fees were not pleaded, <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4314140/susanne-l-kuhajda-v-borden-dairy-company-of-alabama-llc/"><em>Kuhajda</em></a> forecloses this.</li>
+<li><strong>The action is not a "civil action for damages"</strong> — Part 10.</li>
+<li><strong>Good faith</strong> — § 768.79(8)(a). See below.</li>
+<li><strong>The comparison fails</strong> — run the <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1912574/white-v-steak-and-ale-of-florida-inc/"><em>White</em></a> formula yourself (Part 8) rather than accepting the movant's arithmetic. Setoffs are where these are won.</li>
+</ol>
+<h3 id="the-good-faith-challenge">The good-faith challenge<a class="headerlink" href="#the-good-faith-challenge" title="Permanent link">¶</a></h3>
+<p>This is the only discretionary escape, and it is <strong>the least-developed part of the regime</strong> — which cuts both ways. There is little authority to cite, and little authority against you.</p>
+<ul>
+<li><strong>Motive is not a validity question.</strong> Even an admission that a proposal was aimed at settling someone else's claim goes to good faith, not facial validity. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4317987/troy-anderson-v-hilton-hotels-corporation-etc/"><em>Anderson</em></a>.</li>
+<li><strong>Differentiated and strategic offers are legitimate.</strong> <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4317987/troy-anderson-v-hilton-hotels-corporation-etc/"><em>Anderson</em></a>, quoting <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1842075/hess-v-walton/"><em>Hess v. Walton</em></a>.</li>
+<li><strong>Nominal proposals are the open question.</strong> <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1769501/leapai-v-milton/"><em>Leapai</em></a> n.2 (1992) raised doubt about "a one dollar offer of settlement" and said the issue "was neither presented nor addressed." <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1785275/frosti-v-creel/"><em>Frosti</em></a> (2008) let a $1 punitive proposal pass unchallenged. <strong>No Supreme Court decision in the corpus squarely decides a good-faith challenge.</strong> If you are attacking a nominal proposal, you are litigating on open ground — build the record in the trial court, because that is where the finding will be made.</li>
+</ul>
+<hr />
+<h1 id="part-8-running-the-25-comparison">Part 8 — Running the 25% comparison<a class="headerlink" href="#part-8-running-the-25-comparison" title="Permanent link">¶</a></h1>
+<h2 id="a-the-thresholds">A. The thresholds<a class="headerlink" href="#a-the-thresholds" title="Permanent link">¶</a></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Offeror</th>
+<th>Entitled if…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Defendant</strong></td>
+<td>judgment is <strong>one of no liability</strong>, <strong>or</strong> the judgment obtained by the plaintiff is <strong>at least 25% less</strong> than the defendant's proposal</td>
+</tr>
+<tr>
+<td><strong>Plaintiff</strong></td>
+<td>the judgment obtained is <strong>at least 25% greater</strong> than the plaintiff's demand</td>
+</tr>
+</tbody>
+</table></div>
+<p>§ 768.79(1); the post-judgment determination procedure is at <strong>§ 768.79(7)</strong> (2024) — <strong>(6)</strong> in any pre-2022 source.</p>
+<h2 id="b-judgment-obtained-is-a-term-of-art-the-white-formula">B. "Judgment obtained" is a term of art — the <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1912574/white-v-steak-and-ale-of-florida-inc/"><em>White</em></a> formula<a class="headerlink" href="#b-judgment-obtained-is-a-term-of-art-the-white-formula" title="Permanent link">¶</a></h2>
+<p><strong>Not the verdict.</strong> <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1912574/white-v-steak-and-ale-of-florida-inc/"><em>White v. Steak and Ale of Florida, Inc.</em></a>, 816 So. 2d 546 (Fla. 2002):</p>
+<pre><code>judgment obtained  =  net judgment for damages
+                   +  attorney's fees        ┐
+                   +  taxable costs          ├ as they stood ON THE DATE OF THE OFFER
+                   +  prejudgment interest   ┘
+</code></pre>
+<p>Three refinements:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Refinement</th>
+<th>Authority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Post-offer prejudgment interest is EXCLUDED</strong></td>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/5092491/ccm-condominium-association-inc-etc-v-petri-positive-pest-control/"><em>CCM Condominium Ass'n v. Petri Positive Pest Control</em></a>, No. SC19-861 (Fla. Sept. 9, 2021)</td>
+</tr>
+<tr>
+<td><strong>The whole net judgment counts</strong> — you may not isolate a favorable slice (e.g. the compensatory portion) to defeat the threshold</td>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1785275/frosti-v-creel/"><em>Frosti</em></a></td>
+</tr>
+<tr>
+<td><strong>Separate proposals may not be aggregated</strong> and compared against the judgment</td>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4317987/troy-anderson-v-hilton-hotels-corporation-etc/"><em>Anderson</em></a></td>
+</tr>
+</tbody>
+</table></div>
+<p>⚠️ <strong>The formula has never been examined on the merits.</strong> In <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/5092491/ccm-condominium-association-inc-etc-v-petri-positive-pest-control/"><em>CCM</em></a>, the Fourth District below said the plain meaning of § 768.79 does <strong>not</strong> support the formula but considered itself bound; the Supreme Court applied <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4741416/state-of-florida-v-mark-anthony-poole/"><em>State v. Poole</em></a>'s "clearly erroneous" standard and declined to look. Canady, C.J., dissenting, argued the formula's supporting authorities were § 627.428 cases with "no relevant textual similarity." <strong>It is settled law and you should apply it — but it is settled on stare decisis, not on text.</strong></p>
+<h2 id="c-worked-examples">C. Worked examples<a class="headerlink" href="#c-worked-examples" title="Permanent link">¶</a></h2>
+<p><strong>Simple, single claimant.</strong> Defendant serves a $100,000 proposal. Verdict: $70,000. As of the date of the offer, plaintiff's taxable costs and prejudgment interest totaled $8,000.</p>
+<pre><code>judgment obtained = 70,000 + 8,000 = 78,000
+75% of 100,000                     = 75,000
+78,000 &gt; 75,000  ──►  defendant is NOT entitled.
+</code></pre>
+<p>Note how the $8,000 of pre-offer accruals — not the verdict — decided it. <strong>Compute the accruals before you set the number.</strong></p>
+<p><strong>Unified claim, unapportioned joint proposal.</strong> <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/10883903/trace-elements-inc-v-nadja-mackensen/"><em>Trace Elements</em></a>: spouses served a joint, unapportioned <strong>$10,000</strong> proposal; the verdict was <strong>$41,273.70</strong> — comfortably past 125%. The fee claim still failed, on (c)(3), because the proposal was not apportioned. <strong>Arithmetic success does not survive a drafting defect.</strong></p>
+<p><strong>All-or-nothing allocated proposal — the conjunctive test.</strong> <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/5004631/hoang-dinh-duong-v-ziadie/"><em>Hoang Dinh Duong</em></a>: $1,000,000 total, apportioned $900,000 / $50,000 / $50,000, served on one defendant. Each claimant's judgment had to beat that claimant's allocated share by 25%, or <strong>no one</strong> recovered fees. They did, and $557,452 in fees was affirmed. Run the test <strong>per claimant</strong>, not on the total.</p>
+<hr />
+<h1 id="part-9-claiming-the-fees">Part 9 — Claiming the fees<a class="headerlink" href="#part-9-claiming-the-fees" title="Permanent link">¶</a></h1>
+<h2 id="a-the-deadline">A. The deadline<a class="headerlink" href="#a-the-deadline" title="Permanent link">¶</a></h2>
+<p>Serve the motion in accordance with <strong>rule 1.525</strong> — rule 1.442(g). <strong>30 days.</strong> See Part 3.C for the measuring event (verdict in a jury case).</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Point</th>
+<th>Authority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔴 <strong>A reservation of jurisdiction in the final judgment does NOT extend rule 1.525's 30 days</strong></td>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1899565/saia-motor-freight-line-inc-v-reid/"><em>Saia Motor Freight Line, Inc. v. Reid</em></a>, 930 So. 2d 598 (Fla. 2006)</td>
+</tr>
+<tr>
+<td><strong>But 1.525 is a ceiling, not a window</strong> — a motion served <em>before</em> judgment is timely</td>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1785275/frosti-v-creel/"><em>Frosti</em></a>, following <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1825558/barco-v-school-bd-of-pinellas-county/"><em>Barco v. School Bd. of Pinellas County</em></a></td>
+</tr>
+<tr>
+<td><strong>Prospective-only application is not available</strong></td>
+<td>This line has never been applied prospectively — sought and refused in <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1912574/white-v-steak-and-ale-of-florida-inc/"><em>White</em></a>, <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1899565/saia-motor-freight-line-inc-v-reid/"><em>Saia</em></a>, and <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4498881/donna-koppel-v-laura-ochoa/"><em>Koppel</em></a></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Practical consequence: serve early.</strong> There is no penalty for serving the motion before judgment and a fatal one for serving it late. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1899565/saia-motor-freight-line-inc-v-reid/"><em>Saia</em></a> and <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1843592/gulliver-academy-inc-v-bodek/"><em>Gulliver Academy</em></a> were decided nine years apart by the same author on nearly the same facts, and reconcile only because rule 1.525 was adopted in between. Do not rely on a reservation of jurisdiction to save you.</p>
+<h2 id="b-pleading">B. Pleading<a class="headerlink" href="#b-pleading" title="Permanent link">¶</a></h2>
+<p>⭐ <strong>A § 768.79 fee claim is not subject to <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1116540/stockman-v-downs/"><em>Stockman v. Downs</em></a>'s pleading requirement</strong>, because entitlement arises from an event occurring <em>during</em> the suit rather than from the nature of the claim. Discussed in <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/2689203/advanced-chiropractic-and-rehabilitation-center-corp-v-united-automobile/"><em>Advanced Chiropractic &amp; Rehabilitation Center, Corp. v. United Automobile Ins. Co.</em></a>, 140 So. 3d 529 (Fla. 2014), on district authority collected there. ⚠️ The Supreme Court has not squarely held this in a § 768.79 case in the read corpus — <strong>plead the entitlement anyway</strong> if you have any basis to; there is no cost to doing so.</p>
+<h2 id="c-amount">C. Amount<a class="headerlink" href="#c-amount" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>No contingency risk multiplier.</strong> <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1831641/sarkis-v-allstate-ins-co/"><em>Sarkis</em></a>.</li>
+<li>The § 768.79(8)(b) factors (2024; <strong>(7)(b)</strong> pre-2022) go to the <strong>amount</strong>, not entitlement. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1715682/tgi-fridays-inc-v-dvorak/"><em>TGI Friday's</em></a>/<a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1676218/schmidt-v-fortner/"><em>Schmidt</em></a>.</li>
+<li><strong>Appellate fees are recoverable.</strong> <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1785275/frosti-v-creel/"><em>Frosti</em></a>; <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/9406669/brinda-coates-etc-v-rj-reynolds-tobacco-company/"><em>Coates</em></a>. Follow rule 9.400 and move in the appellate court.</li>
+</ul>
+<hr />
+<h1 id="part-10-when-76879-does-not-apply-at-all">Part 10 — When § 768.79 does not apply at all<a class="headerlink" href="#part-10-when-76879-does-not-apply-at-all" title="Permanent link">¶</a></h1>
+<p>Check these before you spend an hour drafting.</p>
+<h2 id="a-actions-seeking-damages-and-equitable-relief">A. Actions seeking damages <em>and</em> equitable relief<a class="headerlink" href="#a-actions-seeking-damages-and-equitable-relief" title="Permanent link">¶</a></h2>
+<p><strong>§ 768.79 does not apply</strong> to an action seeking both damages and equitable relief, at least where the proposal is a <strong>general</strong> one resolving all claims. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4988617/diamond-aircraft-industries-inc-v-horowitch/"><em>Diamond Aircraft</em></a>. There is <strong>no exception</strong> for an equitable claim that lacks serious merit, and <strong>pleading in the alternative does not help</strong> — "an equitable claim in the alternative to a monetary claim is still part of the same civil action."</p>
+<p>⭐ <strong>The open workaround.</strong> <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4988617/diamond-aircraft-industries-inc-v-horowitch/"><em>Diamond Aircraft</em></a> <strong>expressly reserved</strong> whether the result changes where the monetary and nonmonetary claims are pled <strong>separately</strong> and the proposal is <strong>directed only to the monetary claim</strong>. That question is still undecided. It is a real drafting opportunity and a real risk — see <a href="#b-the-diamond-aircraft-reservation">Part 12.B</a>.</p>
+<h2 id="b-contractual-choice-of-another-states-law">B. Contractual choice of another state's law<a class="headerlink" href="#b-contractual-choice-of-another-states-law" title="Permanent link">¶</a></h2>
+<p><strong>§ 768.79 is substantive for conflict-of-law purposes.</strong> Where the parties contracted to be bound by another state's substantive law, <strong>§ 768.79 does not apply</strong>. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/5056323/southeast-floating-docks-inc-v-auto-owners-insurance-co/"><em>Southeast Floating Docks, Inc. v. Auto-Owners Ins. Co.</em></a>, 82 So. 3d 73 (Fla. 2012). Check the contract before you serve.</p>
+<h2 id="c-voluntary-dismissal-without-prejudice">C. Voluntary dismissal without prejudice<a class="headerlink" href="#c-voluntary-dismissal-without-prejudice" title="Permanent link">¶</a></h2>
+<p>Fees follow only where a plaintiff's voluntary dismissal is <strong>with prejudice</strong>, or is a <strong>second</strong> voluntary dismissal. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1799433/mx-investments-inc-v-crawford/"><em>MX Investments, Inc. v. Crawford</em></a>, 700 So. 2d 640 (Fla. 1997). A rule 1.420(d) cost judgment is not a "judgment" for this purpose.</p>
+<h2 id="d-old-accrual-dates">D. Old accrual dates<a class="headerlink" href="#d-old-accrual-dates" title="Permanent link">¶</a></h2>
+<p><strong>§ 768.79 does not reach causes of action accruing before July 1, 1986</strong> (§ 768.71(2)), and <strong>the applicable version is the one in effect when the cause of action accrued</strong> — not when the offer was served. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1925102/metropolitan-dade-county-v-jones-boatyard-inc/"><em>Metropolitan Dade County v. Jones Boatyard, Inc.</em></a>, 611 So. 2d 512 (Fla. 1993).</p>
+<p>⚠️ <strong>§ 45.061 was never repealed.</strong> It was repealed <em>prospectively</em> in 1990 as to causes accruing after October 1, 1990, and survives on the books as § 45.061, Fla. Stat., for pre-October-1990 accruals. Vestigial, but if you are litigating a very old claim, check it — its § 45.061(2)(b) definition of "the amount of the judgment" differs from the <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1912574/white-v-steak-and-ale-of-florida-inc/"><em>White</em></a> formula, and its temporal trigger is <strong>the making of the offer</strong>, not accrual.</p>
+<h2 id="e-things-that-are-not-exclusions">E. Things that are <em>not</em> exclusions<a class="headerlink" href="#e-things-that-are-not-exclusions" title="Permanent link">¶</a></h2>
+<ul>
+<li><strong>PIP and other contractual-damages suits are within the statute.</strong> "[N]othing in the offer of judgment statute exempts claims for contractual damages." <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1697927/state-farm-mut-auto-ins-co-v-nichols/"><em>Nichols</em></a>.</li>
+<li><strong>You need not prevail.</strong> <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/9406669/brinda-coates-etc-v-rj-reynolds-tobacco-company/"><em>Coates</em></a>.</li>
+<li><strong>A pending counterclaim does not defeat an unqualified proposal</strong> — it is resolved by it. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1846806/mgr-equip-v-wilson-ice-enterprises/"><em>MGR Equipment</em></a>.</li>
+</ul>
+<hr />
+<h1 id="part-11-traps-ranked">Part 11 — Traps, ranked<a class="headerlink" href="#part-11-traps-ranked" title="Permanent link">¶</a></h1>
+<p>Ordered by how often they appear as the dispositive defect in the Supreme Court corpus.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Trap</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>🔴 <strong>A joint proposal that does not apportion</strong> — including spouses, unified claims, and claims where apportionment is illogical</td>
+<td>Part 4. Apportion, or restructure so the proposal binds only its named offeror/offeree</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>🔴 <strong>Citing rule 1.442 without citing § 768.79</strong></td>
+<td>Cite both, in the first sentence. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1140885/campbell-v-goldman/"><em>Campbell</em></a></td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>🔴 <strong>Assuming a motion to enlarge tolls the 30-day acceptance period</strong></td>
+<td>It does not. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4498881/donna-koppel-v-laura-ochoa/"><em>Koppel</em></a></td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>🔴 <strong>Counting extra days for service on the 30-day clock</strong></td>
+<td>Rule 1.442(f)(1) excludes rule 2.514(b)</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>🔴 <strong>Missing the rule 1.525 deadline in reliance on a reservation of jurisdiction</strong></td>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1899565/saia-motor-freight-line-inc-v-reid/"><em>Saia</em></a>. Serve the fee motion early; in a jury case, calendar from the <strong>verdict</strong></td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td><strong>A general release or condition stated too vaguely to price</strong></td>
+<td>Attach it; state it with particularity. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1697927/state-farm-mut-auto-ins-co-v-nichols/"><em>Nichols</em></a></td>
+</tr>
+<tr>
+<td><strong>7</strong></td>
+<td><strong>Serving a proposal in an action seeking damages <em>and</em> equitable relief</strong></td>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4988617/diamond-aircraft-industries-inc-v-horowitch/"><em>Diamond Aircraft</em></a>. Check the prayer for relief first</td>
+</tr>
+<tr>
+<td><strong>8</strong></td>
+<td><strong>Expecting fees after a voluntary dismissal without prejudice</strong></td>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1799433/mx-investments-inc-v-crawford/"><em>MX Investments</em></a></td>
+</tr>
+<tr>
+<td><strong>9</strong></td>
+<td><strong>Aggregating separate proposals against one judgment</strong></td>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4317987/troy-anderson-v-hilton-hotels-corporation-etc/"><em>Anderson</em></a>. Each proposal stands alone</td>
+</tr>
+<tr>
+<td><strong>10</strong></td>
+<td><strong>Conditioning a multi-offeree proposal on mutual acceptance</strong></td>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1555417/attorneys-title-insurance-fund-inc-v-gorka/"><em>Gorka</em></a>, unless § 768.79(6) applies</td>
+</tr>
+<tr>
+<td><strong>11</strong></td>
+<td><strong>Omitting the (c)(2)(F) attorney's-fees statement where fees were pleaded</strong></td>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4988617/diamond-aircraft-industries-inc-v-horowitch/"><em>Diamond Aircraft</em></a>. Include it always</td>
+</tr>
+<tr>
+<td><strong>12</strong></td>
+<td><strong>Accepting a proposal silent as to fees while holding a separate fee entitlement</strong></td>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1670587/unicare-health-facilities-inc-v-mort/"><em>Unicare</em></a>. Resolve fees before accepting</td>
+</tr>
+<tr>
+<td><strong>13</strong></td>
+<td><strong>Ignoring foreseeable setoffs when pricing the number</strong></td>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1770539/rollins-v-pizzarelli/"><em>Rollins</em></a>. Model the comparator net</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="the-numbering-trap">The numbering trap<a class="headerlink" href="#the-numbering-trap" title="Permanent link">¶</a></h2>
+<p>🔴 <strong>Chapter 2022-271 renumbered § 768.79. There are two different subsection (6)s.</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Provision</th>
+<th>Pre-2022</th>
+<th>2024</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entitlement</td>
+<td>(1)</td>
+<td>(1)</td>
+</tr>
+<tr>
+<td>Offer requirements</td>
+<td>(2)</td>
+<td>(2)</td>
+</tr>
+<tr>
+<td>Property-insurer conditional joint offers</td>
+<td><em>did not exist</em></td>
+<td><strong>(6)</strong></td>
+</tr>
+<tr>
+<td>Judgment comparison / the 25% math</td>
+<td><strong>(6)</strong></td>
+<td><strong>(7)</strong></td>
+</tr>
+<tr>
+<td>Good faith</td>
+<td>(7)(a)</td>
+<td><strong>(8)(a)</strong></td>
+</tr>
+<tr>
+<td>Reasonableness factors (amount)</td>
+<td>(7)(b)</td>
+<td><strong>(8)(b)</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Every pin cite must be tied to a statutory year</strong>, and the governing version keys to the <strong>accrual date</strong> (<a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1925102/metropolitan-dade-county-v-jones-boatyard-inc/"><em>Jones Boatyard</em></a>), not the date of the offer or today's book. A brief citing "§ 768.79(6)" without a year is ambiguous on its face — and if it is quoting a pre-2022 case, it almost certainly means what is now (7).</p>
+<h2 id="the-terminology-trap-for-research">The terminology trap (for research)<a class="headerlink" href="#the-terminology-trap-for-research" title="Permanent link">¶</a></h2>
+<p>Pre-1996 opinions say "<strong>offer of judgment</strong>" or "<strong>demand for judgment</strong>." Post-1996 they say "<strong>proposal for settlement</strong>." Searching on the modern phrase silently truncates the case law at 1997. <strong>Search on "768.79" and "1.442."</strong></p>
+<hr />
+<h1 id="part-12-unsettled-ground">Part 12 — Unsettled ground<a class="headerlink" href="#part-12-unsettled-ground" title="Permanent link">¶</a></h1>
+<p>Where the law is genuinely open. Do not build a client strategy on any of these without disclosing the risk.</p>
+<h2 id="a-good-faith-is-the-least-developed-area-in-the-regime">A. Good faith is the least-developed area in the regime<a class="headerlink" href="#a-good-faith-is-the-least-developed-area-in-the-regime" title="Permanent link">¶</a></h2>
+<p>Five decisions touch it and <strong>four are asides</strong>. No decision in the read Supreme Court corpus squarely resolves a good-faith challenge. Since good faith is the <strong>only</strong> discretionary escape from an otherwise mechanical entitlement, this is simultaneously the biggest gap and the biggest opportunity. The nominal-proposal question — flagged by the Court in 1992 and never answered — is the sharpest edge of it.</p>
+<h2 id="b-the-diamond-aircraft-reservation">B. The <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4988617/diamond-aircraft-industries-inc-v-horowitch/"><em>Diamond Aircraft</em></a> reservation<a class="headerlink" href="#b-the-diamond-aircraft-reservation" title="Permanent link">¶</a></h2>
+<p>Whether § 768.79 applies where monetary and nonmonetary claims are pled <strong>separately</strong> and the proposal is directed <strong>only to the monetary claim</strong>. Expressly left open in 2013 and still open. A tempting workaround; an untested one.</p>
+<h2 id="c-wheatons-alternative-holding">C. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4581389/sandra-kent-wheaton-v-mardella-wheaton/"><em>Wheaton</em></a>'s alternative holding<a class="headerlink" href="#c-wheatons-alternative-holding" title="Permanent link">¶</a></h2>
+<p><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4581389/sandra-kent-wheaton-v-mardella-wheaton/"><em>Wheaton</em></a> excused noncompliance with a <strong>different rule set</strong> (2.516) on a substantive-compliance rationale broader than <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4314140/susanne-l-kuhajda-v-borden-dairy-company-of-alabama-llc/"><em>Kuhajda</em></a>'s. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/10883903/trace-elements-inc-v-nadja-mackensen/"><em>Trace Elements</em></a> — decided seven years later and squarely about when strict compliance applies — <strong>does not mention it</strong>. Its continued vitality is unresolved.</p>
+<h2 id="d-the-white-formula">D. The <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1912574/white-v-steak-and-ale-of-florida-inc/"><em>White</em></a> formula<a class="headerlink" href="#d-the-white-formula" title="Permanent link">¶</a></h2>
+<p>Applied as settled law, but sustained in <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/5092491/ccm-condominium-association-inc-etc-v-petri-positive-pest-control/"><em>CCM</em></a> on stare decisis under <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4741416/state-of-florida-v-mark-anthony-poole/"><em>State v. Poole</em></a> rather than on the text, over a dissent calling its supporting authorities "of very dubious provenance," and after the district court below said the plain language does not support it. <strong>Apply it. Do not assume it is permanent.</strong></p>
+<h2 id="e-trace-elements-itself">E. <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/10883903/trace-elements-inc-v-nadja-mackensen/"><em>Trace Elements</em></a> itself<a class="headerlink" href="#e-trace-elements-itself" title="Permanent link">¶</a></h2>
+<p>🔴 Not final; rehearing and clarification pending as of August 8, 2026. Two further points:</p>
+<ul>
+<li>The <strong>majority expressly invited a rule amendment</strong> rather than a judicial exception, citing the 2010 adoption of (c)(4) after <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1950924/lamb-v-matetzschk/"><em>Lamb</em></a> as its model. The Civil Procedure Rules Committee has form here: a proposed (c)(3) carve-out was rejected in 2003, the problem it would have prevented arose in 2005, and the Court adopted essentially the original proposal in 2010. <strong>Watch for a (c)(3) amendment proposal.</strong></li>
+<li>The Court <strong>restyled (c)(3) unanimously on November 13, 2025</strong> — changing only <em>shall</em> to <em>must</em>, Committee Notes unchanged — while <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/10883903/trace-elements-inc-v-nadja-mackensen/"><em>Trace Elements</em></a> sat fully briefed on its own docket, four weeks before oral argument. Whatever else follows, the current text is the text the Court re-adopted knowing this case was coming.</li>
+</ul>
+<h2 id="f-the-courts-own-assessment">F. The Court's own assessment<a class="headerlink" href="#f-the-courts-own-assessment" title="Permanent link">¶</a></h2>
+<p>Worth quoting to a client who asks why this is so hard:</p>
+<blockquote>
+<p>"this Court's jurisprudence <strong>in this area of the law seems inconsistently applied and unpredictable</strong>"
+— Polston, J., dissenting in <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4540927/w-riley-allen-v-jairo-rafael-nunez/"><em>Allen v. Nunez</em></a> (2018), joined by Canady, C.J., and Lawson, J.</p>
+</blockquote>
+<p>The majority's response, in footnote 2, does not dispute the diagnosis — only what follows from it.</p>
+<hr />
+<h1 id="quick-reference-one-page-drafting-checklist">Quick-reference — one-page drafting checklist<a class="headerlink" href="#quick-reference-one-page-drafting-checklist" title="Permanent link">¶</a></h1>
+<p><strong>Before drafting</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Is this a "civil action for damages"? Any equitable claim in the case? (<a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4988617/diamond-aircraft-industries-inc-v-horowitch/"><em>Diamond Aircraft</em></a>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Does any contract choose another state's substantive law? (<a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/5056323/southeast-floating-docks-inc-v-auto-owners-insurance-co/"><em>Southeast Floating Docks</em></a>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> When did the cause of action accrue? Which statutory version governs? (<a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1925102/metropolitan-dade-county-v-jones-boatyard-inc/"><em>Jones Boatyard</em></a>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Are we inside the rule 1.442(b) window — 90 days after / 45 days before, off the <strong>current</strong> trial setting?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Have I modeled the comparator under the <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1912574/white-v-steak-and-ale-of-florida-inc/"><em>White</em></a> formula, <strong>net of foreseeable setoffs</strong>?</li>
+</ul>
+<p><strong>In the document</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Cites <strong>§ 768.79</strong> by name — not just rule 1.442</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Names the offeror and the offeree; <strong>defined terms are singular</strong> unless a joint proposal is intended</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Nothing in the document speaks for, binds, or requires anything of a non-party to the proposal</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> States that it resolves <strong>all damages</strong> that would otherwise be awarded in final judgment</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Every <strong>condition</strong> stated with particularity; any <strong>release attached</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Total amount</strong> stated; every nonmonetary term stated with particularity</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Punitive damages</strong> amount stated separately, if claimed</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Attorney's-fees statement</strong> included — whether fees are included and whether they are part of the legal claim</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Certificate of service</strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Nothing material in the cover letter</li>
+</ul>
+<p><strong>If joint</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Amount <strong>and terms</strong> attributable to <strong>each</strong> party stated</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> (c)(4) vicarious-liability exception applied only where liability is <strong>solely</strong> vicarious/constructive/derivative/technical</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> If conditioned: multiple <strong>offerors</strong> → one offeree only. Never multiple offerees conditioned on mutual acceptance (<a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1555417/attorneys-title-insurance-fund-inc-v-gorka/"><em>Gorka</em></a>), absent § 768.79(6)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Allocation stress-tested against the <strong>conjunctive 25% test</strong> — would a weak result for one claimant sink all of them?</li>
+</ul>
+<p><strong>On service</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Serve, do not file (rule 1.442(d))</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Calendar <strong>day 30</strong> — no add-on days, no tolling by motion</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Calendar the <strong>rule 1.525 fee-motion deadline</strong> from the <strong>verdict</strong> (jury) or <strong>entry of judgment</strong> (nonjury)</li>
+</ul>
+<hr />
+<h1 id="table-of-authorities">Table of Authorities<a class="headerlink" href="#table-of-authorities" title="Permanent link">¶</a></h1>
+<h2 id="statutes-and-rules">Statutes and rules<a class="headerlink" href="#statutes-and-rules" title="Permanent link">¶</a></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Provision</th>
+<th>Subject</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fla. Stat. § 768.79</strong></td>
+<td>The substantive right; (1) entitlement, (2) offer requirements, (3) service and filing, (4) acceptance, (5) withdrawal, <strong>(6)</strong> property-insurer conditional joint offers (2022), <strong>(7)</strong> judgment comparison, <strong>(8)(a)</strong> good faith, <strong>(8)(b)</strong> reasonableness factors</td>
+</tr>
+<tr>
+<td><strong>Fla. R. Civ. P. 1.442</strong></td>
+<td>The procedure; (b) timing, (c)(1)–(2) form and content, <strong>(c)(3)</strong> apportionment, <strong>(c)(4)</strong> vicarious-liability exception, (d) service and filing, (e) withdrawal, (f)(1) acceptance and the 30 days, (g) sanctions motion, (j) mediation</td>
+</tr>
+<tr>
+<td><strong>Fla. R. Civ. P. 1.525</strong></td>
+<td>The 30-day fee-motion deadline</td>
+</tr>
+<tr>
+<td><strong>Fla. Stat. § 45.061</strong></td>
+<td>The vestigial parallel statute — pre-October-1990 accruals only</td>
+</tr>
+<tr>
+<td><strong>Fla. Stat. § 768.71(2)</strong></td>
+<td>July 1, 1986 threshold</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="florida-supreme-court">Florida Supreme Court<a class="headerlink" href="#florida-supreme-court" title="Permanent link">¶</a></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Case</th>
+<th>Holding used here</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1670587/unicare-health-facilities-inc-v-mort/"><em>Unicare Health Facilities, Inc. v. Mort</em>, 553 So. 2d 159 (1989)</a></td>
+<td>Accepting a proposal silent as to fees waives statutory fees; the settlement-encouragement purpose</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1769501/leapai-v-milton/"><em>Leapai v. Milton</em>, 595 So. 2d 12 (1992)</a></td>
+<td>Constitutionality; n.2's doubt about a $1 offer</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1925102/metropolitan-dade-county-v-jones-boatyard-inc/"><em>Metropolitan Dade County v. Jones Boatyard, Inc.</em>, 611 So. 2d 512 (1993)</a></td>
+<td>Versioning: the statute keys to <strong>accrual</strong></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1715682/tgi-fridays-inc-v-dvorak/"><em>TGI Friday's, Inc. v. Dvorak</em>, 663 So. 2d 606 (1995)</a></td>
+<td>Entitlement is arithmetic; good faith is the only escape</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1725782/knealing-v-puleo/"><em>Knealing v. Puleo</em>, 675 So. 2d 593 (1996)</a></td>
+<td>Mediation does not alter the timing</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1843592/gulliver-academy-inc-v-bodek/"><em>Gulliver Academy, Inc. v. Bodek</em>, 694 So. 2d 675 (1997)</a></td>
+<td>Rule 1.442(g) runs from the <strong>verdict</strong> in a jury case; the rule prevails</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1799433/mx-investments-inc-v-crawford/"><em>MX Investments, Inc. v. Crawford</em>, 700 So. 2d 640 (1997)</a></td>
+<td>Dismissal must be <strong>with prejudice</strong></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1846806/mgr-equip-v-wilson-ice-enterprises/"><em>MGR Equipment Corp. v. Wilson Ice Enterprises</em>, 731 So. 2d 1262 (1999)</a></td>
+<td>An unqualified proposal resolves counterclaims</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1770539/rollins-v-pizzarelli/"><em>Rollins v. Pizzarelli</em>, 761 So. 2d 294 (2000)</a></td>
+<td>Setoffs can destroy entitlement</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1860954/allstate-indem-co-v-hingson/"><em>Allstate Indemnity Co. v. Hingson</em>, 808 So. 2d 197 (2002)</a></td>
+<td>Origin of the apportionment requirement (4–3)</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1912574/white-v-steak-and-ale-of-florida-inc/"><em>White v. Steak and Ale of Florida, Inc.</em>, 816 So. 2d 546 (2002)</a></td>
+<td>"Judgment obtained" — the <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1912574/white-v-steak-and-ale-of-florida-inc/"><em>White</em></a> formula</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1090776/willis-shaw-express-inc-v-hilyer-sod-inc/"><em>Willis Shaw Express, Inc. v. Hilyer Sod, Inc.</em>, 849 So. 2d 276 (2003)</a></td>
+<td>Multiple offerors must apportion</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1831641/sarkis-v-allstate-ins-co/"><em>Sarkis v. Allstate Ins. Co.</em>, 863 So. 2d 210 (2003)</a></td>
+<td>No contingency risk multiplier</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1950924/lamb-v-matetzschk/"><em>Lamb v. Matetzschk</em>, 906 So. 2d 1037 (2005)</a></td>
+<td>Apportionment required for vicarious liability — later undone by (c)(4)</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1899565/saia-motor-freight-line-inc-v-reid/"><em>Saia Motor Freight Line, Inc. v. Reid</em>, 930 So. 2d 598 (2006)</a></td>
+<td>Rule 1.525's 30 days is a bright line</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1697927/state-farm-mut-auto-ins-co-v-nichols/"><em>State Farm Mut. Auto. Ins. Co. v. Nichols</em>, 932 So. 2d 1067 (2006)</a></td>
+<td>The particularity standard; PIP is within the statute</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1140885/campbell-v-goldman/"><em>Campbell v. Goldman</em>, 959 So. 2d 223 (2007)</a></td>
+<td>Must cite § 768.79</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1785275/frosti-v-creel/"><em>Frosti v. Creel</em>, 979 So. 2d 912 (2008)</a></td>
+<td>Appellate fees; premature filing not fatal; whole net judgment</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1555417/attorneys-title-insurance-fund-inc-v-gorka/"><em>Attorneys' Title Ins. Fund, Inc. v. Gorka</em>, 36 So. 3d 646 (2010)</a></td>
+<td>Mutual-acceptance condition invalid (4–3)</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/5056323/southeast-floating-docks-inc-v-auto-owners-insurance-co/"><em>Southeast Floating Docks, Inc. v. Auto-Owners Ins. Co.</em>, 82 So. 3d 73 (2012)</a></td>
+<td>Choice of law switches the statute off</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4988617/diamond-aircraft-industries-inc-v-horowitch/"><em>Diamond Aircraft Industries, Inc. v. Horowitch</em>, 107 So. 3d 362 (2013)</a></td>
+<td>Damages + equitable relief; (c)(2)(F) where fees pleaded</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/2689203/advanced-chiropractic-and-rehabilitation-center-corp-v-united-automobile/"><em>Advanced Chiropractic &amp; Rehab. Ctr., Corp. v. United Automobile Ins. Co.</em>, 140 So. 3d 529 (2014)</a></td>
+<td>§ 768.79 fees exempt from <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1116540/stockman-v-downs/"><em>Stockman</em></a> pleading (on district authority)</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/2794254/ancel-pratt-jr-v-michael-c-weiss-do/"><em>Pratt v. Weiss</em>, 161 So. 3d 1268 (2015)</a></td>
+<td>"Even where no logical apportionment can be made, it is nonetheless required"</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/2794251/valerie-audiffred-v-thomas-b-arnold/"><em>Audiffred v. Arnold</em>, 161 So. 3d 1274 (2015)</a></td>
+<td>A single offeror can make a "joint" proposal</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4317987/troy-anderson-v-hilton-hotels-corporation-etc/"><em>Anderson v. Hilton Hotels Corp.</em>, 202 So. 3d 846 (2016)</a></td>
+<td>The "speaks for or binds" line; no aggregation; anti-nitpicking; motive</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4314140/susanne-l-kuhajda-v-borden-dairy-company-of-alabama-llc/"><em>Kuhajda v. Borden Dairy Co.</em>, 202 So. 3d 391 (2016)</a></td>
+<td>(c)(2)(F) excused where fees not pleaded</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4498881/donna-koppel-v-laura-ochoa/"><em>Koppel v. Ochoa</em>, 243 So. 3d 886 (2018)</a></td>
+<td>Motion to enlarge does not toll acceptance</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4540927/w-riley-allen-v-jairo-rafael-nunez/"><em>Allen v. Nunez</em>, 258 So. 3d 1207 (2018)</a></td>
+<td>Read the proposal as a whole; the "unpredictable" dissent</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/4581389/sandra-kent-wheaton-v-mardella-wheaton/"><em>Wheaton v. Wheaton</em>, 261 So. 3d 1236 (2019)</a></td>
+<td>Rule 2.516 does not govern proposals</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/5092491/ccm-condominium-association-inc-etc-v-petri-positive-pest-control/"><em>CCM Condominium Ass'n v. Petri Positive Pest Control</em>, No. SC19-861 (Sept. 9, 2021)</a></td>
+<td>Post-offer prejudgment interest excluded</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/8404436/suarez-trucking-fl-corp-v-adam-j-souders/"><em>Suarez Trucking FL Corp. v. Souders</em>, No. SC21-369 (Oct. 20, 2022)</a></td>
+<td>Filed acceptance forms the contract; consistency, not regurgitation</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/9406669/brinda-coates-etc-v-rj-reynolds-tobacco-company/"><em>Coates v. R.J. Reynolds Tobacco Co.</em>, 365 So. 3d 353 (2023)</a></td>
+<td>Not a prevailing-party statute</td>
+</tr>
+<tr>
+<td>🔴 <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/10883903/trace-elements-inc-v-nadja-mackensen/"><em>Trace Elements, Inc. v. MacKensen</em>, No. SC2024-1274 (July 2, 2026)</a></td>
+<td>Apportionment required for a unified claim (4–3) — <strong>rehearing pending</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="district-court-of-appeal">District Court of Appeal<a class="headerlink" href="#district-court-of-appeal" title="Permanent link">¶</a></h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Case</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1676218/schmidt-v-fortner/"><em>Schmidt v. Fortner</em></a>, 629 So. 2d 1036 (Fla. 4th DCA 1993)</td>
+<td>The entitlement/amount framework adopted in <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/1715682/tgi-fridays-inc-v-dvorak/"><em>TGI Friday's</em></a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/7744665/scope-v-fannelli/"><em>Scope v. Fannelli</em></a>, 639 So. 2d 141 (Fla. 5th DCA 1994)</td>
+<td>A counteroffer does not terminate the proposal</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/5004631/hoang-dinh-duong-v-ziadie/"><em>Hoang Dinh Duong v. Ziadie</em>, 153 So. 3d 354 (Fla. 4th DCA 2014)</a></td>
+<td>The all-or-nothing allocated offer; the conjunctive 25% test; the cover letter</td>
+</tr>
+</tbody>
+</table></div>
+<p>⚠️ <strong>The ~816 district court decisions applying § 768.79 have not been surveyed for this project.</strong> This guide is built on the Florida Supreme Court corpus plus the two district decisions listed above. <strong>Check your own district</strong> before relying on any proposition here in a contested fee hearing — particularly on apportionment, where the districts have historically diverged and where the Supreme Court has three times adopted a single district's minority position.</p>
+<hr />
+<p><em>Built from <a href="memo.md"><code>memo.md</code></a>, <a href="sc-corpus.md"><code>sc-corpus.md</code></a>, and <a href="arc-matrix.md"><code>arc-matrix.md</code></a>. Every case name in this guide is hyperlinked to the opinion on CourtListener.</em></p>
+<p><strong>Citation check, August 11, 2026.</strong> All 41 case citations here were run through CourtListener's citation-lookup API and verified. One exception: <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/9406669/brinda-coates-etc-v-rj-reynolds-tobacco-company/"><em>Coates</em></a>, 365 So. 3d 353, returns no match, because CourtListener carries <strong>no So. 3d parallel citation</strong> for that decision. The cite is confirmed instead from <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/10883903/trace-elements-inc-v-nadja-mackensen/"><em>Trace Elements</em></a>'s own citation of it — "365 So. 3d 353, 355 (Fla. 2023)."</p>
+<p>⚠️ Machine verification confirms that a citation <strong>resolves to a real case</strong>. It cannot confirm that a <strong>pin cite says what it is said to say</strong>. Pin cites here were taken from the opinions as recorded in <a href="sc-corpus.md"><code>sc-corpus.md</code></a>.</p>
+<p>🔴 <strong>Docket status for <a target="_blank" rel="noopener" href="https://www.courtlistener.com/opinion/10883903/trace-elements-inc-v-nadja-mackensen/"><em>Trace Elements</em></a> last checked August 8, 2026 — re-check before use.</strong></p>
+  </main>
+</div>
+<script>
+(function(){
+  var root=document.documentElement, b=document.getElementById('themer');
+  function cur(){ return root.getAttribute('data-theme') ||
+    (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'); }
+  function paint(){ b.textContent = cur()==='dark' ? '☾ dark' : '☀ light'; }
+  b.addEventListener('click',function(){
+    root.setAttribute('data-theme', cur()==='dark'?'light':'dark'); paint();
+  });
+  paint();
+  // highlight the TOC entry for the section in view
+  var links=[].slice.call(document.querySelectorAll('nav.toc a[href^="#"]'));
+  var map={}; links.forEach(function(a){
+    var el=document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));
+    if(el) map[el.id]=a;
+  });
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      var a=map[e.target.id]; if(!a) return;
+      if(e.isIntersecting){ links.forEach(function(x){x.style.color='';x.style.fontWeight='';});
+        a.style.color='var(--link)'; a.style.fontWeight='700'; }
+    });
+  },{rootMargin:'0px 0px -75% 0px'});
+  Object.keys(map).forEach(function(id){ var el=document.getElementById(id); if(el) io.observe(el); });
+})();
+</script>
+</body>
+</html>

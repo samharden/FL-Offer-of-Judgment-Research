@@ -86,6 +86,7 @@ Both folders share four open items with each other: re-pulling the *Trace Elemen
 
 | If you want… | Read |
 |---|---|
+| **To actually use the device in a case** | ⭐ [`practice-guide.md`](practice-guide.md) · [HTML](visuals/practice-guide.html) |
 | How the regime works, and how it changed | [`memo.md`](memo.md) |
 | The history as a visual timeline | [`visuals/two-track-timeline.html`](visuals/two-track-timeline.html) |
 | Orientation, verified facts, tooling gotchas | [`CLAUDE.md`](CLAUDE.md) |
@@ -112,6 +113,8 @@ Nothing here *requires* Obsidian, and no file depends on it — plain Markdown r
 | Path | Contents |
 |---|---|
 | `memo.md` | **The deliverable.** A survey of the regime in eight parts — mechanics, two-track history, constitutional architecture, all ten doctrinal arcs, cross-cutting patterns, open gaps, limits. Every case hyperlinked |
+| `practice-guide.md` | **The practitioner deliverable (Aug. 11, 2026).** The same regime as a working tool: the serve decision, the calendar, joint proposals, an element-by-element drafting checklist, how to attack a proposal served on you, the 25% comparison, and thirteen ranked traps. Every case name hyperlinked |
+| `visuals/practice-guide.html` | The practice guide as a standalone page — sidebar contents, light/dark, print stylesheet. **Generated from the Markdown; do not hand-edit** |
 | `visuals/two-track-timeline.html` | The two-track history as a standalone page — 35 events, statute vs. Court, with the three causal loops |
 | `CLAUDE.md` | Project memory — scope note, verified facts, working conventions, tooling gotchas, and arc 3 developed in depth |
 | `research-plan.md` | Plan for remaining work, plus a retrospective on what the original plan got wrong |
